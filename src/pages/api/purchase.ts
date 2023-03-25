@@ -19,15 +19,25 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
+  if (req.method !== "POST") {
+    res.status(400).send("Invalid payment");
+  }
+
   const payment = await paymentService.checkRequestAndReturnDetails(req);
   if (payment === false) {
-    res.status(401).send("Invalid payment");
+    res.status(400).send("Invalid payment");
     return;
   }
 
-  await crmService.addDeal(payment.name!, payment.email!);
-  await courseService.joinCourse(payment.name!, payment.email!);
-  await newsletterService.registerToNewsletter(payment.name!, payment.email!);
+  try {
+    await crmService.addDeal(payment.name!, payment.email!);
+    await courseService.joinCourse(payment.name!, payment.email!);
+    await newsletterService.registerToNewsletter(payment.name!, payment.email!);
+  } catch (err) {
+    // In case one of them didn't work, we send 400, then the payment gateway will re-try the request
+    res.status(400).send("Could not complete one of the services");
+    return;
+  }
 
   res.status(200).send("Success");
 }

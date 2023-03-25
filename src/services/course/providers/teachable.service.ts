@@ -1,6 +1,66 @@
-import {CourseInterface} from "@github20k/services/course/course.interface";
+import { CourseInterface } from "@github20k/services/course/course.interface";
+import axios, { AxiosHeaders } from "axios";
+import { AbstractServicesService } from "@github20k/services/abstract.services.service";
+import { number, object, string } from "yup";
 
-export class TeachableService implements CourseInterface {
-    joinCourse(courseId: string | number) {
+const headers = new AxiosHeaders({
+  apiKey: process.env.COURSE_TOKEN,
+});
+
+export class TeachableService extends AbstractServicesService<CourseInterface> {
+  validation = object({
+    COURSE_TOKEN: string().required(),
+    COURSE_ID: number().required(),
+  });
+
+  providerName = "Teachable";
+
+  async joinCourse(name: string, email: string) {
+    // Searching for the user in case exists, if not, creating a new one
+    const { id: user_id } =
+      (await this.findUser(email)) ||
+      (await axios.post(
+        "https://developers.teachable.com/v1/users",
+        {
+          name,
+          email,
+        },
+        { headers }
+      ));
+
+    await axios.post(
+      "https://developers.teachable.com/v1/enroll",
+      {
+        user_id,
+        course_id: process.env.COURSE_TOKEN,
+      },
+      { headers }
+    );
+  }
+
+  // recursion to iterate between the page as teachable doesn't have a search by email
+  async findUser(email: string, page = 1) {
+    const {
+      data: {
+        users,
+        meta: { total },
+      },
+    } = await axios.get(
+      `https://developers.teachable.com/v1/users?per=20&page=${page}`,
+      {
+        headers,
+      }
+    );
+
+    const user = users?.find((u) => u.email === email);
+    if (user) {
+      return user;
     }
+
+    if (Math.ceil(total / 20) > page) {
+      return this.findUser(email, page + 1);
+    }
+
+    return false;
+  }
 }

@@ -1,3 +1,3 @@
 export interface NewsletterInterface {
-  registerToNewsletter(name: string, email: string): void;
+  registerToNewsletter(name: string, email: string): Promise<void>;
 }

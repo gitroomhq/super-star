@@ -4,9 +4,18 @@ import Stripe from "stripe";
 import { NextApiRequest } from "next";
 import { buffer } from "micro";
 import { PaymentInterface } from "@github20k/services/payment/payment.interface";
-const stripe = new Stripe(process.env.PAYMENT_SECRET_KEY);
+import { AbstractServicesService } from "@github20k/services/abstract.services.service";
+import { object, string } from "yup";
+const stripe = new Stripe(process.env.PAYMENT_SECRET_KEY!, {} as any);
 
-export class StripeService implements PaymentInterface {
+export class StripeService extends AbstractServicesService<PaymentInterface> {
+  validation = object({
+    PAYMENT_SIGNING_SECRET: string().required(),
+    PAYMENT_SECRET_KEY: string().required(),
+  });
+
+  providerName = "Stripe";
+
   async checkRequestAndReturnDetails(req: NextApiRequest) {
     const signature = req.headers["stripe-signature"] as string;
     const reqBuffer = await buffer(req);

@@ -1,5 +1,21 @@
 {
+  "ts-node": {
+    "require": ["tsconfig-paths/register"],
+    "compilerOptions": {
+      "module": "commonjs",
+      "moduleResolution": "node",
+      "baseUrl": "./",
+      "target": "es5",
+      "noEmit": true,
+      "checkJs": false,
+      "strict": false,
+      "suppressImplicitAnyIndexErrors": true
+    },
+    "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+    "exclude": ["node_modules"]
+  },
   "compilerOptions": {
+    "baseUrl": "./",
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
