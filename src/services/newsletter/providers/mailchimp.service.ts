@@ -1,7 +1,12 @@
 import { NewsletterInterface } from "@github20k/services/newsletter/newsletter.interface";
-import axios from "axios";
+import axios, { AxiosBasicCredentials, AxiosHeaders } from "axios";
 import { AbstractServicesService } from "@github20k/services/abstract.services.service";
 import { object, string } from "yup";
+
+const auth = {
+  username: "Nevo",
+  password: process.env.NEWSLETTER_TOKEN,
+} as AxiosBasicCredentials;
 
 export class MailchimpService extends AbstractServicesService<NewsletterInterface> {
   validation = object({
@@ -10,7 +15,7 @@ export class MailchimpService extends AbstractServicesService<NewsletterInterfac
     NEWSLETTER_TOKEN: string().required(),
   });
 
-  providerName = 'MailChimp';
+  providerName = "MailChimp";
 
   async registerToNewsletter(email_address: string, name: string) {
     const [FNAME, ...LNAME] = name?.split(" ");
@@ -30,7 +35,8 @@ export class MailchimpService extends AbstractServicesService<NewsletterInterfac
         ],
         sync_tags: false,
         update_existing: true,
-      }
+      },
+      { auth }
     );
   }
 }
