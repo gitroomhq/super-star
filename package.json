@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "npx ts-node env.check.ts && next dev",
+    "dev": "npx ts-node env.check.ts && concurrently \"node ngrok.js\" \"next dev\"",
     "build": "npx ts-node env.check.ts next build",
     "start": "npx ts-node env.check.ts next start",
     "lint": "npx ts-node env.check.ts next lint"
@@ -15,6 +15,7 @@
     "@types/react-dom": "18.0.11",
     "@types/yup": "^0.32.0",
     "axios": "^1.3.4",
+    "concurrently": "^7.6.0",
     "dotenv": "^16.0.3",
     "eslint": "8.36.0",
     "eslint-config-next": "13.2.4",
@@ -29,5 +30,8 @@
     "typescript": "5.0.2",
     "webpack": "^5.76.3",
     "yup": "^1.0.2"
+  },
+  "devDependencies": {
+    "ngrok": "^4.3.3"
   }
 }
