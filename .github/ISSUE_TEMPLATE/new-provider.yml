@@ -1,0 +1,19 @@
+name: 🦷 New Provider
+description: Add a new provider request
+title: "[BUG] <name>"
+labels: ["New Provider"]
+body:
+  - type: textarea
+    id: name
+    attributes:
+      label: Providers Name
+      description: Add the provider name
+    validations:
+      required: true
+  - type: textarea
+    id: link
+    attributes:
+      label: Link to the provider
+      description: Please add a link to the provider
+    validations:
+      required: true

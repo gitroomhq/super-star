@@ -1,0 +1,12 @@
+name: 🎨 Styling changes
+description: Request a new styling change
+title: "[Styling] <name>"
+labels: ["Styling"]
+body:
+  - type: textarea
+    id: name
+    attributes:
+      label: Styling change
+      description: Add the styling change request and attach pictures (Before and after)
+    validations:
+      required: true
