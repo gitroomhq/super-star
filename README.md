@@ -1,6 +1,11 @@
 ![top](https://user-images.githubusercontent.com/100117126/226394199-4072d339-5841-47b1-acab-2d2906c78d96.png)
 <h1 align="center"><a href="https://github20k.com">GitHub 20K</a> - Resources to grow your repository ⭐️✨</h1>
 
+<p align="center">
+  <a href="https://opensource.org/licenses/MIT" target="_blank">
+    <img alt="License: MIT License" src="https://img.shields.io/badge/License-MIT License-yellow.svg" />
+  </a>
+</p>
 
 <div align="center">
 
@@ -23,7 +28,6 @@
   <p>The course focus a little on strategies, and more about tactics.</p>
   <p>I will show you <code>step-by-step</code> what I am actually doing.</p>
   <p>In case you don't need the course, feel free to use this repository for your own sales page.</p>
-  <p>The tech being used here: <strong>NextJS, Tailwind, Stripe, Mailchimp and Teachable</strong></p>
 
 
   <p>&nbsp;</p>
@@ -53,7 +57,43 @@
   ```
 
   <p>&nbsp;</p>
+  
+## Available Providers
 
+ ### [Payment](https://github.com/github-20k/course/tree/main/src/services/payment/providers)
+ - [x] [Stripe](https://stripe.com)
+ - [ ] [Paddle](https://paddle.com)
+ - [ ] [Chargebee](https://www.chargebee.com)
+ - [ ] [Paypal](https://www.paypal.com)
+ - [ ] [FastSpring](https://fastspring.com)
+ - [ ] [2checkout](https://2checkout.com)
+ - [ ] [Bluesnap](https://bluesnap.com)
+  
+ ### [Newsletter](https://github.com/github-20k/course/tree/main/src/services/newsletter/providers)
+ - [x] [MailChimp](https://mailchimp.com)
+ - [ ] [Sendinblue](https://sendinblue.com)
+ - [ ] [MailerLite](https://www.mailerlite.com)
+ - [ ] [Drip](https://www.drip.com)
+ - [ ] [Moosend](https://moosend.com)
+  
+ ### [CRM](https://github.com/github-20k/course/tree/main/src/services/crm/providers)
+ - [x] [PipeDrive](https://www.pipedrive.com)
+ - [ ] [Monday](https://monday.com)
+ - [ ] [Salesforce](https://www.salesforce.com)
+ - [ ] [Hubspot](https://www.hubspot.com)
+ - [ ] [Trello](https://trello.com)
+  
+ ### [Course](https://github.com/github-20k/course/tree/main/src/services/course/providers)
+ - [x] [Teachable](https://www.teachable.com)
+ - [ ] [Thinkific](https://thinkific.com)
+ - [ ] [Udemy Business](https://www.udemy.com)
+ - [ ] [SamCart](https://samcart.com)
+ - [ ] [Learnworlds](https://learnworlds.com)
+ - [ ] [Podia](https://podia.com)
+ - [ ] [Freshlearn](https://freshlearn.com)
+
+  <p>&nbsp;</p>
+  
 ## Who am I?
 
 | <img width="200" src="https://user-images.githubusercontent.com/100117126/226546227-7485f708-a2f4-4dc5-b97b-a207a241c34b.JPEG" /> | <p align="left"> <sub>Hi there, I'm [Nevo](https://github.com/nevo-david) ✨.</sub></p><p align="left"><sub>I started programming when I was 21, and now I'm 32.</sub></p><p align="left"><sub>For years, I've been working as a full-stack developer and team leader.</sub></p><p align="left"><sub>Three years ago, I started my own startup called Linvo and sold it.</sub></p><p align="left"><sub>It was a real struggle to grow.</sub></p><p align="left"><sub>Coding was the easy part, but getting people to use the product was a different story.</sub></p><p align="left"><sub>That experience made me want to help other startups succeed.</sub></p><p align="left"><sub>I decided to focus on growth strategies.</sub></p><p align="left"><sub>That's why I joined Novu, with the goal of letting everyone know about it.</sub></p> |
