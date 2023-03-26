@@ -28,20 +28,28 @@
 
   <p>&nbsp;</p>
 
-## Installation
+## How it works
 
+<img width="515" alt="image" src="https://user-images.githubusercontent.com/100117126/227772309-8612c369-abf0-4880-bdad-ad2eab602100.png">
 
 <p>The website was created using NextJS and Tailwind.</p>
-<p>When you click on the checkout button, you will be taken to a Stripe Checkout page.</p>
-<p> After you complete the checkout process, Stripe will send a webhook to a special NextJS route.</p>
-<p>On this route, the purchaser is added to both the newsletter (using MailChimp) and the course (using Teachable).</p>
-<p>To install this project, simply clone it, copy the .env.example file to .env, and fill in the Stripe and Mailchimp variables.</p>
+<p>When you click on the checkout button, you will be taken to a a checkout out (default to Stripe).</p>
+<p> After you complete the checkout process, the payment gateway will send a webhook to a special NextJS route (/api/purchase)</p>
+<p>On this route, the purchaser is added to:</p>
 
-  <p>And run</p>
+- The newsletter (default to MailChimp)
+- The course (default to Teachable) 
+- The CRM (default to Pipedrive).
+
+## Installation
+
+<p>Clone the project, copy the .env.example file to .env, and fill in the missing variables.</p>
+
+  <p>And then run</p>
 
   ```bash
   npm install
-  npm run start
+  npm run dev
   ```
 
   <p>&nbsp;</p>
