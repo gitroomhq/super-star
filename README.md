@@ -45,6 +45,8 @@
 - The course (default to Teachable) 
 - The CRM (default to Pipedrive).
 
+  <p>&nbsp;</p>
+  
 ## Installation
 
 <p>Clone the project, copy the .env.example file to .env, and fill in the missing variables.</p>
