@@ -8,3 +8,7 @@ export class NewsletterService {
     }
   }
 }
+
+export const newsletterService = NewsletterService.staticSwitcher(
+  process.env.NEWSLETTER_SERVICE
+);

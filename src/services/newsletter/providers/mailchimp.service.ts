@@ -8,7 +8,7 @@ const auth = {
   password: process.env.NEWSLETTER_TOKEN,
 } as AxiosBasicCredentials;
 
-export class MailchimpService extends AbstractServicesService<NewsletterInterface> {
+export class MailchimpService extends AbstractServicesService implements NewsletterInterface {
   validation = object({
     NEWSLETTER_SERVER: string().required(),
     NEWSLETTER_LIST: string().required(),
@@ -17,10 +17,10 @@ export class MailchimpService extends AbstractServicesService<NewsletterInterfac
 
   providerName = "MailChimp";
 
-  async registerToNewsletter(email_address: string, name: string) {
+  async registerToNewsletter(name: string, email_address: string) {
     const [FNAME, ...LNAME] = name?.split(" ");
     await axios.post(
-      `https://${process.env.NEWSLETTER_SERVER}.api.mailchimp.com/3.0/lists/{${process.env.NEWSLETTER_LIST}?skip_merge_validation=true&skip_duplicate_check=true`,
+      `https://${process.env.NEWSLETTER_SERVER}.api.mailchimp.com/3.0/lists/${process.env.NEWSLETTER_LIST}?skip_merge_validation=true&skip_duplicate_check=true`,
       {
         members: [
           {

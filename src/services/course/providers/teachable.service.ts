@@ -7,7 +7,10 @@ const headers = new AxiosHeaders({
   apiKey: process.env.COURSE_TOKEN,
 });
 
-export class TeachableService extends AbstractServicesService<CourseInterface> {
+export class TeachableService
+  extends AbstractServicesService
+  implements CourseInterface
+{
   validation = object({
     COURSE_TOKEN: string().required(),
     COURSE_ID: number().required(),
@@ -19,20 +22,22 @@ export class TeachableService extends AbstractServicesService<CourseInterface> {
     // Searching for the user in case exists, if not, creating a new one
     const { id: user_id } =
       (await this.findUser(email)) ||
-      (await axios.post(
-        "https://developers.teachable.com/v1/users",
-        {
-          name,
-          email,
-        },
-        { headers }
-      ));
+      (
+        await axios.post(
+          "https://developers.teachable.com/v1/users",
+          {
+            name,
+            email,
+          },
+          { headers }
+        )
+      ).data;
 
     await axios.post(
       "https://developers.teachable.com/v1/enroll",
       {
         user_id,
-        course_id: process.env.COURSE_TOKEN,
+        course_id: +process.env.COURSE_ID,
       },
       { headers }
     );

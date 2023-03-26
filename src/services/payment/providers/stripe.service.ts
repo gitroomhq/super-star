@@ -8,13 +8,53 @@ import { AbstractServicesService } from "@github20k/services/abstract.services.s
 import { object, string } from "yup";
 const stripe = new Stripe(process.env.PAYMENT_SECRET_KEY!, {} as any);
 
-export class StripeService extends AbstractServicesService<PaymentInterface> {
+export class StripeService
+  extends AbstractServicesService
+  implements PaymentInterface
+{
   validation = object({
     PAYMENT_SIGNING_SECRET: string().required(),
     PAYMENT_SECRET_KEY: string().required(),
   });
 
   providerName = "Stripe";
+
+  async createACheckoutSession() {
+    const { url } = await stripe.checkout.sessions.create({
+      payment_method_types: ["card"],
+      custom_fields: [
+        {
+          type: "text",
+          key: "firstname",
+          label: { type: "custom", custom: "First name" },
+          optional: false,
+        },
+        {
+          type: "text",
+          key: "lastname",
+          label: { type: "custom", custom: "Last name" },
+          optional: false,
+        },
+      ],
+      line_items: [
+        {
+          price_data: {
+            currency: process.env.CURRENCY,
+            product_data: {
+              name: process.env.COURSE_NAME,
+            },
+            unit_amount: +process.env.PRICE * 100,
+          },
+          quantity: 1,
+        },
+      ],
+      mode: "payment",
+      success_url: process.env.COURSE_URL + "/success",
+      cancel_url: process.env.COURSE_URL,
+    });
+
+    return { url };
+  }
 
   async checkRequestAndReturnDetails(req: NextApiRequest) {
     const signature = req.headers["stripe-signature"] as string;
@@ -26,13 +66,31 @@ export class StripeService extends AbstractServicesService<PaymentInterface> {
         process.env.PAYMENT_SIGNING_SECRET
       ) as Stripe.DiscriminatedEvent;
 
-      if (event.type !== "invoice.paid") {
+      if (
+        event.type !== "checkout.session.async_payment_succeeded" &&
+        event.type !== "checkout.session.completed"
+      ) {
         return false;
       }
 
-      const { id, customer_email, customer_name } = event.data.object;
+      if (event.data.object.payment_status !== "paid") {
+        return true;
+      }
 
-      return { id, email: customer_email, name: customer_name };
+      const name = event.data.object.custom_fields.find(
+        (p) => p.key === "firstname"
+      ).text?.value;
+
+      const lastname = event.data.object.custom_fields.find(
+        (p) => p.key === "lastname"
+      ).text?.value;
+
+      const {
+        id,
+        customer_details: { email },
+      } = event.data.object;
+
+      return { id, email: email, name: name + " " + lastname };
     } catch (err) {
       return false;
     }

@@ -1,7 +1,6 @@
 import { AnyObject } from "yup";
 
-// @ts-ignore
-export abstract class AbstractServicesService<T> implements T {
+export abstract class AbstractServicesService {
   abstract validation: AnyObject;
   abstract providerName: string;
   async runEnvValidation() {

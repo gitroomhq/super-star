@@ -8,3 +8,5 @@ export class CRMService {
     }
   }
 }
+
+export const crmService = CRMService.staticSwitcher(process.env.CRM_SERVICE);

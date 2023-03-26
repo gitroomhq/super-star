@@ -8,3 +8,7 @@ export class PaymentService {
     }
   }
 }
+
+export const paymentService = PaymentService.staticSwitcher(
+  process.env.PAYMENT_SERVICE
+);
