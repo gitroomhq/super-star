@@ -48,10 +48,10 @@ const newsletterService = NewsletterService.staticSwitcher(
 
 (async () => {
   const errors = {
-    ...(await paymentService.runEnvValidation()),
-    ...(process.env.COURSE_SERVICE ? await courseService.runEnvValidation() : {}),
-    ...(process.env.CRM_SERVICE ? await crmService.runEnvValidation() : {}),
-    ...(process.env.NEWSLETTER_SERVICE ? await newsletterService.runEnvValidation() : {}),
+    ...(await paymentService?.runEnvValidation()),
+    ...(process.env.COURSE_SERVICE ? await courseService?.runEnvValidation() : {}),
+    ...(process.env.CRM_SERVICE ? await crmService?.runEnvValidation() : {}),
+    ...(process.env.NEWSLETTER_SERVICE ? await newsletterService?.runEnvValidation() : {}),
   };
 
   if (Object.values(errors).length > 0) {

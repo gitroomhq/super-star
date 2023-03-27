@@ -9,4 +9,4 @@ export class CourseService {
   }
 }
 
-export const courseService = CourseService.staticSwitcher(process.env.COURSE_SERVICE);
+export const courseService = CourseService.staticSwitcher(process.env.COURSE_SERVICE!);

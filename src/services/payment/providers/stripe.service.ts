@@ -39,21 +39,21 @@ export class StripeService
       line_items: [
         {
           price_data: {
-            currency: process.env.CURRENCY,
+            currency: process.env.CURRENCY!,
             product_data: {
-              name: process.env.COURSE_NAME,
+              name: process.env.COURSE_NAME!,
             },
-            unit_amount: +process.env.PRICE * 100,
+            unit_amount: +process.env.PRICE! * 100,
           },
           quantity: 1,
         },
       ],
       mode: "payment",
-      success_url: process.env.COURSE_URL + "/success",
-      cancel_url: process.env.COURSE_URL,
+      success_url: process.env.COURSE_URL! + "/success",
+      cancel_url: process.env.COURSE_URL!,
     });
 
-    return { url };
+    return { url: url! };
   }
 
   async checkRequestAndReturnDetails(req: NextApiRequest) {
@@ -63,7 +63,7 @@ export class StripeService
       const event = stripe.webhooks.constructEvent(
         reqBuffer,
         signature,
-        process.env.PAYMENT_SIGNING_SECRET
+        process.env.PAYMENT_SIGNING_SECRET!
       ) as Stripe.DiscriminatedEvent;
 
       if (
@@ -73,24 +73,25 @@ export class StripeService
         return false;
       }
 
-      if (event.data.object.payment_status !== "paid") {
+      if (event?.data?.object?.payment_status !== "paid") {
         return true;
       }
 
-      const name = event.data.object.custom_fields.find(
-        (p) => p.key === "firstname"
-      ).text?.value;
+      const name = event?.data?.object?.custom_fields?.find(
+        (p) => p?.key === "firstname"
+      )?.text?.value;
 
-      const lastname = event.data.object.custom_fields.find(
-        (p) => p.key === "lastname"
-      ).text?.value;
+      const lastname = event?.data?.object?.custom_fields?.find(
+        (p) => p?.key === "lastname"
+      )?.text?.value;
 
-      const {
+      const { id } = event.data.object;
+
+      return {
         id,
-        customer_details: { email },
-      } = event.data.object;
-
-      return { id, email: email, name: name + " " + lastname };
+        email: event?.data?.object?.customer_details?.email!,
+        name: name + " " + lastname,
+      };
     } catch (err) {
       return false;
     }

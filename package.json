@@ -4,9 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "npx ts-node env.check.ts && concurrently \"node ngrok.js\" \"next dev\"",
-    "build": "npx ts-node env.check.ts next build",
-    "start": "npx ts-node env.check.ts next start",
-    "lint": "npx ts-node env.check.ts next lint"
+    "build": "npx ts-node env.check.ts && next build",
+    "start": "npx ts-node env.check.ts && next start",
+    "lint": "npx ts-node env.check.ts && next lint"
   },
   "dependencies": {
     "@types/axios": "^0.14.0",

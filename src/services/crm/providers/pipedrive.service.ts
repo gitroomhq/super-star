@@ -18,7 +18,7 @@ export class PipedriveService
 
   async addDeal(name: string, email: string) {
     // set the headers of the request
-    const api = ("api_token=" + process.env.CRM_TOKEN) as string;
+    const api = ("api_token=" + process.env.CRM_TOKEN!) as string;
 
     // search if the person exists (might have a few deals)
     const searchPerson = (
@@ -43,12 +43,12 @@ export class PipedriveService
         title: "Course for " + name,
         person_id: id,
         visible_to: 3,
-        value: process.env.PRICE,
-        currency: process.env.CURRENCY,
+        value: process.env.PRICE!,
+        currency: process.env.CURRENCY!,
         status: "open",
         probability: 100,
-        pipeline_id: +process.env.CRM_PIPELINE,
-        stage_id: +process.env.CRM_STAGE,
+        pipeline_id: +process.env.CRM_PIPELINE!,
+        stage_id: +process.env.CRM_STAGE!,
       })
     ).data;
   }

@@ -7,7 +7,7 @@ export abstract class AbstractServicesService {
     try {
       await this.validation.validate(process.env, { abortEarly: false });
       return {};
-    } catch (err) {
+    } catch (err: any) {
       return { [this.providerName]: err.errors };
     }
   }

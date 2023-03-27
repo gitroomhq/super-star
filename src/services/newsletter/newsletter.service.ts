@@ -10,5 +10,5 @@ export class NewsletterService {
 }
 
 export const newsletterService = NewsletterService.staticSwitcher(
-  process.env.NEWSLETTER_SERVICE
+  process.env.NEWSLETTER_SERVICE!
 );

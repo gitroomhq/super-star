@@ -4,7 +4,7 @@ import { AbstractServicesService } from "@github20k/services/abstract.services.s
 import { number, object, string } from "yup";
 
 const headers = new AxiosHeaders({
-  apiKey: process.env.COURSE_TOKEN,
+  apiKey: process.env.COURSE_TOKEN!,
 });
 
 export class TeachableService
@@ -37,14 +37,14 @@ export class TeachableService
       "https://developers.teachable.com/v1/enroll",
       {
         user_id,
-        course_id: +process.env.COURSE_ID,
+        course_id: +process.env.COURSE_ID!,
       },
       { headers }
     );
   }
 
   // recursion to iterate between the page as teachable doesn't have a search by email
-  async findUser(email: string, page = 1) {
+  async findUser(email: string, page = 1): Promise<any> {
     const {
       data: {
         users,
@@ -57,7 +57,7 @@ export class TeachableService
       }
     );
 
-    const user = users?.find((u) => u.email === email);
+    const user = users?.find((u: any) => u.email === email);
     if (user) {
       return user;
     }
