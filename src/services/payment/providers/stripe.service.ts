@@ -42,6 +42,7 @@ export class StripeService
             currency: process.env.CURRENCY!,
             product_data: {
               name: process.env.COURSE_NAME!,
+              description: 'The complete package of ' + process.env.COURSE_NAME!
             },
             unit_amount: +process.env.PRICE! * 100,
           },
