@@ -15,6 +15,8 @@ config();
               authtoken: process.env.NGROK_AUTH, // your authtoken from ngrok.com
               region: process.env.NGROK_REGION, // one of ngrok regions (us, eu, au, ap, sa, jp, in), defaults to us
             }
+          : process.env.NGROK_SUBDOMAIN
+          ? { subdomain: process.env.NGROK_SUBDOMAIN }
           : {}
       );
 

@@ -3,6 +3,7 @@ import { StripeService } from "@github20k/services/payment/providers/stripe.serv
 export class PaymentService {
   static staticSwitcher(type: string) {
     switch (type) {
+      default:
       case "stripe":
         return new StripeService();
     }
