@@ -9,6 +9,6 @@ export default async function handler(
     res.status(400).send("Invalid click");
   }
 
-  const { url } = await paymentService.createACheckoutSession();
+  const { url } = await paymentService.createACheckoutSession(req?.query?.affiliate as string | undefined);
   res.status(200).json({ url });
 }

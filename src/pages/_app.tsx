@@ -55,6 +55,16 @@ export default function App({ Component, pageProps }: AppProps) {
             `}
         </Script>
       )}
+
+      {!!process.env.REWARDFUL_ID && (
+        <>
+          <Script id="rewardful-api" strategy="afterInteractive">
+            {`(function(w,r){w._rwq=r;w[r]=w[r]||function(){(w[r].q=w[r].q||[]).push(arguments)}})(window,'rewardful');`}
+          </Script>
+          <Script async src='https://r.wdfl.co/rw.js' data-rewardful={process.env.REWARDFUL_ID!} strategy="afterInteractive"
+          />
+        </>
+      )}
       <Component {...pageProps} />
     </>
   );

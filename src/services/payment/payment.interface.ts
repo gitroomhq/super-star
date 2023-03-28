@@ -5,5 +5,5 @@ export interface PaymentInterface {
     req: NextApiRequest
   ): Promise<{ id: string; email: string; name: string } | boolean>;
 
-  createACheckoutSession(): Promise<{url: string}>;
+  createACheckoutSession(affiliate?: string): Promise<{url: string}>;
 }

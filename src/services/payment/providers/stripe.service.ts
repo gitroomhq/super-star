@@ -19,7 +19,7 @@ export class StripeService
 
   providerName = "Stripe";
 
-  async createACheckoutSession() {
+  async createACheckoutSession(affiliate?: string) {
     const { url } = await stripe.checkout.sessions.create({
       payment_method_types: ["card"],
       custom_fields: [
@@ -42,7 +42,8 @@ export class StripeService
             currency: process.env.CURRENCY!,
             product_data: {
               name: process.env.COURSE_NAME!,
-              description: 'The complete package of ' + process.env.COURSE_NAME!
+              description:
+                "The complete package of " + process.env.COURSE_NAME!,
             },
             unit_amount: +process.env.PRICE! * 100,
           },
@@ -50,8 +51,12 @@ export class StripeService
         },
       ],
       mode: "payment",
-      success_url: process.env.COURSE_URL! + "/success?session_id={CHECKOUT_SESSION_ID}",
+      success_url:
+        process.env.COURSE_URL! + "/success?session_id={CHECKOUT_SESSION_ID}",
       cancel_url: process.env.COURSE_URL!,
+      ...(affiliate
+        ? { client_reference_id: affiliate }
+        : { client_reference_id: "blank" }),
     });
 
     return { url: url! };
