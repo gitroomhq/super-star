@@ -8,6 +8,7 @@ const nextConfig = {
     CURRENCY: process.env.CURRENCY,
     PRICE: process.env.PRICE,
     FACEBOOK_PIXEL: process.env.FACEBOOK_PIXEL,
+    LINKEDIN_PIXEL: process.env.LINKEDIN_PIXEL,
   },
 };
 
