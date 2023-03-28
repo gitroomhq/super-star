@@ -34,4 +34,13 @@ export class TrackingHelper {
     // @ts-ignore
     window?.fbq("track", name, value);
   }
+
+  static twitter(name: string, value: any) {
+    if (!process.env.TWITTER_PIXEL || typeof window === "undefined") {
+      return;
+    }
+
+    // @ts-ignore
+    window?.twq("event", name, value);
+  }
 }

@@ -6,7 +6,12 @@ const PaymentButton = () => {
   const [loading, setLoading] = useState(false);
   const onClick = useCallback(async () => {
     // @ts-ignore
-    const affiliate = typeof window === "undefined" || !process.env.REWARDFUL_ID || !window?.Rewardful?.referral ? '' : `?affiliate=${window.Rewardful.referral}`;
+    const affiliate =
+      typeof window === "undefined" ||
+      !process.env.REWARDFUL_ID ||
+      !window?.Rewardful?.referral
+        ? ""
+        : `?affiliate=${window.Rewardful.referral}`;
     setLoading(true);
     const {
       data: { url },
@@ -26,6 +31,11 @@ const PaymentButton = () => {
     TrackingHelper.facebook("InitiateCheckout", {
       content_ids: [TrackingHelper.getUniqueId()],
       eventref: "fb_oea",
+    });
+
+    TrackingHelper.twitter(process.env.TWITTER_INITIATE_CHECKOUT_ID, {
+      currency: (process?.env?.CURRENCY || "").toUpperCase(),
+      value: +(process?.env?.PRICE || 300),
     });
 
     setLoading(false);
