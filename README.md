@@ -5,6 +5,9 @@
   <a href="https://opensource.org/licenses/MIT" target="_blank">
     <img alt="License: MIT License" src="https://img.shields.io/badge/License-MIT License-yellow.svg" />
   </a>
+  <a href="https://docs.github20k.com" target="_blank">
+      <img alt="Docs" height="20" src="https://user-images.githubusercontent.com/100117126/228219809-26349cfa-de50-4a7e-8528-741730a9f786.png" />
+  </a>
 </p>
 
 <div align="center">
