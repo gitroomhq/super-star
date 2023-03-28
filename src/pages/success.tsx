@@ -8,11 +8,11 @@ export default function Success() {
   useEffect(() => {
     GoogleTagHelper.event("purchase", {
       transaction_id: String(router?.query?.session_id || makeid(10)),
-      currency: process.env.CURRENCY.toUpperCase(),
+      currency: (process?.env?.CURRENCY || '').toUpperCase(),
       value: process.env.PRICE,
       items: [
         {
-          item_name: process.env.COURSE_NAME + " course",
+          item_name: process?.env?.COURSE_NAME + " course",
         },
       ],
     });
