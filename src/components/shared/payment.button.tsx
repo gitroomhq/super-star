@@ -28,7 +28,7 @@ const PaymentButton = () => {
       eventref: "fb_oea",
     });
 
-    TrackingHelper.twitter(process.env.TWITTER_INITIATE_CHECKOUT_ID, {
+    TrackingHelper.twitter(process?.env?.TWITTER_INITIATE_CHECKOUT_ID!, {
       currency: (process?.env?.CURRENCY || "").toUpperCase(),
       value: +(process?.env?.PRICE || 300),
     });
