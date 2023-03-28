@@ -6,6 +6,6 @@ export class GoogleTagHelper {
     }
 
     // @ts-ignore
-    window.gtag(name, value);
+    window.gtag('event', name, value);
   }
 }
