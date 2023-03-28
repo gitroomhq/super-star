@@ -21,44 +21,14 @@
 
 </div>
 <p>&nbsp;</p>
-<h2 align="left">What can you do here?</h1>
-<div align="left">
-  <p>I have created a course on <a href="https://github20k.com">how to get 20k GitHub stars</a></p>
-  <p>The course has a sales page, and the entire source code of the page can be found here 🚀</p>
-  <p>The course focus a little on strategies, and more about tactics.</p>
-  <p>I will show you <code>step-by-step</code> what I am actually doing.</p>
-  <p>In case you don't need the course, feel free to use this repository for your own sales page.</p>
-
-
-  <p>&nbsp;</p>
-
-## How it works
-
-<img width="515" alt="image" src="https://user-images.githubusercontent.com/100117126/227772309-8612c369-abf0-4880-bdad-ad2eab602100.png">
-
-<p>The website was created using NextJS and Tailwind.</p>
-<p>When you click on the checkout button, you will be taken to a a checkout out (default to Stripe).</p>
-<p> After you complete the checkout process, the payment gateway will send a webhook to a special NextJS route (/api/purchase)</p>
-<p>On this route, the purchaser is added to:</p>
-
-- The newsletter (default to MailChimp)
-- The course (default to Teachable) 
-- The CRM (default to Pipedrive).
-
-  <p>&nbsp;</p>
   
 ## Installation
 
-<p>Clone the project, copy the .env.example file to .env, and fill in the missing variables.</p>
+The entire course is open-sourced and can be used for your private projects! (MIT LICENSE) - no limits.
 
-  <p>And then run</p>
+Please check the quick installation guide here:
 
-  ```bash
-  npm install
-  npm run dev
-  ```
-
-  <p>&nbsp;</p>
+https://docs.github20k.com
   
 ## Available Providers
 
