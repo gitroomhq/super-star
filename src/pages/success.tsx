@@ -26,7 +26,7 @@ export default function Success() {
       value: +(process?.env?.PRICE || 300),
     });
 
-    TrackingHelper.twitter(process.env.TWITTER_PURCHASE_ID, {
+    TrackingHelper.twitter(process?.env?.TWITTER_PURCHASE_ID!, {
       currency: (process?.env?.CURRENCY || "").toUpperCase(),
       value: +(process?.env?.PRICE || 300),
     });
