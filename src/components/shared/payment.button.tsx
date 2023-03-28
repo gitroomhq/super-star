@@ -11,11 +11,12 @@ const PaymentButton = () => {
     } = await axios.get("/api/payment");
 
     GoogleTagHelper.event("begin_checkout", {
-      currency: (process?.env?.CURRENCY || '').toUpperCase(),
+      currency: (process?.env?.CURRENCY || "").toUpperCase(),
       value: +(process?.env?.PRICE || 300),
       items: [
         {
           item_name: process.env.COURSE_NAME! + " course",
+          price: +(process?.env?.PRICE || 300),
         },
       ],
     });

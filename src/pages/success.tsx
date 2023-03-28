@@ -13,6 +13,7 @@ export default function Success() {
       items: [
         {
           item_name: process?.env?.COURSE_NAME + " course",
+          price: +(process?.env?.PRICE || 300),
         },
       ],
     });
