@@ -7,6 +7,7 @@ const nextConfig = {
     COURSE_NAME: process.env.COURSE_NAME,
     CURRENCY: process.env.CURRENCY,
     PRICE: process.env.PRICE,
+    FACEBOOK_PIXEL: process.env.FACEBOOK_PIXEL,
   },
 };
 

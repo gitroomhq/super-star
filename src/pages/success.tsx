@@ -1,14 +1,14 @@
 import { useEffect } from "react";
-import { GoogleTagHelper } from "@github20k/helpers/google.tag.helper";
+import { TrackingHelper } from "@github20k/helpers/tracking.helper";
 import { useRouter } from "next/router";
 import { makeid } from "@github20k/helpers/makeid";
 
 export default function Success() {
   const router = useRouter();
   useEffect(() => {
-    GoogleTagHelper.event("purchase", {
+    TrackingHelper.gtag("purchase", {
       transaction_id: String(router?.query?.session_id || makeid(10)),
-      currency: (process?.env?.CURRENCY || '').toUpperCase(),
+      currency: (process?.env?.CURRENCY || "").toUpperCase(),
       value: +(process?.env?.PRICE || 300),
       items: [
         {
@@ -17,6 +17,15 @@ export default function Success() {
         },
       ],
     });
+
+    TrackingHelper.facebook("Purchase", {
+      content_ids: [TrackingHelper.getUniqueId()],
+      eventref: 'fb_oea',
+      num_items: 1,
+      currency: (process?.env?.CURRENCY || "").toUpperCase(),
+      value: +(process?.env?.PRICE || 300),
+    });
+
   }, []);
   return <></>;
 }
