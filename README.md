@@ -8,6 +8,9 @@
   <a href="https://docs.github20k.com" target="_blank">
       <img alt="Docs" height="20" src="https://user-images.githubusercontent.com/100117126/228219809-26349cfa-de50-4a7e-8528-741730a9f786.png" />
   </a>
+  <a href="https://github-20k.getrewardful.com" target="_blank">
+      <img alt="Affiliate" height="20" src="https://user-images.githubusercontent.com/100117126/228555730-e210ec6d-5922-4e77-ac64-d05942cc3ade.png" />
+  </a>
 </p>
 
 <div align="center">
