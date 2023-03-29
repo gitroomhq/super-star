@@ -20,13 +20,21 @@ export default function Success() {
 
     TrackingHelper.facebook("Purchase", {
       content_ids: [TrackingHelper.getUniqueId()],
-      eventref: 'fb_oea',
+      eventref: "fb_oea",
       num_items: 1,
       currency: (process?.env?.CURRENCY || "").toUpperCase(),
       value: +(process?.env?.PRICE || 300),
     });
 
     TrackingHelper.twitter(process?.env?.TWITTER_PURCHASE_ID!, {
+      currency: (process?.env?.CURRENCY || "").toUpperCase(),
+      value: +(process?.env?.PRICE || 300),
+    });
+
+    TrackingHelper.segment("purchase", {
+      content_ids: [TrackingHelper.getUniqueId()],
+      eventref: "fb_oea",
+      num_items: 1,
       currency: (process?.env?.CURRENCY || "").toUpperCase(),
       value: +(process?.env?.PRICE || 300),
     });

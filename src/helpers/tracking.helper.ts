@@ -43,4 +43,13 @@ export class TrackingHelper {
     // @ts-ignore
     window?.twq("event", name, value);
   }
+
+  static segment(name: string, value: any) {
+    if (!process.env.SEGMENT_ID || typeof window === "undefined") {
+      return;
+    }
+
+    // @ts-ignore
+    window?.analytics?.track(name, value);
+  }
 }
