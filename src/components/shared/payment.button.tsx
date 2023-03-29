@@ -6,12 +6,7 @@ const PaymentButton = () => {
   const [loading, setLoading] = useState(false);
   const onClick = useCallback(async () => {
     // @ts-ignore
-    const affiliate =
-      typeof window === "undefined" ||
-      !process.env.REWARDFUL_ID ||
-      !window?.Rewardful?.referral
-        ? ""
-        : `?affiliate=${window.Rewardful.referral}`;
+    const affiliate = typeof window === "undefined" || !process.env.REWARDFUL_ID || !window?.Rewardful?.referral ? "" : `?affiliate=${window.Rewardful.referral}`;
     setLoading(true);
     const {
       data: { url },
