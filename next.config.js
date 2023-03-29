@@ -13,6 +13,7 @@ const nextConfig = {
     TWITTER_PIXEL: process.env.TWITTER_PIXEL,
     TWITTER_PURCHASE_ID: process.env.TWITTER_PURCHASE_ID,
     TWITTER_INITIATE_CHECKOUT_ID: process.env.TWITTER_INITIATE_CHECKOUT_ID,
+    SEGMENT_ID: process.env.SEGMENT_ID,
   },
 };
 
