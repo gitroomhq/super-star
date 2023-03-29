@@ -33,6 +33,12 @@ const PaymentButton = () => {
       value: +(process?.env?.PRICE || 300),
     });
 
+    TrackingHelper.reddit('AddToCart', {
+      currency: (process?.env?.CURRENCY || "").toUpperCase(),
+      value: +(process?.env?.PRICE || 300),
+      itemCount: 1
+    });
+
     TrackingHelper.segment('initiateCheckout', {
       content_ids: [TrackingHelper.getUniqueId()],
       eventref: "fb_oea",

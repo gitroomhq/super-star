@@ -52,4 +52,13 @@ export class TrackingHelper {
     // @ts-ignore
     window?.analytics?.track(name, value);
   }
+
+  static reddit(name: string, value: any) {
+    if (!process.env.REDDIT_PIXEL || typeof window === "undefined") {
+      return;
+    }
+
+    // @ts-ignore
+    window?.rdt('track', name, value);
+  }
 }

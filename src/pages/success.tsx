@@ -38,6 +38,13 @@ export default function Success() {
       currency: (process?.env?.CURRENCY || "").toUpperCase(),
       value: +(process?.env?.PRICE || 300),
     });
+
+    TrackingHelper.reddit('Purchase', {
+      currency: (process?.env?.CURRENCY || "").toUpperCase(),
+      value: +(process?.env?.PRICE || 300),
+      itemCount: 1,
+      transactionId: String(router?.query?.session_id || makeid(10))
+    });
   }, []);
   return <></>;
 }

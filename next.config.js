@@ -14,6 +14,7 @@ const nextConfig = {
     TWITTER_PURCHASE_ID: process.env.TWITTER_PURCHASE_ID,
     TWITTER_INITIATE_CHECKOUT_ID: process.env.TWITTER_INITIATE_CHECKOUT_ID,
     SEGMENT_ID: process.env.SEGMENT_ID,
+    REDDIT_PIXEL: process.env.REDDIT_PIXEL,
   },
 };
 
