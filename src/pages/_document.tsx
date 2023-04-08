@@ -4,9 +4,7 @@ import Script from "next/script";
 export default function Document() {
   return (
     <Html lang="en">
-      <Head>
-          <title>{process.env.COURSE_NAME}</title>
-      </Head>
+      <Head />
       <body>
         <Main />
         <NextScript />

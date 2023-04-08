@@ -15,7 +15,31 @@ const nextConfig = {
     TWITTER_INITIATE_CHECKOUT_ID: process.env.TWITTER_INITIATE_CHECKOUT_ID,
     SEGMENT_ID: process.env.SEGMENT_ID,
     REDDIT_PIXEL: process.env.REDDIT_PIXEL,
+    GITHUB_REPO: process.env.GITHUB_REPO,
   },
+  redirects() {
+    if (process?.env?.BLOG_SERVICE === 'wordpress') {
+      return [
+        {
+          source: '/wp-admin',
+          destination: process.env.BLOG_PATH + '/wp-admin',
+          permanent: false,
+        }
+      ]
+    }
+    return [];
+  },
+  rewrites() {
+    if (process?.env?.BLOG_SERVICE === 'wordpress') {
+      return [
+        {
+          source: '/wp-content/:path*',
+          destination: process.env.BLOG_PATH + '/wp-content/:path*'
+        }
+      ]
+    }
+    return [];
+  }
 };
 
 module.exports = nextConfig;
