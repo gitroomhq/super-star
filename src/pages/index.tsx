@@ -5,7 +5,7 @@ export default function Home(props: { stargazers_count: number }) {
   return <HomeComponent stargazers_count={props.stargazers_count} />;
 }
 
-export async function getStaticProps(context) {
+export async function getStaticProps() {
   return {
     props: {
       ...(await getGithubStars()),
