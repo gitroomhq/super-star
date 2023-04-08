@@ -1,7 +1,7 @@
 import axios, { CreateAxiosDefaults } from "axios";
 import { AbstractServicesService } from "@github20k/services/abstract.services.service";
 import { object, string } from "yup";
-import { BlogInterface } from "@github20k/services/blog/blog.interface";
+import {BlogInterface, Details} from "@github20k/services/blog/blog.interface";
 import { stripHtml } from "string-strip-html";
 
 export interface Root {
@@ -159,7 +159,7 @@ export class WordpressService
 
   providerName = "Wordpress";
 
-  async getPost(slug: string) {
+  async getPost(slug: string): Promise<Details> {
     const l: Root[] = (await wordpress.get(`/wp-json/wp/v2/posts?slug=${slug}`))
       .data;
 
@@ -173,7 +173,7 @@ export class WordpressService
     }
   }
 
-  async getAuthor(id: number) {
+  async getAuthor(id: number): Promise<{name: string, picture: string}> {
     if (WordpressService.authors[id]) {
       return WordpressService.authors[id];
     }
@@ -187,7 +187,7 @@ export class WordpressService
     return WordpressService.authors[id];
   }
 
-  async getFeaturedImage(id: number) {
+  async getFeaturedImage(id: number): Promise<string> {
     if (!id) {
       return "";
     }
@@ -202,7 +202,7 @@ export class WordpressService
     return WordpressService.featuredImage[id];
   }
 
-  async getPostList(page = 1) {
+  async getPostList(page = 1): Promise<Details[]> {
     const list: Root[] = (
       await wordpress.get(`/wp-json/wp/v2/posts?page=${page}&per_page=100`)
     ).data;
