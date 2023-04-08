@@ -21,5 +21,6 @@ export async function getStaticProps(props: { params: { slug: string } }) {
       ...(await getGithubStars()),
       blog: await blogService.getPost(props.params.slug),
     }, // will be passed to the page component as props
+    revalidate: 3600
   };
 }
