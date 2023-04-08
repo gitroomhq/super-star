@@ -7,6 +7,15 @@ export default function Index({ stargazers_count, blog }) {
 }
 
 export async function getStaticProps(context) {
+  if (!process.env.BLOG_SERVICE) {
+    return {
+      redirect: {
+        destination: '/',
+        permanent: true,
+      },
+    }
+  }
+
   return {
     props: {
       ...(await getGithubStars()),

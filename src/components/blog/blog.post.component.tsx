@@ -2,11 +2,7 @@ import { FC } from "react";
 import { BlogLayout } from "@github20k/components/blog/blog.layout";
 import Link from "next/link";
 import { Details } from "@github20k/services/blog/blog.interface";
-import ReactHtmlParser, {
-  processNodes,
-  convertNodeToElement,
-  htmlparser2,
-} from "react-html-parser";
+import ReactHtmlParser from "react-html-parser";
 import Head from "next/head";
 
 export const BlogPostComponent: FC<{
@@ -17,7 +13,7 @@ export const BlogPostComponent: FC<{
 
   return (
     <>
-      {blog?.seo ? <Head>{ReactHtmlParser(blog?.seo)}</Head> : ""}
+      {blog?.seo ? <Head>{ReactHtmlParser(blog?.seo!)}</Head> : ""}
       <BlogLayout stargazers_count={stargazers_count} image={blog.picture}>
         <div className="flex items-center mb-4">
           <Link href="/blog" className="text-white hover:underline">
