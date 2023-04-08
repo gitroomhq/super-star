@@ -15,11 +15,11 @@ export async function getStaticPaths() {
   };
 }
 
-export async function getStaticProps({ params: { slug } }) {
+export async function getStaticProps(props: { params: { slug: string } }) {
   return {
     props: {
       ...(await getGithubStars()),
-      blog: await blogService.getPost(slug),
+      blog: await blogService.getPost(props.params.slug),
     }, // will be passed to the page component as props
   };
 }

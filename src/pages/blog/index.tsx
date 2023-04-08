@@ -7,7 +7,7 @@ export default function Index(props: { stargazers_count: number, blog: Details[]
   return <BlogComponent stargazers_count={props.stargazers_count} blog={props.blog} />;
 }
 
-export async function getStaticProps(context) {
+export async function getStaticProps() {
   if (!process.env.BLOG_SERVICE) {
     return {
       redirect: {
