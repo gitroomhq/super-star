@@ -10,7 +10,7 @@ export default function Index(props: { stargazers_count: number, blog: Details }
 export async function getStaticPaths() {
   const load = await blogService.getPostList();
   return {
-    paths: load.map((p) => ({ params: { slug: p.slug } })),
+    paths: load.map((p: Details) => ({ params: { slug: p.slug } })),
     fallback: false,
   };
 }
