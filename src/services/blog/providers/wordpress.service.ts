@@ -133,11 +133,11 @@ const wordpress = axios.create({
   baseURL: process?.env?.BLOG_PATH!,
   transformResponse: [
       function (data) {
-        const findPath = new URL(process.env.BLOG_PATH)?.host! as string;
-        const replacePath = new URL(process.env.COURSE_URL)?.host! as string;
+        const findPath = new URL(process.env.BLOG_PATH!)?.host! as string;
+        const replacePath = new URL(process.env.COURSE_URL!)?.host! as string;
 
-        const findProtocol = new URL(process.env.BLOG_PATH)?.protocol! as string;
-        const replaceProtocol = new URL(process.env.COURSE_URL)?.protocol! as string;
+        const findProtocol = new URL(process.env.BLOG_PATH!)?.protocol! as string;
+        const replaceProtocol = new URL(process.env.COURSE_URL!)?.protocol! as string;
 
         const regEx = new RegExp(findPath, 'gi');
         const regEx2 = new RegExp(findProtocol, 'gi');
