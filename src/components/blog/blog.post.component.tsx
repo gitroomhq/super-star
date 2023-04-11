@@ -34,7 +34,7 @@ export const BlogPostComponent: FC<{
           </div>
         </div>
         <div
-          className="prose max-w-none"
+          className="prose max-w-none blog-container"
           dangerouslySetInnerHTML={{ __html: blog.description }}
         />
       </BlogLayout>

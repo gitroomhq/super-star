@@ -10,7 +10,6 @@ export default function Index(props: {
   blog: Details[];
 }) {
   const router = useRouter();
-
   useEffect(() => {
     if (!props.blog) {
       router.push("/");

@@ -10,7 +10,7 @@ export class EmptyBlogService
     BLOG_PATH: string().required(),
   });
 
-  providerName = "Wordpress";
+  providerName = "empty";
 
   async getPost(slug: string) {
     return {
