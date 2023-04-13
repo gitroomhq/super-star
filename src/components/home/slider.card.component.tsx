@@ -8,8 +8,8 @@ const SliderCardComponent = ({
       picture: string;
     };
     name: string;
-    title: string;
-    text: string;
+    title: any;
+    text: any;
     background: {
       picture: string;
     };
