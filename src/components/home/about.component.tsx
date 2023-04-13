@@ -4,7 +4,7 @@ import {mainPageDetails} from "@github20k/helpers/main.page.details";
 const AboutComponent = () => {
   return (
     <div className='relative max-w-base mx-auto z-20 px-6 -mt-52 lg:mt-0 lg:py-16 xl:py-32'>
-      <div className='bg-about border border-brand-yellow rounded-t-3xl pt-12 md:pb-11'>
+      <div className='bg-about-o lg:bg-transparent bg-about border border-brand-yellow rounded-t-3xl pt-12 md:pb-11'>
         <RecSvg />
 
         <div className='flex flex-col lg:flex-row justify-center items-center md:gap-10 px-7 md:px-10 xl:px-28'>

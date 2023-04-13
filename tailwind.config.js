@@ -18,9 +18,9 @@ module.exports = {
             light: '#E968A8',
           },
           white: {
-            primary: '#FFF0F5',
-            medium: '#FFEEFC',
-            light: '#E1DCFF',
+            primary: '#fff',
+            medium: '#fff',
+            light: '#fff',
           },
           yellow: {
             DEFAULT: '#CD9C83',
@@ -30,11 +30,13 @@ module.exports = {
       maxWidth: {
         base: '99.625rem',
       },
+      backgroundColor: {
+        'about-o': 'rgb(14 6 65 / 0.7)'
+      },
       backgroundImage: {
         'hero-lg': 'url(/assets/hero-lg.webp)',
         'hero-sm': 'url(/assets/hero-sm.webp)',
         'about-bg': 'url(/assets/bg/testimonial-bg.webp)',
-        'stars-bg': 'url(/assets/bg/stars-course.webp)',
         'stars-bg': 'url(/assets/bg/stars-course.webp)',
         'personal-bg': 'url(/assets/bg/personal-meeting.webp)',
         'recording-left-bg': 'url(/assets/bg/recording-left.webp)',

@@ -12,7 +12,16 @@ export const mainPageDetails = {
         <br />
       </>
     ),
-    description: `Learn how to gain 20k GitHub stars in a year, boosting your library's credibility, increasing metrics, and attracting regular attention.`,
+    description: (
+      <>
+        Learn how to gain{" "}
+        <span className="text-brand-main-medium bg-brand-plum-light">
+          20k GitHub stars
+        </span>{" "}
+        in a year, boosting your library{"'"}s credibility, increasing metrics, and
+        attracting regular attention.
+      </>
+    ),
     myName: "Nevo David",
     profileDescription: (
       <>
@@ -28,21 +37,23 @@ export const mainPageDetails = {
     title: "My Story",
     text: (
       <>
-        I{"'"}ve been a developer for a long time, working in various companies.
-        Four years ago, I started my own startup and built and sold it
-        single-handedly, which was extremely challenging.
-        <br />
-        Since then, I joined Novu with one goal in mind - to gain traction and
-        achieve Product Market Fit. In my previous startup, I did
-        straightforward marketing, selling services to Marketing and Sales
+        I{"'"}ve been a developer for a long time, working in various companies.<br />
+        Four years ago, I started my own startup, built and sold it<br />
+        single-handedly, which was extremely challenging.<br /><br />
+        Since then, I joined Novu with one goal in mind - <span className="text-brand-main-medium bg-brand-plum-light">to gain traction and
+          achieve Product Market Fit.</span> <br />
+        In my previous startup, as a one-man-show, I did
+        straightforward marketing: selling services to Marketing and Sales
         professionals who are not the most sophisticated personas.
-        <br />
-        However, at Novu, I started working with Developers, and it was
-        different. Developers don{"'"}t tolerate nonsense, and marketing to them
+        <br /><br />
+        However, it all changed when I joined Novu.<br />
+        Developers don{"'"}t tolerate nonsense, and marketing to them
         requires a completely different approach.
+        <br /><br />
+          When I tried to search for <span className="text-brand-main-medium bg-brand-plum-light">{'"'}How to market to developers{'"'}</span> on
+        Google, I found no results.
         <br />
-        When I tried to search for {'"'}How to market to developers{'"'} on
-        Google, I found zero results. So, I had to figure it out on my own over
+        So, I had to figure it out on my own over
         the course of a year, and I developed practical tactics, not just
         theoretical ones.
         <br />
@@ -72,17 +83,17 @@ export const mainPageDetails = {
       "Learn how to boost your open-source project's visibility and growth with proven strategies. From trending on GitHub to leveraging Reddit and DEV.to, using influencers, creating custom events, writing converting marketing materials, and mastering the call to action, this course covers it all. You'll also learn effective communication with developers, finding content writers, and utilizing community-building tools like badges and certificates",
   },
   section2: {
-    title: "Bonus: Video about your library",
+    title: "ALSO: Video about your library",
     description:
       "I will create a concise video about your library and upload it to my YouTube channel. Please be aware that I am only able to provide technical explanations using JS and PHP. If the library is in a different programming language, I may provide a more generalized overview.",
   },
   section3: {
-    title: "Bonus: Personal meeting",
+    title: "ALSO: Personal meeting",
     description:
       "Get guidance on how to boost your GitHub with a 1-hour call with me. We'll dive into your GitHub library, analyze its strengths and weaknesses, and craft a customized funnel strategy to help you reach your goal of 20k stars.",
   },
   section4: {
-    title: "Bonus: Technical Content Writers Slack Group",
+    title: "ALSO: Technical Content Writers Slack Group",
     description:
       "Finding content writers who are both technical and capable of writing marketing content can be difficult. However, I have managed to identify and add the top 1% of content writers to a Slack Group over the year.",
   },
@@ -93,13 +104,13 @@ export const mainPageDetails = {
         title: "The 20K Stars course",
       },
       {
-        title: "Bonus: Video about your library",
+        title: "Video about your library",
       },
       {
-        title: "Bonus: Personal Meeting",
+        title: "Personal Meeting",
       },
       {
-        title: "Bonus: Technical content writers Slack group",
+        title: "Technical content writers Slack group",
       },
     ],
     underPrice: {
@@ -145,7 +156,7 @@ export const mainPageDetails = {
     },
     {
       title:
-        "I have a non open-source product (an SDK / Tech Product) can I use your course to grow it to 20k stars.",
+        "Can your course help my closed-source SDK/tech product reach 20k stars?",
       description:
         "While you might be able to gain a decent number of stars, it may not be sustainable for long-term growth within the community. Here's a helpful trick: you don't necessarily have to open-source your existing product. Instead, you can create an additional open-source library. A great example of this approach is builder.io with Quik.",
     },
@@ -160,7 +171,7 @@ export const mainPageDetails = {
         "If you have completed the course and find that it's not delivering the expected results, you can request a refund within 14 days with no questions asked. Your money will be returned to you.",
     },
     {
-      title: "I am not a funded company, will it work for me?",
+      title: "I am not a funded company / I have low resources, will it work for me?",
       description:
         "Absolutely! The course provides strategies that can help you delegate tasks, However, If you prefer to do everything on your own, that's also possible. As an example, I am the only marketing person at Novu.",
     },

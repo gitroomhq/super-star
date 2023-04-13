@@ -33,7 +33,7 @@ const FaqComponent = () => {
                         <span
                           className={`${
                             open ? "bg-span-open" : "bg-span"
-                          } w-8 h-8 md:w-10 md:h-10 xl:w-14 xl:h-14 rounded-full flex items-center justify-center font-semibold xl:text-2xl`}
+                          } shrink-0 w-8 h-8 md:w-10 md:h-10 xl:w-14 xl:h-14 rounded-full flex items-center justify-center font-semibold xl:text-2xl`}
                         >
                           {idx + 1}
                         </span>
