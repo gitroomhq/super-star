@@ -18,7 +18,7 @@ export const mainPageDetails = {
         <span className="text-brand-main-medium bg-brand-plum-light">
           20k GitHub stars
         </span>{" "}
-        in a year, boosting your library{"'"}s credibility, increasing metrics,
+        in a year, boosting your library credibility, increasing metrics,
         and attracting regular attention.
       </>
     ),
