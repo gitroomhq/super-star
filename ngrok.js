@@ -16,7 +16,7 @@ config();
               region: process.env.NGROK_REGION, // one of ngrok regions (us, eu, au, ap, sa, jp, in), defaults to us
             }
           : process.env.NGROK_SUBDOMAIN
-          ? { subdomain: process.env.NGROK_SUBDOMAIN }
+          ? { addr: 3000, subdomain: process.env.NGROK_SUBDOMAIN }
           : {}
       );
 

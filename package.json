@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "npx ts-node env.check.ts && concurrently \"node ngrok.js\" \"next dev\"",
     "build": "npx ts-node env.check.ts && next build",
+    "postbuild": "next-sitemap",
     "start": "npx ts-node env.check.ts && next start",
     "lint": "npx ts-node env.check.ts && next lint"
   },
@@ -26,6 +27,7 @@
     "module": "^1.2.5",
     "next": "13.2.4",
     "next-seo": "^6.0.0",
+    "next-sitemap": "^4.0.7",
     "numeral": "^2.0.6",
     "path": "^0.12.7",
     "react": "18.2.0",
