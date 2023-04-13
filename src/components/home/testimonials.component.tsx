@@ -13,7 +13,7 @@ const TestimonialsComponent = () => {
     <div className='relative pb-12 pt-20 lg:pt-10 lg:pb-20 xl:pt-0 xl:pb-36'>
       <div className='mb-16 lg:mb-20 xl:mb-24'>
         <h3 className='font-home-baukasten text-brand-white-primary font-medium text-center text-3xl lg:text-4xl uppercase mb-1 lg:mb-3.5'>
-          What people say about me
+          What people say<br />about me
         </h3>
         <HeadingBottomLineComponent className='mx-auto px-8 lg:px-3.5' />
       </div>
