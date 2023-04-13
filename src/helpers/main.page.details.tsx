@@ -1,26 +1,53 @@
+import Link from "next/link";
+
 export const mainPageDetails = {
   header: {
-    title: "Get you GitHub to 20k stars",
-    description: `Gain 20k GitHub stars in a year, boosting your library's credibility, increasing metrics, and attracting regular attention.`,
+    title: (
+      <>
+        GET GITHUB
+        <br />
+        <span className="inline-block bg-hero-span leading-none font-ibm-mono italic px-2 md:pr-4 lg:pr-6">
+          STARS
+        </span>
+        <br />
+      </>
+    ),
+    description: `Learn how to gain 20k GitHub stars in a year, boosting your library's credibility, increasing metrics, and attracting regular attention.`,
+    myName: "Nevo David",
     profileDescription: (
       <>
-        Experienced full-stack developer with a decade of expertise. Currently
-        at{" "}
+        Experienced full-stack developer with a decade of expertise. Working at{" "}
         <a href="https://novu.co" target="_blank">
           Novu
         </a>
-        , open-source notification infrastructure startup.
+        , the open-source notification infrastructure startup.
       </>
     ),
   },
   aboutMe: {
     title: "My Story",
-    text: `
-I've been a developer for a long time, working in various companies. Four years ago, I started my own startup and built and sold it single-handedly, which was extremely challenging.<br />
-Since then, I joined Novu with one goal in mind - to gain traction and achieve Product Market Fit. In my previous startup, I did straightforward marketing, selling services to Marketing and Sales professionals who are not the most sophisticated personas.<br />
-However, at Novu, I started working with Developers, and it was different. Developers don't tolerate nonsense, and marketing to them requires a completely different approach.<br />
-When I tried to search for "How to market to developers" on Google, I found zero results. So, I had to figure it out on my own over the course of a year, and I developed practical tactics, not just theoretical ones.<br />
-    `,
+    text: (
+      <>
+        I{"'"}ve been a developer for a long time, working in various companies.
+        Four years ago, I started my own startup and built and sold it
+        single-handedly, which was extremely challenging.
+        <br />
+        Since then, I joined Novu with one goal in mind - to gain traction and
+        achieve Product Market Fit. In my previous startup, I did
+        straightforward marketing, selling services to Marketing and Sales
+        professionals who are not the most sophisticated personas.
+        <br />
+        However, at Novu, I started working with Developers, and it was
+        different. Developers don{"'"}t tolerate nonsense, and marketing to them
+        requires a completely different approach.
+        <br />
+        When I tried to search for {'"'}How to market to developers{'"'} on
+        Google, I found zero results. So, I had to figure it out on my own over
+        the course of a year, and I developed practical tactics, not just
+        theoretical ones.
+        <br />
+      </>
+    ),
   },
   testimonials: [
     {
@@ -36,7 +63,11 @@ When I tried to search for "How to market to developers" on Google, I found zero
     },
   ],
   section1: {
-    title: "THE 20K STARS COURSE",
+    title: (
+      <>
+        The 20k <br /> Stars course
+      </>
+    ),
     description:
       "Learn how to boost your open-source project's visibility and growth with proven strategies. From trending on GitHub to leveraging Reddit and DEV.to, using influencers, creating custom events, writing converting marketing materials, and mastering the call to action, this course covers it all. You'll also learn effective communication with developers, finding content writers, and utilizing community-building tools like badges and certificates",
   },
@@ -74,8 +105,15 @@ When I tried to search for "How to market to developers" on Google, I found zero
     underPrice: {
       description: (
         <>
-          Not sure this is a safe purchase? Here is the source code of the
-          purchase area
+          <p className="text-xs md:text-lg xl:text-xl/8 font-semibold">
+            Not sure this is a safe purchase?
+          </p>
+          <Link
+            className="text-xs md:text-xl/8 text-[#E67168] underline"
+            href={`https://github.com/${process.env.GITHUB_REPO}/blob/main/src/services/payment/providers/stripe.service.ts`}
+          >
+            Here is the source code of the purchase area
+          </Link>
         </>
       ),
     },
@@ -85,8 +123,12 @@ When I tried to search for "How to market to developers" on Google, I found zero
     warrenty: (
       <>
         If it doesn{"'"}t work for you in 14 days, you will get all your money
-        back - no questions asked. So you can basically completed the entire
-        course, and ask for a refund.
+        back -{" "}
+        <span className="text-brand-main-medium bg-brand-plum-light leading-4 md:leading-normal md:my-2 inline-block">
+          no questions asked.
+        </span>
+        <br />
+        So you can basically completed the entire course, and ask for a refund.
       </>
     ),
   },
@@ -120,7 +162,7 @@ When I tried to search for "How to market to developers" on Google, I found zero
     {
       title: "I am not a funded company, will it work for me?",
       description:
-        "Absolutely! The course provides strategies that can help you delegate tasks, even if they require some investment. If you prefer to do everything on your own, that's also possible. As an example, I am the only marketing person at Novu.",
+        "Absolutely! The course provides strategies that can help you delegate tasks, However, If you prefer to do everything on your own, that's also possible. As an example, I am the only marketing person at Novu.",
     },
     {
       title: "Why the course is so expensive?",
@@ -171,8 +213,9 @@ When I tried to search for "How to market to developers" on Google, I found zero
       ),
     },
     {
-      title: "I dislike sales pages like this",
-      description: " I understand, as a programmer, I also tend to dislike sales pages. Rest assured, my course will not rely on traditional sales tactics. However in order to make it more friendly I have open-sourced it completely",
+      title: "I don't like sales pages like this",
+      description:
+        " I understand, as a programmer, I also tend to dislike sales pages. Rest assured, my course will not rely on traditional sales tactics. However in order to make it more friendly I have open-sourced it completely",
     },
   ],
 };

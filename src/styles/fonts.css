@@ -1,0 +1,15 @@
+@font-face {
+  font-family: 'HomepageBaukasten';
+  src: url('HomepageBaukasten-Book.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'HomepageBaukasten';
+  src: url('HomepageBaukasten-Bold.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}

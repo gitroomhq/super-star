@@ -1,7 +1,8 @@
+@import "fonts.css";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 :root {
   --max-width: 1100px;
   --border-radius: 12px;
@@ -116,4 +117,31 @@ a {
 .blog-container a {
   font-weight: bold;
   text-decoration: underline;
+}
+
+.blog-container ul {
+  padding-left: 30px;
+}
+.blog-container ul li {
+  list-style: disc;
+}
+
+@layer base {
+  body {
+    @apply bg-brand-main font-ibm-sans;
+  }
+}
+
+.recording-left {
+  @apply before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-recording-left-bg before:bg-no-repeat before:bg-contain;
+}
+
+.purchase-bg {
+  background: radial-gradient(
+          135.83% 323.59% at 12.06% 10.53%,
+          rgba(145, 142, 255, 0.4) 0%,
+          rgba(56, 58, 192, 0.4) 29.69%,
+          rgba(88, 29, 164, 0.4) 44.07%,
+          rgba(9, 4, 43, 0.4) 100%
+  );
 }
