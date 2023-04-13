@@ -33,9 +33,9 @@ const HomeComponent: FC<{ stargazers_count: number }> = (props) => {
         description={description}
         canonical={process.env.COURSE_URL}
         openGraph={{
-          url: "https://www.url.ie/a",
+          url: process.env.COURSE_URL,
           title: process.env.COURSE_NAME,
-          description: "Open Graph Description",
+          description: description,
           images: [
             {
               url: process.env.COURSE_URL + '/og-image.png',
