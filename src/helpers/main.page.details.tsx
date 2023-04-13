@@ -34,7 +34,7 @@ export const mainPageDetails = {
     ),
   },
   aboutMe: {
-    title: "My Story",
+    title: "Why this course?",
     text: (
       <>
         I{"'"}ve been a developer for a long time, working in various companies.
