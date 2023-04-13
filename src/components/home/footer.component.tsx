@@ -19,6 +19,9 @@ const FooterComponent = () => {
         </div>
 
         <div className="flex justify-center flex-col md:flex-row gap-6 md:gap-x-16 items-center text-brand-white-primary font-medium text-lg/7 mb-16">
+          <Link className="hover:text-brand-plum-primary" href="/">
+            Home
+          </Link>
           <Link className="hover:text-brand-plum-primary" href="/blog">
             Blog
           </Link>
@@ -34,7 +37,7 @@ const FooterComponent = () => {
             Terms of service
           </Link>
           <Link className="hover:text-brand-plum-primary" href="/">
-            Privacy
+            Privacy Policy
           </Link>
         </div>
 

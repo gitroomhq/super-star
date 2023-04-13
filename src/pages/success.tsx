@@ -2,8 +2,11 @@ import { useEffect } from "react";
 import { TrackingHelper } from "@github20k/helpers/tracking.helper";
 import { useRouter } from "next/router";
 import { makeid } from "@github20k/helpers/makeid";
+import SuccessComponent from "@github20k/components/home/success.component";
+import {getGithubStars} from "@github20k/helpers/get.github.stars";
 
-export default function Success() {
+export default function Success(props: { stargazers_count: number }) {
+  const { stargazers_count } = props;
   const router = useRouter();
   useEffect(() => {
     TrackingHelper.gtag("purchase", {
@@ -46,5 +49,13 @@ export default function Success() {
       transactionId: String(router?.query?.session_id || makeid(10))
     });
   }, []);
-  return <></>;
+  return <SuccessComponent stargazers_count={stargazers_count} />;
+}
+
+export async function getStaticProps() {
+  return {
+    props: {
+      ...(await getGithubStars()),
+    }, // will be passed to the page component as props
+  };
 }
