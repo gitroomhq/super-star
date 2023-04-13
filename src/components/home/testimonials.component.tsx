@@ -6,6 +6,7 @@ import 'swiper/css/pagination';
 import { FreeMode, Navigation } from 'swiper';
 import HeadingBottomLineComponent from "@github20k/components/home/heading.bottom.line.component";
 import SliderCardComponent from "@github20k/components/home/slider.card.component";
+import {mainPageDetails} from "@github20k/helpers/main.page.details";
 
 const TestimonialsComponent = () => {
   return (
@@ -20,8 +21,8 @@ const TestimonialsComponent = () => {
         <Slider />
       </div>
       <div className='md:hidden grid md:grid-cols-2 gap-6 px-6 '>
-        {[...Array(3)].map((item, idx) => (
-          <SliderCardComponent key={idx} item={idx} />
+        {mainPageDetails.testimonials.map((item, idx) => (
+          <SliderCardComponent key={idx} item={item!} />
         ))}
       </div>
     </div>
@@ -53,14 +54,14 @@ function Slider() {
           }}
           modules={[FreeMode, Navigation]}
           className='pb-1'>
-          {[...Array(4)].map((item, idx) => (
+          {mainPageDetails.testimonials.map((item, idx) => (
             <SwiperSlide key={idx}>
-              <SliderCardComponent item={idx} />
+              <SliderCardComponent item={item!} />
             </SwiperSlide>
           ))}
         </Swiper>
       </div>
-      <div className='w-full hidden absolute top-1/2 -translate-y-1/2 left-0 md:flex items-center justify-between z-20'>
+      <div className='z-0 w-full hidden absolute top-1/2 -translate-y-1/2 left-0 md:flex items-center justify-between z-20'>
         <button
           type='button'
           className='slide-prev text-[#302861] hover:text-brand-yellow disabled:opacity-0'>

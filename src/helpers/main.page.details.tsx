@@ -18,8 +18,8 @@ export const mainPageDetails = {
         <span className="text-brand-main-medium bg-brand-plum-light">
           20k GitHub stars
         </span>{" "}
-        in a year, boosting your library{"'"}s credibility, increasing metrics, and
-        attracting regular attention.
+        in a year, boosting your library{"'"}s credibility, increasing metrics,
+        and attracting regular attention.
       </>
     ),
     myName: "Nevo David",
@@ -37,25 +37,37 @@ export const mainPageDetails = {
     title: "My Story",
     text: (
       <>
-        I{"'"}ve been a developer for a long time, working in various companies.<br />
-        Four years ago, I started my own startup, built and sold it<br />
-        single-handedly, which was extremely challenging.<br /><br />
-        Since then, I joined Novu with one goal in mind - <span className="text-brand-main-medium bg-brand-plum-light">to gain traction and
-          achieve Product Market Fit.</span> <br />
-        In my previous startup, as a one-man-show, I did
-        straightforward marketing: selling services to Marketing and Sales
-        professionals who are not the most sophisticated personas.
-        <br /><br />
-        However, it all changed when I joined Novu.<br />
-        Developers don{"'"}t tolerate nonsense, and marketing to them
-        requires a completely different approach.
-        <br /><br />
-          When I tried to search for <span className="text-brand-main-medium bg-brand-plum-light">{'"'}How to market to developers{'"'}</span> on
-        Google, I found no results.
+        I{"'"}ve been a developer for a long time, working in various companies.
         <br />
-        So, I had to figure it out on my own over
-        the course of a year, and I developed practical tactics, not just
-        theoretical ones.
+        Four years ago, I started my own startup, built and sold it
+        <br />
+        single-handedly, which was extremely challenging.
+        <br />
+        <br />
+        Since then, I joined Novu with one goal in mind -{" "}
+        <span className="text-brand-main-medium bg-brand-plum-light">
+          to gain traction and achieve Product Market Fit.
+        </span>{" "}
+        <br />
+        In my previous startup, as a one-man-show, I did straightforward
+        marketing: selling services to Marketing and Sales professionals who are
+        not the most sophisticated personas.
+        <br />
+        <br />
+        However, it all changed when I joined Novu.
+        <br />
+        Developers don{"'"}t tolerate nonsense, and marketing to them requires a
+        completely different approach.
+        <br />
+        <br />
+        When I tried to search for{" "}
+        <span className="text-brand-main-medium bg-brand-plum-light">
+          {'"'}How to market to developers{'"'}
+        </span>{" "}
+        on Google, I found no results.
+        <br />
+        So, I had to figure it out on my own over the course of a year, and I
+        developed practical tactics, not just theoretical ones.
         <br />
       </>
     ),
@@ -63,13 +75,41 @@ export const mainPageDetails = {
   testimonials: [
     {
       profile: {
-        picture: "",
+        picture:
+          "https://user-images.githubusercontent.com/100117126/231681615-825f10e9-232a-4fae-8c92-fc7d0bbc817b.png",
       },
-      name: "",
-      title: "",
-      text: "",
+      name: "Zevi Reinitz",
+      title: <>Head of Product Marketing @ <Link href="https://github.com/livecycle/preevy">Livecycle</Link></>,
+      text: "The content is clear, creative and practical, and can have an immediate impact, highly recommend to anyone looking to grow their Github library.",
       background: {
-        picture: "",
+        picture: "/assets/bg-2.png",
+      },
+    },
+    {
+      profile: {
+        picture: "https://avatars.githubusercontent.com/u/34749692",
+      },
+      name: "Teja Kummarikuntla",
+      title: (
+        <>
+          Developer Advocate @{" "}
+          <Link href="https://github.com/ToolJet/ToolJet">ToolJet</Link>
+        </>
+      ),
+      text: "Nevo's thoughts were insightful, his ideas and strategies are experimented with regular improvements towards the growth of GitHub stargazers and contributors",
+      background: {
+        picture: "/assets/bg-4.png",
+      },
+    },
+    {
+      profile: {
+        picture: "https://avatars.githubusercontent.com/u/1110414",
+      },
+      name: "Ömer Faruk Aplak",
+      title: <>CTO & Co-Founder @ <Link href="https://github.com/refinedev/refine">Refine</Link></>,
+      text: "Nevo had smart thoughts and tried out new ideas and strategies to make GitHub grow, by getting more people to star and contribute to it.",
+      background: {
+        picture: "/assets/bg-5.png",
       },
     },
   ],
@@ -171,7 +211,8 @@ export const mainPageDetails = {
         "If you have completed the course and find that it's not delivering the expected results, you can request a refund within 14 days with no questions asked. Your money will be returned to you.",
     },
     {
-      title: "I am not a funded company / I have low resources, will it work for me?",
+      title:
+        "I am not a funded company / I have low resources, will it work for me?",
       description:
         "Absolutely! The course provides strategies that can help you delegate tasks, However, If you prefer to do everything on your own, that's also possible. As an example, I am the only marketing person at Novu.",
     },
