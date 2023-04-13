@@ -12,7 +12,7 @@ const AboutComponent = () => {
             <h2 className='font-home-baukasten text-xl md:text-2xl xl:text-3xl text-brand-white-primary font-medium uppercase mb-8'>
               {mainPageDetails.aboutMe.title}
             </h2>
-            <p className='max-w-lg text-brand-white-light font-medium text-lg md:text-xl md:leading-8'>
+            <p className='text-brand-white-light font-medium text-lg md:text-xl md:leading-8'>
               {mainPageDetails.aboutMe.text}
             </p>
           </div>
