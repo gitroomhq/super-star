@@ -79,7 +79,12 @@ export const mainPageDetails = {
           "https://user-images.githubusercontent.com/100117126/231681615-825f10e9-232a-4fae-8c92-fc7d0bbc817b.png",
       },
       name: "Zevi Reinitz",
-      title: <>Head of Product Marketing @ <Link href="https://github.com/livecycle/preevy">Livecycle</Link></>,
+      title: (
+        <>
+          Head of Product Marketing @{" "}
+          <Link href="https://github.com/livecycle/preevy">Livecycle</Link>
+        </>
+      ),
       text: "The content is clear, creative and practical, and can have an immediate impact, highly recommend to anyone looking to grow their Github library.",
       background: {
         picture: "/assets/bg-2.png",
@@ -106,7 +111,12 @@ export const mainPageDetails = {
         picture: "https://avatars.githubusercontent.com/u/1110414",
       },
       name: "Ömer Faruk Aplak",
-      title: <>CTO & Co-Founder @ <Link href="https://github.com/refinedev/refine">Refine</Link></>,
+      title: (
+        <>
+          CTO & Co-Founder @{" "}
+          <Link href="https://github.com/refinedev/refine">Refine</Link>
+        </>
+      ),
       text: "Nevo had smart thoughts and tried out new ideas and strategies to make GitHub grow, by getting more people to star and contribute to it.",
       background: {
         picture: "/assets/bg-5.png",
@@ -119,23 +129,62 @@ export const mainPageDetails = {
         The 20k <br /> Stars course
       </>
     ),
-    description:
-      "Learn how to boost your open-source project's visibility and growth with proven strategies. From trending on GitHub to leveraging Reddit and DEV.to, using influencers, creating custom events, writing converting marketing materials, and mastering the call to action, this course covers it all. You'll also learn effective communication with developers, finding content writers, and utilizing community-building tools like badges and certificates",
+    description: (
+      <>
+        Learn how to boost your open-source project{"'"}s visibility and growth
+        with proven strategies.
+        <br />
+        <br />
+        From trending on GitHub to leveraging Reddit and DEV.to, using
+        influencers, creating custom events, writing converting marketing
+        materials, and mastering the call to action, this course covers it all.
+        <br />
+        <br />
+        You{"'"}ll also learn effective communication with developers, finding
+        content writers, and utilizing community-building tools like badges and
+        certificates
+      </>
+    ),
   },
   section2: {
     title: "ALSO: Video about your library",
-    description:
-      "I will create a concise video about your library and upload it to my YouTube channel. Please be aware that I am only able to provide technical explanations using JS and PHP. If the library is in a different programming language, I may provide a more generalized overview.",
+    description: (
+      <>
+        I will create a concise video about your library and upload it to my
+        YouTube channel.
+        <br />
+        <br />
+        Please be aware that I am only able to provide technical explanations
+        using JS and PHP.
+        <br />
+        <br />
+        If the library is in a different programming language, I may provide a
+        more generalized overview.
+      </>
+    ),
   },
   section3: {
     title: "ALSO: Personal meeting",
-    description:
-      "Get guidance on how to boost your GitHub with a 1-hour call with me. We'll dive into your GitHub library, analyze its strengths and weaknesses, and craft a customized funnel strategy to help you reach your goal of 20k stars.",
+    description: (
+      <>
+        Get guidance on how to boost your GitHub with a one hour call with me.
+        We{"'"}ll dive into your GitHub library, analyze its strengths and
+        weaknesses, and craft a customized funnel strategy to help you reach
+        your goal of 20k stars.
+      </>
+    ),
   },
   section4: {
     title: "ALSO: Technical Content Writers Slack Group",
-    description:
-      "Finding content writers who are both technical and capable of writing marketing content can be difficult. However, I have managed to identify and add the top 1% of content writers to a Slack Group over the year.",
+    description: (
+      <>
+        Finding content writers who are both technical and capable of writing
+        marketing content can be difficult.
+        <br /><br />
+        However, I have managed to identify and add the top 1% of content
+        writers to a Slack Group over the year.
+      </>
+    ),
   },
   payment: {
     title: "Register to the course",
