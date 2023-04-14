@@ -11,7 +11,13 @@ const NavigationComponent: FC<{ stars: number }> = (props) => {
     <header className="max-w-base w-full mx-auto px-6 absolute top-0 right-0 z-50 mt-9 xl:mt-16">
       <div className="sm:max-w-xs mx-auto md:mr-0 flex items-center bg-nav-stat-gr border border-brand-plum divide-x-2 divide-brand-plum rounded-xl p-1">
         <button className="flex-1 flex items-center justify-center gap-x-5 py-2.5 xl:py-3.5 text-brand-plum font-semibold">
-          <GithubSvg />
+          <Link
+            href={`https://github.com/${process.env.GITHUB_REPO}`}
+            target="blank"
+            className="uppercase"
+          >
+            <GithubSvg />
+          </Link>
           <Link
             href={`https://github.com/${process.env.GITHUB_REPO}`}
             target="blank"

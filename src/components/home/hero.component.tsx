@@ -6,7 +6,7 @@ const HeroComponent = () => {
     <div className="relative lg:h-screen bg-hero-sm bg-cover bg-center sm:bg-hero-lg sm:bg-cover xl:bg-contain sm:bg-[-42rem] lg:bg-center bg-no-repeat text-white pb-80 lg:pb-0">
       <div className="max-w-base mx-auto h-full lg:flex items-end justify-between px-6 pb-[3%] pt-[40%] sm:pt-[25%] md:pt-[20%] lg:pt-[12%]">
         <div className="flex flex-col h-full text-center lg:text-left">
-          <h1 className="font-home-baukasten text-brand-white-primary font-bold text-5xl !leading-[1.1] md:text-7xl xl:text-8xl md:pl-5">
+          <h1 className="text-brand-white-primary font-bold text-5xl !leading-[1.1] md:text-7xl xl:text-8xl md:pl-5">
             {mainPageDetails.header.title}
           </h1>
 

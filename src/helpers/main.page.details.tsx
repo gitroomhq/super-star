@@ -3,14 +3,15 @@ import Link from "next/link";
 export const mainPageDetails = {
   header: {
     title: (
-      <>
-        GET GITHUB
+      <span className="title-shadow-add">
+        THE GITHUB
         <br />
-        <span className="inline-block bg-hero-span leading-none font-ibm-mono italic px-2 md:pr-4 lg:pr-6">
-          STARS
+        <span className="inline-block bg-hero-span leading-none italic px-2 md:pr-4 lg:pr-6">
+          20K STARS
         </span>
         <br />
-      </>
+        COURSE
+      </span>
     ),
     description: (
       <>
@@ -18,8 +19,8 @@ export const mainPageDetails = {
         <span className="text-brand-main-medium bg-brand-plum-light">
           20k GitHub stars
         </span>{" "}
-        in a year, boosting your library credibility, increasing metrics,
-        and attracting regular attention.
+        in a year, boosting your library credibility, increasing metrics, and
+        attracting regular attention.
       </>
     ),
     myName: "Nevo David",
@@ -180,7 +181,8 @@ export const mainPageDetails = {
       <>
         Finding content writers who are both technical and capable of writing
         marketing content can be difficult.
-        <br /><br />
+        <br />
+        <br />
         However, I have managed to identify and add the top 1% of content
         writers to a Slack Group over the year.
       </>

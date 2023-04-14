@@ -162,3 +162,7 @@ a {
           rgba(9, 4, 43, 0.4) 100%
   );
 }
+
+.title-shadow-add {
+  text-shadow: 2px 2px 7px rgba(0,0,0,0.24);
+}
