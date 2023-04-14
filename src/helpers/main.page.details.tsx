@@ -27,8 +27,7 @@ export const mainPageDetails = {
     myName: "Nevo David",
     profileDescription: (
       <>
-        Experienced full-stack developer with a decade of expertise. Working at{" "}Novu
-        ,the open-source notification infrastructure startup.
+        Experienced full-stack developer with a decade of expertise. Working at{" "}Novu, the open-source notification infrastructure startup.
       </>
     ),
   },
