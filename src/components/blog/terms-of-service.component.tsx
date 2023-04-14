@@ -12,13 +12,13 @@ export const TermsOfServiceComponent: FC<{
         <div className="blog-container">
           <h1>Terms of Service</h1>
           <p>
-            Welcome to the Linvo, Inc. website (the "Site"). By accessing or
+            Welcome to the Linvo, Inc. website (the {'"'}Site{'"'}). By accessing or
             using the Site, you agree to comply with and be bound by the
-            following terms and conditions ("Terms of Service").
+            following terms and conditions ({'"'}Terms of Service{'"'}).
           </p>
           <h2>1. Course Subscription</h2>
           <p>
-            You may purchase a subscription to our "GitHub 20K" course. The
+            You may purchase a subscription to our {'"'}GitHub 20K{'"'} course. The
             subscription will grant you access to the course content for a
             limited period of time, as specified during the checkout process.
             You agree to use the course content for personal, non-commercial
@@ -31,7 +31,7 @@ export const TermsOfServiceComponent: FC<{
             products and promotions. By subscribing to our newsletter, you agree
             to receive marketing communications from us via email. You can
             unsubscribe from our newsletter at any time by clicking the
-            "unsubscribe" link in the email.
+            {'"'}unsubscribe{'"'} link in the email.
           </p>
           <h2>3. Payment</h2>
           <p>
@@ -40,7 +40,7 @@ export const TermsOfServiceComponent: FC<{
             payments are final and non-refundable, unless otherwise specified by
             law. We may use a third-party payment processor to process your
             payment, and your payment information will be subject to the
-            processor's privacy policy.
+            processor{"'"}s privacy policy.
           </p>
           <h2>4. Use of Cookies</h2>
           <p>
@@ -90,7 +90,7 @@ export const TermsOfServiceComponent: FC<{
             You agree to indemnify and hold harmless Linvo, Inc., its
             affiliates, officers, directors, employees, agents, and licensors,
             from and against any claims, liabilities, damages, losses, and
-            expenses, including without limitation reasonable attorney's fees,
+            expenses, including without limitation reasonable attorney{"'"}s fees,
             arising out of or in connection with your use of the Site, the
             course content, or your subscription to the newsletter, your
             violation of these Terms of Service, or your violation of any rights

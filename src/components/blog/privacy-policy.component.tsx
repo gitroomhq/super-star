@@ -13,12 +13,12 @@ export const PrivacyPolicyComponent: FC<{
           <h1>Privacy Policy for Linvo, Inc. - GitHub 20K Course</h1>
 
           <p>
-            At Linvo, Inc. ("Company", "we", "us", or "our"), we are committed
+            At Linvo, Inc. ({'"'}Company{'"'}, {'"'}we{'"'}, {'"'}us{'"'}, or {'"'}our{'"'}), we are committed
             to protecting the privacy and security of the personal information
             of our users. This Privacy Policy outlines how we collect, use, and
             safeguard the personal information collected on our website,
             including during the registration process for our GitHub 20K Course
-            ("Course"). By accessing or using our website, registering for the
+            ({'"'}Course{'"'}). By accessing or using our website, registering for the
             Course, and providing your personal information, you agree to the
             terms and conditions of this Privacy Policy.
           </p>
