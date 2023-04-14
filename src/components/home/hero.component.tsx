@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { mainPageDetails } from "@github20k/helpers/main.page.details";
+import Link from "next/link";
 
 const HeroComponent = () => {
   return (
@@ -17,19 +18,25 @@ const HeroComponent = () => {
         <div className="max-w-md xl:max-w-lg mx-auto pb-12 pt-40 md:pt-32">
           <div className=" bg-brand-main/70 flex items-start gap-6 rounded-lg border border-brand-yellow p-5 xl:px-8 lg:pt-9 md:pb-10">
             <div className="relative w-16 h-16 xl:w-28 xl:h-28 rounded-full shrink-0 ">
-              <Image
-                className="object-contain"
-                src="/assets/david.png"
-                fill
-                alt={mainPageDetails.header.myName}
-              />
+              <Link href={mainPageDetails.header.github} target="_blank">
+                <Image
+                  className="object-contain"
+                  src="/assets/david.png"
+                  fill
+                  alt={mainPageDetails.header.myName}
+                />
+              </Link>
             </div>
             <div className="flex-1 pt-1">
               <p className="font-home-baukasten text-brand-white-primary capitalize text-lg xl:text-2xl leading-none">
-                {mainPageDetails.header.myName}
+                <Link href={mainPageDetails.header.github} target="_blank">
+                  {mainPageDetails.header.myName} <Image className="inline-block mb-1" src="/github.svg" width="22" height="22" alt="GitHub" />
+                </Link>
               </p>
               <p className="text-sm md:text-base xl:text-lg xl:leading-6 font-medium text-brand-white-medium mt-3">
-                {mainPageDetails.header.profileDescription}
+                <Link href={mainPageDetails.header.github} target="_blank">
+                  {mainPageDetails.header.profileDescription}
+                </Link>
               </p>
             </div>
           </div>

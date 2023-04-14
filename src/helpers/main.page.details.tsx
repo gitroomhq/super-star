@@ -2,6 +2,7 @@ import Link from "next/link";
 
 export const mainPageDetails = {
   header: {
+    github: 'https://github.com/nevo-david',
     title: (
       <span className="title-shadow-add">
         THE GITHUB
@@ -26,11 +27,8 @@ export const mainPageDetails = {
     myName: "Nevo David",
     profileDescription: (
       <>
-        Experienced full-stack developer with a decade of expertise. Working at{" "}
-        <a href="https://novu.co" target="_blank">
-          Novu
-        </a>
-        , the open-source notification infrastructure startup.
+        Experienced full-stack developer with a decade of expertise. Working at{" "}Novu
+        ,the open-source notification infrastructure startup.
       </>
     ),
   },
