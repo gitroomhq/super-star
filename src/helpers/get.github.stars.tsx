@@ -4,13 +4,11 @@ import axios from "axios";
 let stargazers_count = 0;
 export const getGithubStars = async () => {
   if (stargazers_count) {
-    return stargazers_count;
+    return { stargazers_count };
   }
 
   try {
-    const {
-      data,
-    } = await axios.get(
+    const { data } = await axios.get(
       `https://api.github.com/repos/${process.env.GITHUB_REPO}`
     );
 
