@@ -3,7 +3,7 @@ import Link from "next/link";
 import PurchaseButtonComponent from "@github20k/components/home/purchase.button.component";
 import { FC } from "react";
 
-const FooterComponent: FC<{ hidePurchase: boolean }> = (props) => {
+const FooterComponent: FC<{ hidePurchase?: boolean }> = (props) => {
   const { hidePurchase } = props;
   return (
     <footer className="bg-footer">
