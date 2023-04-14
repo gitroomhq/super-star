@@ -127,6 +127,22 @@ a {
   list-style: disc;
 }
 
+.blog-container h1 {
+  font-size: 40px;
+  font-weight: bold;
+  margin: 20px 0;
+}
+.blog-container h2 {
+  font-size: 30px;
+  font-weight: bold;
+  margin: 20px 0;
+}
+.blog-container img {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  max-width: 100%;
+}
+
 @layer base {
   body {
     @apply bg-brand-main font-ibm-sans;

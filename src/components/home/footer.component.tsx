@@ -1,8 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import PurchaseButtonComponent from "@github20k/components/home/purchase.button.component";
+import { FC } from "react";
 
-const FooterComponent = () => {
+const FooterComponent: FC<{ hidePurchase: boolean }> = (props) => {
+  const { hidePurchase } = props;
   return (
     <footer className="bg-footer">
       <div className="max-w-base mx-auto px-6 flex flex-col items-center justify-center py-12 md:pt-16 lg:pt-24 ">
@@ -14,9 +16,11 @@ const FooterComponent = () => {
             alt="alt"
           />
         </div>
-        <div className="max-w-sm xl:max-w-3xl w-full rounded-xl overflow-hidden relative mb-12 md:mb-16">
-          <PurchaseButtonComponent />
-        </div>
+        {!hidePurchase && (
+          <div className="max-w-sm xl:max-w-3xl w-full rounded-xl overflow-hidden relative mb-12 md:mb-16">
+            <PurchaseButtonComponent />
+          </div>
+        )}
 
         <div className="flex justify-center flex-col md:flex-row gap-6 md:gap-x-16 items-center text-brand-white-primary font-medium text-lg/7 mb-16">
           <Link className="hover:text-brand-plum-primary" href="/">
@@ -33,10 +37,10 @@ const FooterComponent = () => {
             <LinkSvg />
             <span>Affiliate link</span>
           </Link>
-          <Link className="hover:text-brand-plum-primary" href="/">
+          <Link className="hover:text-brand-plum-primary" href="/terms-of-service">
             Terms of service
           </Link>
-          <Link className="hover:text-brand-plum-primary" href="/">
+          <Link className="hover:text-brand-plum-primary" href="/privacy-policy">
             Privacy Policy
           </Link>
         </div>
