@@ -8,7 +8,7 @@ export const mainPageDetails = {
         THE GITHUB
         <br />
         <span className="inline-block bg-hero-span leading-none italic px-2 md:pr-4 lg:pr-6">
-          20K STARS
+          GROWTH
         </span>
         <br />
         COURSE
@@ -18,9 +18,8 @@ export const mainPageDetails = {
       <>
         Learn how to gain{" "}
         <span className="text-brand-main-medium bg-brand-plum-light">
-          20k GitHub stars
-        </span>{" "}
-        in a year, boosting your library credibility, increasing metrics, and
+          a major GitHub library growth
+        </span>{" "}, boosting your library credibility, increasing metrics, and
         attracting regular attention.
       </>
     ),
