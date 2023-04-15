@@ -13,7 +13,7 @@
   </a>
 </p>
 
-<p align="center">The open-source course sales page build with NextJS and Tailwind</p>
+<p align="center">The open-source course sales page built with NextJS and Tailwind</p>
 
 ## Super-Star
 
