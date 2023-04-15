@@ -1,5 +1,5 @@
 ![top](https://user-images.githubusercontent.com/100117126/226394199-4072d339-5841-47b1-acab-2d2906c78d96.png)
-<h1 align="center"><a href="https://github20k.com">GitHub 20K</a> - Resources to grow your repository ⭐️✨</h1>
+<h1 align="center"><a href="https://github20k.com">GitHub 20K</a> - Super-Star ⭐️✨</h1>
 
 <p align="center">
   <a href="https://opensource.org/licenses/MIT" target="_blank">
@@ -13,26 +13,22 @@
   </a>
 </p>
 
-<div align="center">
+<p align="center">The open-source course sales page built with NextJS and Tailwind</p>
 
-### Your repository might be great, so let's share it with everybody!
+## Super-Star
 
-#### In one year, I have managed to grow [Novu](https://github.com/novuhq/novu/) to `20,000` GitHub stars.
+What can you find here:
+- A beautiful sales page for selling your course.
+- Integration with payment providers.
+- Integration with newsletter providers.
+- Integration with CRM providers.
+- Integration with Courses providers.
+- Integration with CMSs for blogs.
 
-##### It's not pure luck, I have managed to tackle multiple subjects such as:
 
-
-| <p align="left">🏅 Perfecting the GitHub README file</p> <p align="left">🏅 Attracting contributors for your repository</p> <p align="left">🏅 Getting content writers to write about you</p> <p align="left">🏅 Appearing on [GitHub trending feed](https://github.com/trending) multiple times</p>  <p align="left">🏅 Getting trending articles every week on [DEV.to](https://dev.to/nevodavid)</p>  <p align="left">🏅 Constant Reddit growth</p>  <p align="left">🏅 Using the power of influencers</p>  <p align="left">🏅 Using big events such as [HackSquad](https://hacksquad.dev)</p> |
-|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-
-</div>
-<p>&nbsp;</p>
-  
 ## Installation
 
-The entire course is open-sourced and can be used for your private projects! (MIT LICENSE) - no limits.
-
-Please check the quick installation guide here:
+For a quick installation and docs please check:
 
 https://docs.github20k.com
   
@@ -78,12 +74,6 @@ https://docs.github20k.com
 |-----------------------------------------------------------------------------------------------------------------------|-----------------|
 
 Follow me on: [Twitter](https://twitter.com/nevodavid), [GitHub](https://github.com/nevo-david) and [DEV.to](https://dev.to/nevodavid)
-
-  <p>&nbsp;</p>
-
-## Some of the companies I have worked with
-
-![workwith](https://user-images.githubusercontent.com/100117126/226560025-b3a5e5f7-b21b-4e11-a1ee-9d683b46e9d2.png)
 
   <p>&nbsp;</p>
 
