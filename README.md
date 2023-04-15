@@ -1,5 +1,5 @@
 ![top](https://user-images.githubusercontent.com/100117126/226394199-4072d339-5841-47b1-acab-2d2906c78d96.png)
-<h1 align="center"><a href="https://github20k.com">GitHub 20K</a> - Super-Star course ⭐️✨</h1>
+<h1 align="center"><a href="https://github20k.com">GitHub 20K</a> - Super-Star ⭐️✨</h1>
 
 <p align="center">
   <a href="https://opensource.org/licenses/MIT" target="_blank">
@@ -12,10 +12,23 @@
       <img alt="Affiliate" height="20" src="https://user-images.githubusercontent.com/100117126/228555730-e210ec6d-5922-4e77-ac64-d05942cc3ade.png" />
   </a>
 </p>
-  
+
+<p align="center">The open-source course sales page build with NextJS and Tailwind</p>
+
+## Super-Star
+
+What can you find here:
+- A beautiful sales page for selling your course.
+- Integration with payment providers.
+- Integration with newsletter providers.
+- Integration with CRM providers.
+- Integration with Courses providers.
+- Integration with CMSs for blogs.
+
+
 ## Installation
 
-For a quick installation please check:
+For a quick installation and docs please check:
 
 https://docs.github20k.com
   
