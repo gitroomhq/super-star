@@ -18,9 +18,8 @@ export const mainPageDetails = {
       <>
         Learn how to gain{" "}
         <span className="text-brand-main-medium bg-brand-plum-light">
-          a major GitHub library growth
-        </span>{" "}, boosting your library credibility, increasing metrics, and
-        attracting regular attention.
+          major GitHub library growth
+        </span>{" "}, boost your library credibility, increase metrics, and attract regular attention.
       </>
     ),
     myName: "Nevo David",
