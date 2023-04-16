@@ -61,7 +61,7 @@ function Slider() {
           ))}
         </Swiper>
       </div>
-      <div className='z-0 w-full hidden absolute top-1/2 -translate-y-1/2 left-0 md:flex items-center justify-between z-20'>
+      <div className='z-0 w-full hidden absolute top-1/2 -translate-y-1/2 left-0 md:flex items-center justify-between z-0'>
         <button
           type='button'
           className='slide-prev text-[#302861] hover:text-brand-yellow disabled:opacity-0'>
