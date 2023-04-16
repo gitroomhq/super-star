@@ -103,22 +103,6 @@ export const mainPageDetails = {
         picture: "/assets/bg-4.png",
       },
     },
-    {
-      profile: {
-        picture: "https://avatars.githubusercontent.com/u/1110414",
-      },
-      name: "Ömer Faruk Aplak",
-      title: (
-        <>
-          CTO & Co-Founder @{" "}
-          <Link href="https://github.com/refinedev/refine">Refine</Link>
-        </>
-      ),
-      text: "Nevo had smart thoughts and tried out new ideas and strategies to make GitHub grow, by getting more people to star and contribute to it.",
-      background: {
-        picture: "/assets/bg-5.png",
-      },
-    },
   ],
   section1: {
     title: (
