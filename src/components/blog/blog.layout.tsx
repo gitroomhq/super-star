@@ -55,7 +55,7 @@ export const BlogLayout: FC<{
         )}
         {children}
       </div>
-      <FooterComponent hidePurchase={true} />
+      <FooterComponent newsletter={true} hidePurchase={true} />
     </>
   );
 };

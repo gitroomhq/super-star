@@ -2,9 +2,12 @@ import Image from "next/image";
 import Link from "next/link";
 import PurchaseButtonComponent from "@github20k/components/home/purchase.button.component";
 import { FC } from "react";
+import NewsletterComponent from "@github20k/components/blog/newsletter.component";
 
-const FooterComponent: FC<{ hidePurchase?: boolean }> = (props) => {
-  const { hidePurchase } = props;
+const FooterComponent: FC<{ hidePurchase?: boolean; newsletter?: boolean }> = (
+  props
+) => {
+  const { hidePurchase, newsletter } = props;
   return (
     <footer className="bg-footer">
       <div className="max-w-base mx-auto px-6 flex flex-col items-center justify-center py-12 md:pt-16 lg:pt-24 ">
@@ -16,6 +19,7 @@ const FooterComponent: FC<{ hidePurchase?: boolean }> = (props) => {
             alt="alt"
           />
         </div>
+        {newsletter && <NewsletterComponent />}
         {!hidePurchase && (
           <div className="max-w-sm xl:max-w-3xl w-full rounded-xl overflow-hidden relative mb-12 md:mb-16">
             <PurchaseButtonComponent />
@@ -37,10 +41,16 @@ const FooterComponent: FC<{ hidePurchase?: boolean }> = (props) => {
             <LinkSvg />
             <span>Affiliate link</span>
           </Link>
-          <Link className="hover:text-brand-plum-primary" href="/terms-of-service">
+          <Link
+            className="hover:text-brand-plum-primary"
+            href="/terms-of-service"
+          >
             Terms of service
           </Link>
-          <Link className="hover:text-brand-plum-primary" href="/privacy-policy">
+          <Link
+            className="hover:text-brand-plum-primary"
+            href="/privacy-policy"
+          >
             Privacy Policy
           </Link>
         </div>
