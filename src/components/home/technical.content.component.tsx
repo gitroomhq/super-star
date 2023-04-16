@@ -10,7 +10,7 @@ const TechnicalContentComponent = () => {
           <div className='relative max-w-lg xl:max-w-2xl aspect-square xl:aspect-auto xl:h-[36rem] mx-auto md:ml-auto'>
             <Image
               className='object-contain'
-              src='/assets/bg/slack-group.webp'
+              src='/assets/slack-group.webp'
               fill
               alt='Slack Group'
             />

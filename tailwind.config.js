@@ -34,8 +34,8 @@ module.exports = {
         'about-o': 'rgb(14 6 65 / 0.7)'
       },
       backgroundImage: {
-        'hero-lg': 'url(/assets/bg/hero-lg.webp)',
-        'hero-sm': 'url(/assets/bg/hero-sm.webp)',
+        'hero-lg': 'url(/assets/hero-lg.webp)',
+        'hero-sm': 'url(/assets/hero-sm.webp)',
         'about-bg': 'url(/assets/bg/testimonial-bg.webp)',
         'stars-bg': 'url(/assets/bg/stars-course.webp)',
         'personal-bg': 'url(/assets/bg/personal-meeting.webp)',

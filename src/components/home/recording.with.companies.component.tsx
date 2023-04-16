@@ -10,7 +10,7 @@ const RecordingWithCompaniesComponent = () => {
           <div className='relative max-w-lg xl:max-w-2xl aspect-square xl:aspect-auto xl:h-[42.8125rem] mx-auto md:ml-auto'>
             <Image
               className='object-contain'
-              src='/assets/bg/recordings.webp'
+              src='/assets/recordings.webp'
               fill
               alt='Recordings with Companies'
             />

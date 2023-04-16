@@ -21,7 +21,7 @@ const StarsCourseComponent = () => {
           <div className='relative md:max-w-lg xl:max-w-2xl aspect-square xl:aspect-auto xl:h-[42.8125rem] mx-auto md:ml-auto'>
             <Image
               className='object-contain'
-              src='/assets/bg/stars-course.webp'
+              src='/assets/stars-course.webp'
               fill
               alt='Stars Course'
             />
