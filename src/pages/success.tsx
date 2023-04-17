@@ -56,6 +56,7 @@ export async function getStaticProps() {
   return {
     props: {
       ...(await getGithubStars()),
-    }, // will be passed to the page component as props
+    },
+    revalidate: 3600
   };
 }
