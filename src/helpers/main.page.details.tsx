@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export const mainPageDetails = {
   header: {
-    github: 'https://github.com/nevo-david',
+    github: "https://github.com/nevo-david",
     title: (
       <span className="title-shadow-add">
         THE GITHUB
@@ -19,13 +19,16 @@ export const mainPageDetails = {
         Learn how to gain{" "}
         <span className="text-brand-main-medium bg-brand-plum-light">
           major GitHub library growth
-        </span>{" "}, boost your library credibility, increase metrics, and attract regular attention.
+        </span>{" "}
+        , boost your library credibility, increase metrics, and attract regular
+        attention.
       </>
     ),
     myName: "Nevo David",
     profileDescription: (
       <>
-        Experienced full-stack developer with a decade of expertise. Working at{" "}Novu, the open-source notification infrastructure startup.
+        Experienced full-stack developer with a decade of expertise. Working at{" "}
+        Novu, the open-source notification infrastructure startup.
       </>
     ),
   },
@@ -69,6 +72,22 @@ export const mainPageDetails = {
     ),
   },
   testimonials: [
+    {
+      profile: {
+        picture: "https://user-images.githubusercontent.com/100117126/232469471-6a4f39cf-49c9-4126-8ff2-fc45e05d6fdc.png",
+      },
+      name: "Nicklas Gellner",
+      title: (
+        <>
+          COO @{" "}
+          <Link href="https://github.com/medusajs/medusa">Medusa</Link>
+        </>
+      ),
+      text: "Nevo is an outstanding Growth Engineer. He really understands how to create traction around a developer products and his results speak for themselves!",
+      background: {
+        picture: "/assets/bg-3.png",
+      },
+    },
     {
       profile: {
         picture:
