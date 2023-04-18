@@ -74,13 +74,29 @@ export const mainPageDetails = {
   testimonials: [
     {
       profile: {
-        picture: "https://user-images.githubusercontent.com/100117126/232469471-6a4f39cf-49c9-4126-8ff2-fc45e05d6fdc.png",
+        picture:
+          "https://avatars.githubusercontent.com/u/8877285",
+      },
+      name: "Tomer Barnea",
+      title: (
+        <>
+          CEO @ <Link href="https://github.com/novuhq/novu">Novu</Link>
+        </>
+      ),
+      text: "Nevo has achieved great growth for Novu in a remarkably short time. His creative, and practical strategies have resulted in immediate and tangible results.",
+      background: {
+        picture: "/assets/bg-1.png",
+      },
+    },
+    {
+      profile: {
+        picture:
+          "https://user-images.githubusercontent.com/100117126/232469471-6a4f39cf-49c9-4126-8ff2-fc45e05d6fdc.png",
       },
       name: "Nicklas Gellner",
       title: (
         <>
-          COO @{" "}
-          <Link href="https://github.com/medusajs/medusa">Medusa</Link>
+          COO @ <Link href="https://github.com/medusajs/medusa">Medusa</Link>
         </>
       ),
       text: "Nevo is an outstanding Growth Engineer. He really understands how to create traction around a developer products and his results speak for themselves!",
