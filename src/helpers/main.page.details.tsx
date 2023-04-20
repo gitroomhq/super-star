@@ -74,13 +74,12 @@ export const mainPageDetails = {
   testimonials: [
     {
       profile: {
-        picture:
-          "https://avatars.githubusercontent.com/u/8877285",
+        picture: "https://avatars.githubusercontent.com/u/8877285",
       },
       name: "Tomer Barnea",
       title: (
         <>
-          CEO @ <Link href="https://github.com/novuhq/novu">Novu</Link>
+          CEO @ <Link href="https://github.com/novuhq/novu" target="_blank">Novu</Link>
         </>
       ),
       text: "Nevo has achieved great growth for Novu in a remarkably short time. His creative, and practical strategies have resulted in immediate and tangible results.",
@@ -96,7 +95,7 @@ export const mainPageDetails = {
       name: "Nicklas Gellner",
       title: (
         <>
-          COO @ <Link href="https://github.com/medusajs/medusa">Medusa</Link>
+          COO @ <Link href="https://github.com/medusajs/medusa" target="_blank">Medusa</Link>
         </>
       ),
       text: "Nevo is an outstanding Growth Engineer. He really understands how to create traction around a developer products and his results speak for themselves!",
@@ -113,12 +112,29 @@ export const mainPageDetails = {
       title: (
         <>
           Head of Product Marketing @{" "}
-          <Link href="https://github.com/livecycle/preevy">Livecycle</Link>
+          <Link href="https://github.com/livecycle/preevy" target="_blank">Livecycle</Link>
         </>
       ),
       text: "The content is clear, creative and practical, and can have an immediate impact, highly recommend to anyone looking to grow their Github library.",
       background: {
         picture: "/assets/bg-2.png",
+      },
+    },
+    {
+      profile: {
+        picture:
+          "https://user-images.githubusercontent.com/100117126/233274687-c8966a08-6538-47d7-b17b-2a952cf0dddb.png",
+      },
+      name: "Michael Solati",
+      title: (
+        <>
+          DevRel @{" "}
+          <Link href="https://github.com/amplication/amplication" target="_blank">Amplication</Link>
+        </>
+      ),
+      text: "Nevo's knowledge and expertise in building communities, engaging with developers, and reaching out to them wherever they are, is invaluable.",
+      background: {
+        picture: "/assets/bg-5.png",
       },
     },
     {
@@ -129,7 +145,7 @@ export const mainPageDetails = {
       title: (
         <>
           Developer Advocate @{" "}
-          <Link href="https://github.com/ToolJet/ToolJet">ToolJet</Link>
+          <Link href="https://github.com/ToolJet/ToolJet" target="_blank">ToolJet</Link>
         </>
       ),
       text: "Nevo's thoughts were insightful, his ideas and strategies are experimented with regular improvements towards the growth of GitHub stargazers and contributors",
