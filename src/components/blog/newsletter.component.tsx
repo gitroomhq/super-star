@@ -19,7 +19,7 @@ const NewsletterComponent: FC = () => {
       },
     });
   return (
-    <div className="max-w-sm flex flex-col lg:max-w-3xl w-full text-center overflow-hidden relative mb-12 md:mb-16">
+    <div className="text-white max-w-sm flex flex-col lg:max-w-3xl w-full text-center overflow-hidden relative mb-12 md:mb-16">
       <strong>
         Do you want to get more tips and tricks? register to our newsletter
       </strong>
