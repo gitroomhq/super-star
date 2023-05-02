@@ -27,7 +27,7 @@ export const BlogPostComponent: FC<{
             alt={blog.author.name}
           />
           <div>
-            <h1 className="text-4xl font-semibold mb-1">{blog.title}</h1>{" "}
+            <h1 className="text-white text-4xl font-semibold mb-1">{blog.title}</h1>{" "}
             {/* Add title here */}
             <p className="text-gray-500">{blog.author.name}</p>{" "}
             {/* Add author name here */}

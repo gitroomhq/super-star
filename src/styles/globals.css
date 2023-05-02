@@ -107,6 +107,10 @@ a {
   }
 }
 
+.blog-container {
+  color: white;
+}
+
 .blog-container p {
   margin: 13px 0;
 }
