@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { mainPageDetails } from "@github20k/helpers/main.page.details";
 import Link from "next/link";
+import NewsletterComponent from "@github20k/components/blog/newsletter.component";
 
 const HeroComponent = () => {
   return (
@@ -11,9 +12,13 @@ const HeroComponent = () => {
             {mainPageDetails.header.title}
           </h1>
 
-          <p className="max-w-xl lg:max-w-2xl mx-auto text-brand-white-light font-medium text-lg leading-8 md:text-xl md:leading-snug xl:text-2xl lg:mt-auto pt-6 md:pt-12 px-4">
+          <p className="max-w-xl lg:max-w-2xl mx-auto lg:ml-0 text-brand-white-light font-medium text-lg leading-8 md:text-xl md:leading-snug xl:text-2xl lg:mt-auto pt-6 md:pt-12 px-4">
             {mainPageDetails.header.description}
           </p>
+
+          <div className="flex max-w-xl lg:max-w-2xl mx-auto lg:ml-0 text-brand-white-light font-medium text-lg leading-8 md:text-xl md:leading-snug xl:text-2xl pt-10 px-4">
+            <NewsletterComponent showText={false} />
+          </div>
         </div>
         <div className="max-w-md xl:max-w-lg mx-auto pb-12 pt-40 md:pt-32">
           <div className=" bg-brand-main/70 flex items-start gap-6 rounded-lg border border-brand-yellow p-5 xl:px-8 lg:pt-9 md:pb-10">
@@ -30,7 +35,14 @@ const HeroComponent = () => {
             <div className="flex-1 pt-1">
               <p className="font-home-baukasten text-brand-white-primary capitalize text-lg xl:text-2xl leading-none">
                 <Link href={mainPageDetails.header.github} target="_blank">
-                  {mainPageDetails.header.myName} <Image className="inline-block mb-1" src="/github.svg" width="22" height="22" alt="GitHub" />
+                  {mainPageDetails.header.myName}{" "}
+                  <Image
+                    className="inline-block mb-1"
+                    src="/github.svg"
+                    width="22"
+                    height="22"
+                    alt="GitHub"
+                  />
                 </Link>
               </p>
               <p className="text-sm md:text-base xl:text-lg xl:leading-6 font-medium text-brand-white-medium mt-3">

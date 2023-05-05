@@ -29,7 +29,7 @@ export default async function handler(
     await Promise.all([
       !process.env.CRM_SERVICE ? new Promise((res) => res) : crmService!.addDeal(payment.name!, payment.email!),
       !process.env.COURSE_SERVICE ? new Promise((res) => res) : courseService!.joinCourse(payment.name!, payment.email!),
-      !process.env.NEWSLETTER_SERVICE ? new Promise((res) => res) : newsletterService!.registerToNewsletter(payment.name!, payment.email!),
+      !process.env.NEWSLETTER_SERVICE ? new Promise((res) => res) : newsletterService!.registerToNewsletter(payment.email!, payment.name!),
     ]);
   } catch (err) {
     // In case one of them didn't work, we send 400, then the payment gateway will re-try the request

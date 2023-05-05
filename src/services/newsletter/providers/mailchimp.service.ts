@@ -8,7 +8,10 @@ const auth = {
   password: process.env.NEWSLETTER_TOKEN,
 } as AxiosBasicCredentials;
 
-export class MailchimpService extends AbstractServicesService implements NewsletterInterface {
+export class MailchimpService
+  extends AbstractServicesService
+  implements NewsletterInterface
+{
   validation = object({
     NEWSLETTER_SERVER: string().required(),
     NEWSLETTER_LIST: string().required(),
@@ -17,8 +20,8 @@ export class MailchimpService extends AbstractServicesService implements Newslet
 
   providerName = "MailChimp";
 
-  async registerToNewsletter(name: string, email_address: string) {
-    const [FNAME, ...LNAME] = name?.split(" ");
+  async registerToNewsletter(email_address: string, name?: string) {
+    const [FNAME, ...LNAME] = (name || "").split(" ");
     await axios.post(
       `https://${process.env.NEWSLETTER_SERVER}.api.mailchimp.com/3.0/lists/${process.env.NEWSLETTER_LIST}?skip_merge_validation=true&skip_duplicate_check=true`,
       {
@@ -27,10 +30,14 @@ export class MailchimpService extends AbstractServicesService implements Newslet
             email_address,
             email_type: "html",
             status: "subscribed",
-            merge_fields: {
-              FNAME,
-              LNAME: LNAME.join(" "),
-            },
+            ...(name
+              ? {
+                  merge_fields: {
+                    FNAME,
+                    LNAME: LNAME.join(" "),
+                  },
+                }
+              : {}),
           },
         ],
         sync_tags: false,

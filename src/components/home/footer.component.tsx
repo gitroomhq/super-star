@@ -19,7 +19,7 @@ const FooterComponent: FC<{ hidePurchase?: boolean; newsletter?: boolean }> = (
             alt="alt"
           />
         </div>
-        {newsletter && <NewsletterComponent />}
+        {newsletter && <NewsletterComponent showText={true} />}
         {!hidePurchase && (
           <div className="max-w-sm xl:max-w-3xl w-full rounded-xl overflow-hidden relative mb-12 md:mb-16">
             <PurchaseButtonComponent />

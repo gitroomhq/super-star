@@ -63,11 +63,11 @@ const HomeComponent: FC<{ stargazers_count: number }> = (props) => {
         <StarsCourseComponent />
         <RecordingWithCompaniesComponent />
         <PersonalMeetingComponent />
-        <TechnicalContentComponent />
-        <GetItNowComponent />
-        <FaqComponent />
+        {/*<TechnicalContentComponent />*/}
+        {/*<GetItNowComponent />*/}
+        {/*<FaqComponent />*/}
       </main>
-      <FooterComponent />
+      <FooterComponent hidePurchase={true} newsletter={true} />
     </>
   );
 };

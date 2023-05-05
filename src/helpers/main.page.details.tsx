@@ -5,21 +5,21 @@ export const mainPageDetails = {
     github: "https://github.com/nevo-david",
     title: (
       <span className="title-shadow-add">
-        THE GITHUB
+        GROW YOUR
         <br />
         <span className="inline-block bg-hero-span leading-none italic px-2 md:pr-4 lg:pr-6">
-          GROWTH
+          OPEN-SOURCE
         </span>
         <br />
-        COURSE
+          LIBRARY
       </span>
     ),
     description: (
       <>
-        Learn how to gain{" "}
+        Subscribe FREE and learn how to gain a{" "}
         <span className="text-brand-main-medium bg-brand-plum-light">
-          major GitHub library growth
-        </span>{" "}
+          major library growth
+        </span>
         , boost your library credibility, increase metrics, and attract regular
         attention.
       </>
@@ -33,7 +33,7 @@ export const mainPageDetails = {
     ),
   },
   aboutMe: {
-    title: "Why this course?",
+    title: "Grow your GitHub repository faster than everybody else",
     text: (
       <>
         I{"'"}ve been a developer for a long time, working in various companies.
@@ -68,6 +68,7 @@ export const mainPageDetails = {
         So, I had to figure it out on my own over the course of a year, and I
         developed practical tactics, not just theoretical ones.
         <br />
+        I will be sharing them weekly over my newsletter.
       </>
     ),
   },
@@ -157,7 +158,7 @@ export const mainPageDetails = {
   section1: {
     title: (
       <>
-        The 20k <br /> Stars course
+        Trend on GitHub tomorrow
       </>
     ),
     description: (
@@ -168,7 +169,7 @@ export const mainPageDetails = {
         <br />
         From trending on GitHub to leveraging Reddit and DEV.to, using
         influencers, creating custom events, writing converting marketing
-        materials, and mastering the call to action, this course covers it all.
+        materials, and mastering the call to action, this newsletter covers it all.
         <br />
         <br />
         You{"'"}ll also learn effective communication with developers, finding
@@ -178,30 +179,22 @@ export const mainPageDetails = {
     ),
   },
   section2: {
-    title: "ALSO: Video about your library",
+    title: "Revealing the secrets of different libraries",
     description: (
       <>
-        I will create a concise video about your library and upload it to my
-        YouTube channel.
+        Get access to videos of different libraries shared over the newsletter.
         <br />
         <br />
-        Please be aware that I am only able to provide technical explanations
-        using JS and PHP.
-        <br />
-        <br />
-        If the library is in a different programming language, I may provide a
-        more generalized overview.
+        I will touch both successful libraries and the ones that could improve, feel free to send me your library
       </>
     ),
   },
   section3: {
-    title: "ALSO: Personal meeting",
+    title: "Let's discuss",
     description: (
       <>
-        Get guidance on how to boost your GitHub with a one hour call with me.
-        We{"'"}ll dive into your GitHub library, analyze its strengths and
-        weaknesses, and craft a customized funnel strategy to help you reach
-        your goal of 20k stars.
+        Do you want to grow you library and don{"'"}t know how?<br />
+        <a href="https://calendly.com/github20k" target="_blank" className="underline hover:text-pink-800">Book a meeting with me here</a> and let{"'"}s figure it up together.
       </>
     ),
   },
