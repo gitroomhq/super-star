@@ -35,7 +35,7 @@ const NewsletterComponent: FC<{ showText: boolean }> = (props) => {
             value={values.email}
             onChange={handleChange}
             onBlur={handleBlur}
-            className={`flex-1 bg-[#182769]/70 border-2 border-white/10 rounded-2xl rounded-r-none outline-0 p-2 ${
+            className={`flex-1 bg-[#182769]/70 border-2 border-white/10 rounded-2xl rounded-r-none max-lg:mb-3 max-lg:rounded-2xl outline-0 p-2 ${
               touched.email &&
               errors.email &&
               `border-solid border-2 border-rose-500`
@@ -45,7 +45,7 @@ const NewsletterComponent: FC<{ showText: boolean }> = (props) => {
             placeholder="Email"
           />
           <button
-            className="bg-purchase-btn flex min-w-[200px] items-center justify-center rounded-2xl rounded-l-none px-3"
+            className="bg-purchase-btn flex min-w-[200px] items-center justify-center rounded-2xl rounded-l-none max-lg:rounded-2xl p-2"
             type="submit"
             placeholder="Register"
           >
