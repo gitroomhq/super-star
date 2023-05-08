@@ -16,7 +16,7 @@ const RecordingWithCompaniesComponent = () => {
             />
           </div>
         </div>
-        <div className='text-center md:text-left'>
+        <div className='text-center md:text-left mx-auto'>
           <div className='max-w-xl mb:mx-auto sm:mx-auto lg:mx-0 xl mx-0'>
             <h3 className='font-home-baukasten text-brand-white-primary text-3xl lg:text-4xl xl:text-5xl !leading-tight uppercase mb-3 lg:mb-5'>
               {mainPageDetails.section2.title}

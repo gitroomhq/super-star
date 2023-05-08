@@ -34,14 +34,6 @@ const FooterComponent: FC<{ hidePurchase?: boolean; newsletter?: boolean }> = (
             Blog
           </Link>
           <Link
-            className="flex items-center gap-x-2 text-brand-plum-primary"
-            href="https://github-20k.getrewardful.com/signup"
-            target="_blank"
-          >
-            <LinkSvg />
-            <span>Affiliate link</span>
-          </Link>
-          <Link
             className="hover:text-brand-plum-primary"
             href="/terms-of-service"
           >

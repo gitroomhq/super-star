@@ -11,17 +11,19 @@ export const mainPageDetails = {
           OPEN-SOURCE
         </span>
         <br />
-          LIBRARY
+        LIBRARY
       </span>
     ),
     description: (
       <>
-        Subscribe FREE and learn how to gain a{" "}
+        Learn how we have grown Novu to{" "}
         <span className="text-brand-main-medium bg-brand-plum-light">
-          major library growth
+          20,000 stars
         </span>
-        , boost your library credibility, increase metrics, and attract regular
-        attention.
+        <br />
+        within a year, gaining more stars, forks and users.
+        <br />
+        subscribe to get my weekly tips
       </>
     ),
     myName: "Nevo David",
@@ -33,42 +35,17 @@ export const mainPageDetails = {
     ),
   },
   aboutMe: {
-    title: "Grow your GitHub repository faster than everybody else",
+    title: "A year of learning",
     text: (
       <>
-        I{"'"}ve been a developer for a long time, working in various companies.
-        <br />
-        Four years ago, I started my own startup, built and sold it
-        <br />
-        single-handedly, which was extremely challenging.
-        <br />
-        <br />
-        Since then, I joined Novu with one goal in mind -{" "}
-        <span className="text-brand-main-medium bg-brand-plum-light">
-          to gain traction and achieve Product Market Fit.
-        </span>{" "}
-        <br />
-        In my previous startup, as a one-man-show, I did straightforward
-        marketing: selling services to Marketing and Sales professionals who are
-        not the most sophisticated personas.
-        <br />
-        <br />
-        However, it all changed when I joined Novu.
-        <br />
         Developers don{"'"}t tolerate nonsense, and marketing to them requires a
-        completely different approach.
-        <br />
-        <br />
-        When I tried to search for{" "}
+        completely different approach. When I tried to search for{" "}
         <span className="text-brand-main-medium bg-brand-plum-light">
           {'"'}How to market to developers{'"'}
         </span>{" "}
-        on Google, I found no results.
-        <br />
-        So, I had to figure it out on my own over the course of a year, and I
-        developed practical tactics, not just theoretical ones.
-        <br />
-        I will be sharing them weekly over my newsletter.
+        on Google, I found no results. So, I had to figure it out on my own.
+        During the year, I developed practical tactics that helped me every-day
+        and I will be happy to share it with you over my newsletter.
       </>
     ),
   },
@@ -80,7 +57,10 @@ export const mainPageDetails = {
       name: "Tomer Barnea",
       title: (
         <>
-          CEO @ <Link href="https://github.com/novuhq/novu" target="_blank">Novu</Link>
+          CEO @{" "}
+          <Link href="https://github.com/novuhq/novu" target="_blank">
+            Novu
+          </Link>
         </>
       ),
       text: "Nevo has achieved great growth for Novu in a remarkably short time. His creative, and practical strategies have resulted in immediate and tangible results.",
@@ -96,7 +76,10 @@ export const mainPageDetails = {
       name: "Nicklas Gellner",
       title: (
         <>
-          COO @ <Link href="https://github.com/medusajs/medusa" target="_blank">Medusa</Link>
+          COO @{" "}
+          <Link href="https://github.com/medusajs/medusa" target="_blank">
+            Medusa
+          </Link>
         </>
       ),
       text: "Nevo is an outstanding Growth Engineer. He really understands how to create traction around a developer products and his results speak for themselves!",
@@ -113,7 +96,9 @@ export const mainPageDetails = {
       title: (
         <>
           Head of Product Marketing @{" "}
-          <Link href="https://github.com/livecycle/preevy" target="_blank">Livecycle</Link>
+          <Link href="https://github.com/livecycle/preevy" target="_blank">
+            Livecycle
+          </Link>
         </>
       ),
       text: "The content is clear, creative and practical, and can have an immediate impact, highly recommend to anyone looking to grow their Github library.",
@@ -130,7 +115,12 @@ export const mainPageDetails = {
       title: (
         <>
           DevRel @{" "}
-          <Link href="https://github.com/amplication/amplication" target="_blank">Amplication</Link>
+          <Link
+            href="https://github.com/amplication/amplication"
+            target="_blank"
+          >
+            Amplication
+          </Link>
         </>
       ),
       text: "Nevo's knowledge and expertise in building communities, engaging with developers, and reaching out to them wherever they are, is invaluable.",
@@ -146,7 +136,9 @@ export const mainPageDetails = {
       title: (
         <>
           Developer Advocate @{" "}
-          <Link href="https://github.com/ToolJet/ToolJet" target="_blank">ToolJet</Link>
+          <Link href="https://github.com/ToolJet/ToolJet" target="_blank">
+            ToolJet
+          </Link>
         </>
       ),
       text: "Nevo's thoughts were insightful, his ideas and strategies are experimented with regular improvements towards the growth of GitHub stargazers and contributors",
@@ -156,11 +148,7 @@ export const mainPageDetails = {
     },
   ],
   section1: {
-    title: (
-      <>
-        Trend on GitHub tomorrow
-      </>
-    ),
+    title: <>Trend on GitHub</>,
     description: (
       <>
         Learn how to boost your open-source project{"'"}s visibility and growth
@@ -169,7 +157,7 @@ export const mainPageDetails = {
         <br />
         From trending on GitHub to leveraging Reddit and DEV.to, using
         influencers, creating custom events, writing converting marketing
-        materials, and mastering the call to action, this newsletter covers it all.
+        materials, and mastering the call to action.
         <br />
         <br />
         You{"'"}ll also learn effective communication with developers, finding
@@ -179,22 +167,50 @@ export const mainPageDetails = {
     ),
   },
   section2: {
-    title: "Revealing the secrets of different libraries",
+    title: "Value first",
     description: (
       <>
-        Get access to videos of different libraries shared over the newsletter.
+        Many of my tactics can be found over my{" "}
+        <Link href="/blog" className="underline hover:text-pink-800">
+          GitHub20k blog
+        </Link>
+        , I have shared tactics that can help you get your initial growth.
         <br />
         <br />
-        I will touch both successful libraries and the ones that could improve, feel free to send me your library
+        Let{"'"}s meet, maybe I can help you out
+        <br />
+        <a
+          href="https://calendly.com/github20k"
+          target="_blank"
+          className="underline hover:text-pink-800"
+        >
+          Book a meeting with me here
+        </a>{" "}
+        and let{"'"}s figure it up together.
       </>
     ),
   },
   section3: {
-    title: "Let's discuss",
+    title: "Value first",
     description: (
       <>
-        Do you want to grow you library and don{"'"}t know how?<br />
-        <a href="https://calendly.com/github20k" target="_blank" className="underline hover:text-pink-800">Book a meeting with me here</a> and let{"'"}s figure it up together.
+        Many of my tactics can be found over my{" "}
+        <Link href="/blog" className="underline hover:text-pink-800">
+          GitHub20k blog
+        </Link>
+        , I have shared tactics that can help you get your initial growth.
+        <br />
+        <br />
+        Let{"'"}s meet, maybe I can help you out
+        <br />
+        <a
+          href="https://calendly.com/github20k"
+          target="_blank"
+          className="underline hover:text-pink-800"
+        >
+          Book a meeting with me here
+        </a>{" "}
+        and let{"'"}s figure it up together.
       </>
     ),
   },
