@@ -16,14 +16,14 @@ export const mainPageDetails = {
     ),
     description: (
       <>
-        Learn how we have grown Novu to{" "}
+        Learn how we have grown {" "}
         <span className="text-brand-main-medium bg-brand-plum-light">
-          20,000 stars
+          Novu community
         </span>
         <br />
-        within a year, gaining more stars, forks and users.
+        Gaining more stars, forks and clients.
         <br />
-        subscribe to get my weekly tips
+        subscribe to get weekly tips
       </>
     ),
     myName: "Nevo David",
@@ -160,14 +160,14 @@ export const mainPageDetails = {
         materials, and mastering the call to action.
         <br />
         <br />
-        You{"'"}ll also learn effective communication with developers, finding
+        Learn effective communication with developers, finding
         content writers, and utilizing community-building tools like badges and
         certificates
       </>
     ),
   },
   section2: {
-    title: "Value first",
+    title: "Resources & Help",
     description: (
       <>
         Many of my tactics can be found over my{" "}
