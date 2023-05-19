@@ -20,7 +20,12 @@ export class MailchimpService
 
   providerName = "MailChimp";
 
-  async registerToNewsletter(email_address: string, name?: string) {
+  async registerToNewsletter(
+    email_address: string,
+    name?: string,
+    slug?: string,
+    tag?: string
+  ) {
     const [FNAME, ...LNAME] = (name || "").split(" ");
     await axios.post(
       `https://${process.env.NEWSLETTER_SERVER}.api.mailchimp.com/3.0/lists/${process.env.NEWSLETTER_LIST}?skip_merge_validation=true&skip_duplicate_check=true`,
@@ -30,11 +35,17 @@ export class MailchimpService
             email_address,
             email_type: "html",
             status: "subscribed",
-            ...(name
+            ...(name || slug
               ? {
                   merge_fields: {
-                    FNAME,
-                    LNAME: LNAME.join(" "),
+                    ...(name
+                      ? {
+                          FNAME,
+                          LNAME: LNAME.join(" "),
+                        }
+                      : {
+                          COMPANY: slug,
+                        }),
                   },
                 }
               : {}),
@@ -45,5 +56,11 @@ export class MailchimpService
       },
       { auth }
     );
+
+    if (tag) {
+      await axios.post(
+        `https://${process.env.NEWSLETTER_SERVER}.api.mailchimp.com/3.0/lists/${process.env.NEWSLETTER_LIST}/segments/${tag}/members`
+      );
+    }
   }
 }

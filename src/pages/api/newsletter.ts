@@ -12,7 +12,7 @@ export default async function handler(
 
   try {
     newsletterValidation.validateSync(req.body);
-    await newsletterService?.registerToNewsletter(req.body.email);
+    await newsletterService?.registerToNewsletter(req.body.email, undefined, req.body.slug, req.body.tag);
     res.status(200).json({
       success: true
     });
