@@ -44,7 +44,7 @@ export class MailchimpService
                           LNAME: LNAME.join(" "),
                         }
                       : {
-                          COMPANY: slug,
+                          SLUG: slug,
                         }),
                   },
                 }
