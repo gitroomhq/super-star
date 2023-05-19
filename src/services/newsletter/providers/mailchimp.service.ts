@@ -59,7 +59,11 @@ export class MailchimpService
 
     if (tag) {
       await axios.post(
-        `https://${process.env.NEWSLETTER_SERVER}.api.mailchimp.com/3.0/lists/${process.env.NEWSLETTER_LIST}/segments/${tag}/members`
+        `https://${process.env.NEWSLETTER_SERVER}.api.mailchimp.com/3.0/lists/${process.env.NEWSLETTER_LIST}/segments/${tag}/members`,
+          {
+              email_address
+          },
+        { auth }
       );
     }
   }
