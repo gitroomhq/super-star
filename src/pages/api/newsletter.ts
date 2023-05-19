@@ -19,7 +19,7 @@ export default async function handler(
   }
   catch (err) {
     res.status(400).json({
-      message: 'Error'
+      message: 'Error2'
     });
   }
 }
