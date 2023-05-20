@@ -33,6 +33,9 @@ const FooterComponent: FC<{ hidePurchase?: boolean; newsletter?: boolean }> = (
           <Link className="hover:text-brand-plum-primary" href="/blog">
             Blog
           </Link>
+          <Link className="hover:text-brand-plum-primary" href="https://libraries.github20k.com">
+            Find a GitHub library
+          </Link>
           <Link
             className="hover:text-brand-plum-primary"
             href="/terms-of-service"
