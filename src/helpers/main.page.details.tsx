@@ -16,7 +16,7 @@ export const mainPageDetails = {
     ),
     description: (
       <>
-        Learn how we have grown {" "}
+        Learn how we have grown{" "}
         <span className="text-brand-main-medium bg-brand-plum-light">
           Novu community
         </span>
@@ -160,9 +160,8 @@ export const mainPageDetails = {
         materials, and mastering the call to action.
         <br />
         <br />
-        Learn effective communication with developers, finding
-        content writers, and utilizing community-building tools like badges and
-        certificates
+        Learn effective communication with developers, finding content writers,
+        and utilizing community-building tools like badges and certificates
       </>
     ),
   },
@@ -199,6 +198,14 @@ export const mainPageDetails = {
           GitHub20k blog
         </Link>
         , I have shared tactics that can help you get your initial growth.
+        <br />
+        You can also join our{" "}
+        <a
+          href="https://discord.github20k.com"
+          className="underline hover:text-pink-800"
+        >
+          Discord server
+        </a>
         <br />
         <br />
         Let{"'"}s meet, maybe I can help you out
