@@ -175,6 +175,14 @@ export const mainPageDetails = {
         </Link>
         , I have shared tactics that can help you get your initial growth.
         <br />
+        You can also join our{" "}
+        <a
+          href="https://discord.github20k.com"
+          className="underline hover:text-pink-800"
+        >
+          Discord server
+        </a>
+        <br />
         <br />
         Let{"'"}s meet, maybe I can help you out
         <br />
