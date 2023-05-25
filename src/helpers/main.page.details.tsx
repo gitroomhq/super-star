@@ -169,11 +169,20 @@ export const mainPageDetails = {
     title: "Resources & Help",
     description: (
       <>
-        Many of my tactics can be found over my{" "}
+        Many of my tactics can be found over the{" "}
         <Link href="/blog" className="underline hover:text-pink-800">
-          GitHub20k blog
+          blog
         </Link>
-        , I have shared tactics that can help you get your initial growth.
+        <br />
+        <br />
+        Got a GitHub library? promote it by adding it to our{" "}
+        <a
+          href="https://libraries.github20k.com"
+          className="underline hover:text-pink-800"
+        >
+          GitHub20k library
+        </a>{" "}- it{"'"}s free.
+        <br />
         <br />
         You can also join our{" "}
         <a
@@ -184,7 +193,7 @@ export const mainPageDetails = {
         </a>
         <br />
         <br />
-        Let{"'"}s meet, maybe I can help you out
+        Need extra help? maybe I can help you out
         <br />
         <a
           href="https://calendly.com/github20k"
