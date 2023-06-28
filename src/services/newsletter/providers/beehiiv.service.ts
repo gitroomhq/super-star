@@ -22,8 +22,8 @@ export class BeehiivService
   providerName = "Beehiiv";
 
   async registerToNewsletter(
-    email_address: string,
     name?: string,
+    email_address?: string,
     slug?: string,
     tag?: string
   ) {
@@ -35,12 +35,16 @@ export class BeehiivService
         reactivate_existing: false,
         send_welcome_email: true,
         custom_fields: [
-          ...(name
+          ...(FNAME
             ? [
                 {
                   name: "first_name",
                   value: FNAME,
                 },
+              ]
+            : []),
+          ...(LNAME.length
+            ? [
                 {
                   name: "last_name",
                   value: LNAME.join(" "),
