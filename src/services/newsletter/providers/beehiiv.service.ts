@@ -22,8 +22,8 @@ export class BeehiivService
   providerName = "Beehiiv";
 
   async registerToNewsletter(
+    email_address: string,
     name?: string,
-    email_address?: string,
     slug?: string,
     tag?: string
   ) {
