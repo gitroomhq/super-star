@@ -34,6 +34,11 @@ export class BeehiivService
         email: email_address,
         reactivate_existing: false,
         send_welcome_email: true,
+        ...(slug
+          ? {
+              utm_source: "libraries",
+            }
+          : {}),
         custom_fields: [
           ...(FNAME
             ? [
