@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Details } from "@github20k/services/blog/blog.interface";
 import ReactHtmlParser from "react-html-parser";
 import Head from "next/head";
+import { TwitterWidget } from "@github20k/helpers/twitter.widget";
 
 export const BlogPostComponent: FC<{
   stargazers_count: number;
@@ -27,16 +28,22 @@ export const BlogPostComponent: FC<{
             alt={blog.author.name}
           />
           <div>
-            <h1 className="text-white text-4xl font-semibold mb-1">{blog.title}</h1>{" "}
+            <h1 className="text-white text-4xl font-semibold mb-1">
+              {blog.title}
+            </h1>{" "}
             {/* Add title here */}
             <p className="text-gray-500">{blog.author.name}</p>{" "}
             {/* Add author name here */}
           </div>
         </div>
-        <div
-          className="prose max-w-none blog-container"
-          dangerouslySetInnerHTML={{ __html: blog.description }}
-        />
+        <TwitterWidget
+          active={blog.description.indexOf(`class="twitter-tweet"`) > -1}
+        >
+          <div
+            className="prose max-w-none blog-container"
+            dangerouslySetInnerHTML={{ __html: blog.description }}
+          />
+        </TwitterWidget>
       </BlogLayout>
     </>
   );

@@ -1,7 +1,7 @@
 import "@github20k/styles/globals.css";
 import type { AppProps } from "next/app";
 import Script from "next/script";
-import Head from 'next/head'
+import Head from "next/head";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
@@ -113,6 +113,7 @@ rdt('track', 'PageVisit');
           />
         </>
       )}
+      <Script async src="https://platform.twitter.com/widgets.js" />
       <Head>
         <title>{process.env.COURSE_NAME}</title>
       </Head>

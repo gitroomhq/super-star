@@ -10,8 +10,8 @@ import {blogService} from "@github20k/services/blog/blog.service";
 const availablePaymentService = ['stripe'];
 const availableCrmService = ['pipedrive'];
 const availableLMSService = ['teachable'];
-const availableNewsletterService = ['mailchimp'];
-const availableBlogService = ['wordpress'];
+const availableNewsletterService = ['mailchimp', 'beehiiv'];
+const availableBlogService = ['wordpress', 'beehiiv'];
 
 let errors = false;
 if (!process.env.PAYMENT_SERVICE || availablePaymentService.indexOf(process.env.PAYMENT_SERVICE) === -1) {
