@@ -127,6 +127,9 @@ a {
 .blog-container ul {
   padding-left: 30px;
 }
+.blog-container ol {
+  padding-left: 20px;
+}
 .blog-container ul li {
   list-style: disc;
 }

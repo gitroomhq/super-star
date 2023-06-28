@@ -134,11 +134,29 @@ export class BeeHiivService
     );
 
     const dom = new JSDOM(data.content.free.web);
-    
+    Array.from(dom.window.document.querySelectorAll("style")).map((p) =>
+      p.remove()
+    );
+    Array.from(dom.window.document.querySelectorAll("[style]")).map((p) => {
+      // @ts-ignore
+      p.style.padding = "";
+      // @ts-ignore
+      p.style.margin = "";
+      // @ts-ignore
+      p.style.fontSize = "";
+      // @ts-ignore
+      p.style.fontWeight = "";
+      // @ts-ignore
+      p.style.lineHeight = "";
+      // @ts-ignore
+      p.style.fontFamily = "";
+      return p;
+    });
+    const description =
+      dom.window.document.querySelector("#content-blocks")?.innerHTML!;
     return {
       title: data.title,
-      description:
-        dom.window.document.querySelector("#content-blocks")?.innerHTML!,
+      description,
       slug: slug,
       seo: "<br />",
       picture: data.thumbnail_url,
@@ -159,21 +177,24 @@ export class BeeHiivService
     );
 
     return [
-      ...(await Promise.all(
-        list.map(async (l) => ({
-          id: l.id,
-          title: l.title,
-          description: l.subtitle,
-          slug: l.slug,
-          picture: l.thumbnail_url,
-          author: {
-            name: l.authors[0],
-            picture: new JSDOM(l.content.free.web).window.document
-              .querySelector("[alt=Author]")
-              ?.getAttribute("src")!,
-          },
-        }))
-      )),
+      ...(
+        await Promise.all(
+          list.map(async (l) => ({
+            id: l.id,
+            title: l.title,
+            created: l.created,
+            description: l.subtitle,
+            slug: l.slug,
+            picture: l.thumbnail_url,
+            author: {
+              name: l.authors[0],
+              picture: new JSDOM(l.content.free.web).window.document
+                .querySelector("[alt=Author]")
+                ?.getAttribute("src")!,
+            },
+          }))
+        )
+      ).sort((a, b) => (a.created > b.created ? -1 : 1)),
       ...(list.length < 100 ? [] : await this.getPostList(page + 1)),
     ];
   }
