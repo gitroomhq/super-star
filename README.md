@@ -45,6 +45,7 @@ https://docs.github20k.com
   
  ### [Newsletter](https://github.com/github-20k/course/tree/main/src/services/newsletter/providers)
  - [x] [MailChimp](https://mailchimp.com)
+ - [x] [Beehiiv](https://beehiiv.com)
  - [ ] [Sendinblue](https://sendinblue.com)
  - [ ] [MailerLite](https://www.mailerlite.com)
  - [ ] [Drip](https://www.drip.com)

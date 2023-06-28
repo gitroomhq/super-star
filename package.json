@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "npx ts-node env.check.ts && concurrently \"node ngrok.js\" \"next dev\"",
+    "dev": "npx ts-node env.check.ts && concurrently \"node ngrok.js\" \"node tunnelmole.js\" \"next dev\"",
     "build": "npx ts-node env.check.ts && next build",
     "postbuild": "next-sitemap",
     "start": "npx ts-node env.check.ts && next start",
@@ -48,6 +48,7 @@
     "autoprefixer": "^10.4.14",
     "ngrok": "^4.3.3",
     "postcss": "^8.4.21",
-    "tailwindcss": "^3.3.1"
+    "tailwindcss": "^3.3.1",
+    "tunnelmole": "^2.1.11"
   }
 }
