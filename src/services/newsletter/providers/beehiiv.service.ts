@@ -59,8 +59,14 @@ export class BeehiivService
           ...(slug
             ? [
                 {
+                    name: 'first_subject',
+                    value: 'Your GitHub library is live!'
+                },
+                {
                   name: "slug",
-                  value: slug,
+                  value: `Your GitHub library is live! check it out here!
+                  
+                  https://libraries.github20k.com/site/${slug}`,
                 },
               ]
             : []),
