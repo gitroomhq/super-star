@@ -158,7 +158,16 @@ export class BeeHiivService
       title: data.title,
       description,
       slug: slug,
-      seo: "<br />",
+      seo: `
+<meta name="description" content="${data.subtitle}"/>
+<meta content="${data.subtitle}" property="og:description"/>
+<meta charSet="utf-8"/>
+<meta content="https://blog.github20k.com/blog/${data.slug}" property="og:url"/>
+<meta content="${data.thumbnail_url}" name="twitter:image"/>
+<meta content="${data.thumbnail_url}" property="og:image"/>
+<meta content="en" http-equiv="Content-Language"/>
+<title>${data.title} | GitHub20k</title>
+`,
       picture: data.thumbnail_url,
       author: {
         name: data.authors[0],
