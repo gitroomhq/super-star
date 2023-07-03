@@ -8,6 +8,7 @@ import {
 import { stripHtml } from "string-strip-html";
 import * as process from "process";
 import { JSDOM } from "jsdom";
+import dayjs from "dayjs";
 
 export interface Root {
   data: Daum[];
@@ -188,20 +189,22 @@ export class BeeHiivService
     return [
       ...(
         await Promise.all(
-          list.map(async (l) => ({
-            id: l.id,
-            title: l.title,
-            created: l.created,
-            description: l.subtitle,
-            slug: l.slug,
-            picture: l.thumbnail_url,
-            author: {
-              name: l.authors[0],
-              picture: new JSDOM(l.content.free.web).window.document
-                .querySelector("[alt=Author]")
-                ?.getAttribute("src")!,
-            },
-          }))
+          list
+            .filter((f) => dayjs.unix(f.publish_date).isBefore(dayjs()))
+            .map(async (l) => ({
+              id: l.id,
+              title: l.title,
+              created: l.created,
+              description: l.subtitle,
+              slug: l.slug,
+              picture: l.thumbnail_url,
+              author: {
+                name: l.authors[0],
+                picture: new JSDOM(l.content.free.web).window.document
+                  .querySelector("[alt=Author]")
+                  ?.getAttribute("src")!,
+              },
+            }))
         )
       ).sort((a, b) => (a.created > b.created ? -1 : 1)),
       ...(list.length < 100 ? [] : await this.getPostList(page + 1)),
