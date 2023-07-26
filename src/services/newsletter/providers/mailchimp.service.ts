@@ -24,7 +24,8 @@ export class MailchimpService
     email_address: string,
     name?: string,
     slug?: string,
-    tag?: string
+    tag?: string,
+    referrer?: string
   ) {
     const [FNAME, ...LNAME] = (name || "").split(" ");
     await axios.post(

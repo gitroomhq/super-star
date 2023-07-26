@@ -2,9 +2,11 @@ import { FC, useState } from "react";
 import { useFormik } from "formik";
 import newsletterValidation from "@github20k/helpers/newsletter.validation";
 import axios from "axios";
+import { useReferrer } from "@github20k/helpers/use.referrer";
 
 const NewsletterComponent: FC<{ showText: boolean }> = (props) => {
   const { showText } = props;
+  const referrer = useReferrer();
   const [submitted, setSubmitted] = useState(false);
   const { values, errors, touched, handleChange, handleSubmit, handleBlur } =
     useFormik({
@@ -14,12 +16,18 @@ const NewsletterComponent: FC<{ showText: boolean }> = (props) => {
         email: "",
       },
       onSubmit: (values) => {
-        axios.post("/api/newsletter", values);
+        axios.post("/api/newsletter", { ...values, referrer: referrer() });
         setSubmitted(true);
       },
     });
   return (
-    <div className={showText ? "text-white max-w-sm flex flex-col lg:max-w-3xl w-full text-center overflow-hidden relative mb-12 md:mb-16" : "relative z-50"}>
+    <div
+      className={
+        showText
+          ? "text-white max-w-sm flex flex-col lg:max-w-3xl w-full text-center overflow-hidden relative mb-12 md:mb-16"
+          : "relative z-50"
+      }
+    >
       {showText ? (
         <strong>
           Do you want to get more tips and tricks? register to our newsletter

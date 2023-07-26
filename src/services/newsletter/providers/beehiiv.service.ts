@@ -25,7 +25,8 @@ export class BeehiivService
     email_address: string,
     name?: string,
     slug?: string,
-    tag?: string
+    tag?: string,
+    referrer?: string
   ) {
     const [FNAME, ...LNAME] = (name || "").split(" ");
     await axiosInstance.post(
@@ -34,6 +35,11 @@ export class BeehiivService
         email: email_address,
         reactivate_existing: false,
         send_welcome_email: true,
+        ...(referrer
+          ? {
+              referring_site: referrer,
+            }
+          : {}),
         ...(slug
           ? {
               utm_source: "libraries",
@@ -59,8 +65,8 @@ export class BeehiivService
           ...(slug
             ? [
                 {
-                    name: 'first_subject',
-                    value: 'Your GitHub library is live!'
+                  name: "first_subject",
+                  value: "Your GitHub library is live!",
                 },
                 {
                   name: "slug",
