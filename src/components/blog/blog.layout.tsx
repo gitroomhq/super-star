@@ -10,7 +10,7 @@ export const BlogLayout: FC<{
   const { stargazers_count, image, children } = props;
   return (
     <>
-      <div className="container mx-auto max-w-screen-lg px-4 pb-10">
+      <div className="container mx-auto max-w-[800px] px-4 pb-10">
         <nav className="text-white flex">
           <div className="container pb-4 pt-4 mx-auto flex-1">
             <ul className="flex items-center">
