@@ -53,7 +53,6 @@ const HomeComponent: FC<{ stargazers_count: number }> = (props) => {
           cardType: "summary_large_image",
         }}
       />
-      <NavigationComponent stars={stargazers_count} />
       <main>
         <HeroComponent />
         <div className="relative bg-about-bg bg-cover lg:bg-contain bg-center bg-no-repeat">

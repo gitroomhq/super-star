@@ -35,14 +35,6 @@ export const BlogLayout: FC<{
               </li>
             </ul>
           </div>
-          <div className="flex items-center">
-            <a
-              target="_blank"
-              href={`https://github.com/${process.env.GITHUB_REPO}`}
-            >
-              GitHub Stars: {stargazers_count}
-            </a>
-          </div>
         </nav>
         {!!image && (
           <div className="relative h-[358px] mb-10">
