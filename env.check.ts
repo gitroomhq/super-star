@@ -7,7 +7,7 @@ import { CourseService } from "@github20k/services/course/course.service";
 import { NewsletterService } from "@github20k/services/newsletter/newsletter.service";
 import {blogService} from "@github20k/services/blog/blog.service";
 
-const availablePaymentService = ['stripe'];
+const availablePaymentService = ['stripe', 'paypal'];
 const availableCrmService = ['pipedrive'];
 const availableLMSService = ['teachable'];
 const availableNewsletterService = ['mailchimp', 'beehiiv'];
