@@ -1,0 +1,10 @@
+.navbarItem {
+  @apply font-matter font-normal text-lg leading-[21.6px] text-white text-center;
+  @apply transition-all;
+  @apply whitespace-nowrap overflow-hidden;
+  @apply md:text-base;
+}
+
+.navbarItem:hover {
+  @apply text-[rgba(186,185,255)];
+}

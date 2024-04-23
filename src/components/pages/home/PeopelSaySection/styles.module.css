@@ -1,0 +1,13 @@
+.peopleCard {
+  @apply flex flex-col;
+  @apply p-[30px] w-[335px] h-[308px];
+  @apply lg:w-[426px] lg:h-[291px];
+  @apply bg-cover;
+  background-image: url("/svgs/PeopleCard-Bg.svg");
+}
+
+@media screen and (min-width: 1440px) {
+  .peopleCard {
+    background-image: url("/svgs/PeopleCard-Bg-lg.svg");
+  }
+}

@@ -1,0 +1,5 @@
+.githubCard {
+  @apply flex flex-col cursor-pointer;
+  @apply w-[335px] h-[391px];
+  @apply lg:w-[420px] lg:h-[460px];
+}
