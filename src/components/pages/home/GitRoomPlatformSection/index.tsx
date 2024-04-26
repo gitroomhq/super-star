@@ -13,6 +13,7 @@ const GitRoomPlatformSection = () => {
   return (
     <div
       className={clsx(
+        "z-0",
         "git-room-container",
         "flex flex-col",
         "pt-[100px] md:pt-[200px]"
@@ -82,6 +83,7 @@ const GitRoomPlatformSection = () => {
       </div>
       <Button
         customClasses={clsx(
+          "z-0",
           "mx-auto mt-[35.21px] md:mt-12",
           "w-[152px] h-[42px]",
           "md:w-[164px] md:h-[48px]",

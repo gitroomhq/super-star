@@ -7,7 +7,11 @@ export const GithubInfo: IGithubInfo[] = [
     avatarUrl: "",
     name: "Nevo David",
     date: "March 23, 2024",
-    description: `asdfasdfasdfas dfasdf asdf asdf asdfasdfasdf`,
+    description: `Welcome to all the new newsletter subscribers 🚀 
+    Three days ago, I started a launch that resulted in: 
+    200 stars
+    60 newsletter registration
+    I want to say that the launch was super diverse, and many channels helped out. But the truth is, one channel performed 10x better than all the others: DEV.TO `,
   },
   {
     id: 1,

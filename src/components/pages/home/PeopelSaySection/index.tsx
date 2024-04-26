@@ -8,6 +8,7 @@ import { IconButton } from "@/components/core/Buttons";
 import { ChevLeftSvg, ChevRightSvg } from "@/components/svgs";
 
 import "swiper/css";
+import styles from "./styles.module.css";
 
 const PeopleSaySection: React.FC = () => {
   const peopleCardsInfo = [
@@ -115,7 +116,11 @@ const PeopleSaySection: React.FC = () => {
 
   return (
     <div
-      className={clsx("mt-[100px] md:mt-[200px]", "w-full", "flex flex-col")}
+      className={clsx(
+        "mt-[100px] md:mt-[200px]",
+        "w-full",
+        "flex flex-col z-0"
+      )}
     >
       <div className={clsx("flex flex-col items-center")}>
         <div
@@ -137,29 +142,12 @@ const PeopleSaySection: React.FC = () => {
           What People Say
         </div>
       </div>
-      <div className={clsx("mt-[66px]")}>
-        <Swiper
-          loop={true}
-          slidesPerView={1}
-          breakpoints={{
-            768: {
-              slidesPerView: 1,
-            },
-            960: {
-              slidesPerView: 3,
-            },
-            1440: {
-              slidesPerView: 3,
-            },
-            1920: {
-              slidesPerView: 5,
-            },
-          }}
-        >
+      <div className={"swiper-slider-wrapper"}>
+        <Swiper loop={true} slidesPerView={"auto"} centeredSlides={true}>
           <NavigationButton />
           {peopleCardsInfo.map((item, idx: number) => (
             <SwiperSlide key={idx}>
-              <div className={clsx("mx-3", "flex justify-center")}>
+              <div className={clsx("flex justify-center")}>
                 <PeopleCard
                   logoSrc={item.logoSrc}
                   description={item.description}

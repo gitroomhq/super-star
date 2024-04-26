@@ -10,7 +10,26 @@ import styles from "./styles.module.css";
 
 const Navbar = () => {
   const [isExpanded, setIsExpanded] = useState<boolean>(false);
+  const [isScrollDowned, setIsScrollDowned] = useState<boolean>(false);
+
   const onlyWidth = useWindowWidth();
+
+  const controlNavbar = () => {
+    if (window.scrollY > 10) {
+      setIsScrollDowned(true);
+    } else {
+      setIsScrollDowned(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", controlNavbar);
+
+    // cleanup function
+    return () => {
+      window.removeEventListener("scroll", controlNavbar);
+    };
+  }, []);
 
   useEffect(() => {
     if (onlyWidth >= 960) setIsExpanded(false);
@@ -24,7 +43,8 @@ const Navbar = () => {
         "z-[1]",
         "pt-3 pb-4 transition-all",
         "w-full",
-        isExpanded && "h-screen"
+        isExpanded && "h-screen",
+        isScrollDowned && "md:backdrop-blur-sm"
       )}
     >
       <div
