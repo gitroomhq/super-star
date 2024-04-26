@@ -4,7 +4,7 @@ import Image from "next/image";
 import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
 
 import PeopleCard from "./PeopleCard";
-import { IconButton } from "@/components/core/buttons";
+import { IconButton } from "@/components/core/Buttons";
 import { ChevLeftSvg, ChevRightSvg } from "@/components/svgs";
 
 import "swiper/css";
@@ -114,9 +114,13 @@ const PeopleSaySection: React.FC = () => {
   ];
 
   return (
-    <div className={clsx("w-full", "flex flex-col")}>
+    <div
+      className={clsx("mt-[100px] md:mt-[200px]", "w-full", "flex flex-col")}
+    >
       <div className={clsx("flex flex-col items-center")}>
-        <div className={clsx("relative w-[30.88px] h-[30.88px]")}>
+        <div
+          className={clsx("relative w-[50px] h-[50px] md:w-[68px] md:h-[68px]")}
+        >
           <Image
             src="/svgs/PeopleSayIcon.svg"
             layout="fill"

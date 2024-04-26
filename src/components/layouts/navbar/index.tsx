@@ -3,7 +3,7 @@ import Link from "next/link";
 import { useWindowWidth } from "@react-hook/window-size";
 import Image from "next/image";
 import clsx from "clsx";
-import { Button, IconButton } from "../../core/buttons";
+import { Button, IconButton } from "../../core/Buttons";
 import { CloseSvg, HamburgerSvg } from "../../svgs";
 
 import styles from "./styles.module.css";

@@ -19,10 +19,10 @@ const ChevRightSvg: React.FC<Props> = ({
       <path
         d="M1.5 11L6.5 6L1.5 1"
         stroke="white"
-        stroke-opacity="0.8"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeOpacity="0.8"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );

@@ -1,10 +1,10 @@
-import React, { useEffect, useLayoutEffect, useState } from "react";
-import { useWindowWidth } from "@react-hook/window-size";
+import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import clsx from "clsx";
-import { FooterButton } from "../../core/buttons";
+import { IconButton } from "../../core/Buttons";
 
-const Footer = () => {
+const Footer: React.FC = () => {
   return (
     <div className={clsx("bg-black", "text-white")}>
       <div
@@ -63,15 +63,15 @@ const Footer = () => {
               <h4 className={clsx("text-[18px] md:text-[20px]")}>
                 Need consulting?
               </h4>
-              <a
+              <Link
                 href="#"
                 className={clsx(
-                  "text-[14px] md:text-[16px] text-[#B385FF]",
-                  "underline"
+                  "text-[14px] md:text-[16px] text-[#B385FF] hover:text-[rgba(217,193,255,1)]",
+                  "underline transition-all"
                 )}
               >
                 Book a Free Call
-              </a>
+              </Link>
             </div>
             <div
               className={clsx(
@@ -82,15 +82,15 @@ const Footer = () => {
               <h4 className={clsx("text-[18px] md:text-[20px]")}>
                 Launching a product?
               </h4>
-              <a
+              <Link
                 href="#"
                 className={clsx(
-                  "text-[14px] md:text-[16px] text-[#B385FF]",
-                  "underline"
+                  "text-[14px] md:text-[16px] text-[#B385FF] hover:text-[rgba(217,193,255,1)]",
+                  "underline transition-all"
                 )}
               >
                 Grow Chief
-              </a>
+              </Link>
             </div>
             <div
               className={clsx(
@@ -101,15 +101,15 @@ const Footer = () => {
               <h4 className={clsx("text-[18px] md:text-[20px]")}>
                 GitHub Library
               </h4>
-              <a
+              <Link
                 href="#"
                 className={clsx(
-                  "text-[14px] md:text-[16px] text-[#B385FF]",
-                  "underline"
+                  "text-[14px] md:text-[16px] text-[#B385FF] hover:text-[rgba(217,193,255,1)]",
+                  "underline transition-all"
                 )}
               >
                 Visit Website
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -148,7 +148,7 @@ const Footer = () => {
             </div>
           </div>
           <div className={clsx("flex flex-row justify-center gap-[10px]")}>
-            <FooterButton onClick={() => {}}>
+            <IconButton onClick={() => {}}>
               <Image
                 src="/svgs/Discord.svg"
                 height={0}
@@ -156,8 +156,8 @@ const Footer = () => {
                 style={{ width: "24px", height: "16px" }}
                 alt="discord"
               />
-            </FooterButton>
-            <FooterButton onClick={() => {}}>
+            </IconButton>
+            <IconButton onClick={() => {}}>
               <Image
                 src="/svgs/Youtube.svg"
                 height={0}
@@ -165,8 +165,8 @@ const Footer = () => {
                 style={{ width: "22px", height: "15px" }}
                 alt="youtube"
               />
-            </FooterButton>
-            <FooterButton onClick={() => {}}>
+            </IconButton>
+            <IconButton onClick={() => {}}>
               <Image
                 src="/svgs/Linkedin.svg"
                 height={0}
@@ -174,8 +174,8 @@ const Footer = () => {
                 style={{ width: "18.5px", height: "17.59px" }}
                 alt="linkedin"
               />
-            </FooterButton>
-            <FooterButton onClick={() => {}}>
+            </IconButton>
+            <IconButton onClick={() => {}}>
               <Image
                 src="/svgs/Twitter.svg"
                 height={0}
@@ -183,7 +183,7 @@ const Footer = () => {
                 style={{ width: "18px", height: "18px" }}
                 alt="twitter"
               />
-            </FooterButton>
+            </IconButton>
           </div>
           <div
             className={clsx(
@@ -191,8 +191,22 @@ const Footer = () => {
               "text-[14px] md:text-[16px]"
             )}
           >
-            <p className={clsx("pl-0 md:pl-[41px]")}>Terms of service</p>
-            <p>Privacy Policy</p>
+            <Link
+              href=""
+              className={clsx(
+                "pl-0 md:pl-[41px] text-[rgba(255,255,255,0.6)] hover:text-[rgba(255,255,255,1)] transition-all"
+              )}
+            >
+              Terms of service
+            </Link>
+            <Link
+              href=""
+              className={clsx(
+                "text-[rgba(255,255,255,0.6)] hover:text-[rgba(255,255,255,1)] transition-all"
+              )}
+            >
+              Privacy Policy
+            </Link>
           </div>
         </div>
       </div>

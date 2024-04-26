@@ -19,9 +19,9 @@ const CloseSvg: React.FC<Props> = ({
       <path
         d="M17 7L7 17M7 7L17 17"
         stroke="white"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );

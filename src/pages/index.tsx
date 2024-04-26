@@ -1,22 +1,29 @@
 import { clsx } from "clsx";
 import {
   CompanyLogoContainer,
+  GitRoomCommunitySection,
+  GitRoomPlatformSection,
   PeopleSaySection,
+  StayInformedSubscribeSection,
+  SubscribeSection,
+  StayFormSection,
+  GithubSection,
+  HomeHeader,
 } from "@/components/pages/home";
 import RootLayout from "@/components/layouts/RootLayout";
-import Illustrartion from "@/components/layouts/illustrartion";
-import StayFormSection from "@/components/pages/home/StayFormSection";
-import GithubSection from "@/components/pages/home/GithubSection";
 
 export default function Home() {
   return (
     <RootLayout>
-      <div className={clsx("min-h-[300px]")}></div>
+      <HomeHeader />
       <CompanyLogoContainer />
       <StayFormSection />
       <GithubSection />
       <PeopleSaySection />
-      <Illustrartion customClass="pt-[591px] pb-[60px]" />
+      <SubscribeSection />
+      <GitRoomPlatformSection />
+      <GitRoomCommunitySection />
+      <StayInformedSubscribeSection />
     </RootLayout>
   );
 }

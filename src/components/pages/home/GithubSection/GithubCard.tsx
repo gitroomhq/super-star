@@ -1,11 +1,35 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import clsx from "clsx";
 
 import styles from "./styles.module.css";
+import { IGithubInfo } from "@/types";
 
-const GithubCard = () => {
+interface Props {
+  githubInfo: IGithubInfo;
+}
+
+const GithubCard: React.FC<Props> = ({ githubInfo }) => {
+  const [customClass, setCustomClass] = useState(styles.githubCard1);
+
+  useEffect(() => {
+    switch (githubInfo.id) {
+      case 0:
+        setCustomClass(styles.githubCard1);
+        break;
+      case 1:
+        setCustomClass(styles.githubCard2);
+        break;
+      case 2:
+        setCustomClass(styles.githubCard3);
+        break;
+      default:
+        setCustomClass(styles.githubCard1);
+        break;
+    }
+  }, [githubInfo]);
+
   return (
-    <div className={clsx(styles.githubCard)}>
+    <div className={clsx(styles.githubCard, customClass)}>
       <div
         className={clsx(
           "flex flex-col justify-center items-center",
@@ -29,7 +53,7 @@ const GithubCard = () => {
             "lg:text-[22px] lg:leading-[28px]"
           )}
         >
-          Everything I know about the GitHub trending feed
+          {githubInfo.title}
         </div>
         <div className={clsx("flex items-center")}>
           <div
@@ -47,7 +71,7 @@ const GithubCard = () => {
               "lg:text-base lg:leading-[20.8px]"
             )}
           >
-            Nevo David
+            {githubInfo.name}
           </div>
           <div
             className={clsx(
@@ -61,7 +85,7 @@ const GithubCard = () => {
               "lg:text-base lg:leading-[20.8px]"
             )}
           >
-            March 16, 2024
+            {githubInfo.date}
           </div>
         </div>
         <div
@@ -70,11 +94,7 @@ const GithubCard = () => {
             "text-[13px] leading-[19. 5px]"
           )}
         >
-          Getting into the GitHub trending feed is the dream, especially in
-          higher places. In Novu, we were trending on the top spot for almost a
-          week and got around 7000 stars. You immediately rush with tons of
-          stars, contributors, and Discord members when you are there. The
-          success of many companies relies on this feed. 
+          {githubInfo.description}
         </div>
       </div>
     </div>

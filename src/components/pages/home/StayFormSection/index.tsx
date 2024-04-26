@@ -1,12 +1,20 @@
 import React from "react";
 import clsx from "clsx";
 import Image from "next/image";
+import Lottie from "react-lottie-player";
+import NetLottie from "@/lottie/Net.json";
 
 const StayFormSection: React.FC = () => {
   return (
-    <div className={clsx("git-room-container", "flex flex-col items-center")}>
+    <div
+      className={clsx(
+        "mt-[100px] md:mt-[200px]",
+        "git-room-container",
+        "flex flex-col items-center"
+      )}
+    >
       <div
-        className={clsx("relative w-[50px] h-[50px] md:w-[131px] md:h-[131px]")}
+        className={clsx("relative w-[50px] h-[50px] md:w-[68px] md:h-[68px]")}
       >
         <Image
           src="/svgs/NoteEmail.svg"
@@ -15,7 +23,6 @@ const StayFormSection: React.FC = () => {
           alt="stay form"
         />
       </div>
-
       <div
         className={clsx(
           "text-center font-chakra-petch text-white font-[600]",
@@ -39,9 +46,30 @@ const StayFormSection: React.FC = () => {
         updates, and tips straight to your inbox, ensuring you never miss a beat
         in the world of development.
       </div>
+      <div
+        className={clsx(
+          "relative mt-[-133px] overflow-hidden w-full h-[570px]",
+          "flex justify-center"
+        )}
+      >
+        <Lottie
+          loop
+          animationData={NetLottie}
+          play
+          style={{
+            position: "absolute",
+            width: 936,
+            height: 570,
+            left: "50%",
+            top: 0,
+            transform: "translateX(-50%)",
+          }}
+        />
+      </div>
 
-      {/* video content */}
-      <div className={clsx("flex flex-col items-center")}>
+      <div
+        className={clsx("mt-[-144px] md:mt-[]", "flex flex-col items-center")}
+      >
         <div
           className={clsx(
             "text-center text-white font-[600]",
@@ -53,6 +81,7 @@ const StayFormSection: React.FC = () => {
         </div>
         <div
           className={clsx(
+            "md:mt-2",
             "text-center text-white font-[400] ",
             "text-sm leading-[16.8px]",
             "max-w-[304px]",

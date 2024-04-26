@@ -2,8 +2,8 @@ import React from "react";
 import localFont from "@next/font/local";
 import { Chakra_Petch } from "@next/font/google";
 
-import Navbar from "./navbar";
-import Footer from "./footer";
+import Navbar from "./Navbar";
+import Footer from "./Footer";
 
 const matters = localFont({
   src: [

@@ -3,7 +3,7 @@
   @apply overflow-auto;
   @apply py-4;
   /* temp code */
-  @apply min-h-[100px] lg:min-h-[79px];
+  @apply min-h-[79px];
 }
 
 .companyLogoItemWrapper {
