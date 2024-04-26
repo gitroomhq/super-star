@@ -1,0 +1,77 @@
+.componentContainer {
+  @apply w-full max-w-[508px];
+  @apply relative;
+  @apply flex flex-col;
+}
+
+.inputWrapper {
+  @apply relative h-[50px];
+  @apply md:h-[56px];
+  @apply rounded-2xl;
+  @apply overflow-hidden;
+}
+
+.inputWrapper:hover .input {
+  @apply border-[#6661B6];
+  @apply bg-[#1E1D2D];
+}
+
+.input {
+  @apply w-full;
+  @apply h-[50px];
+  @apply rounded-2xl md:h-[56px];
+  @apply py-[17px] pl-5 pr-[160px];
+  @apply md:py-5 md:pl-6 md:pr-[166px];
+  /* @apply bg-[rgba(222, 220, 249, 0.8)]; */
+  @apply bg-[#1E1D2D];
+  @apply text-white text-sm md:text-base font-[400];
+  @apply border-[1px] border-[#2F2C55];
+  @apply !outline-none;
+}
+
+.input:focus {
+  @apply !bg-[#2B2944];
+  @apply !border-[#9791FF];
+}
+
+.input::placeholder {
+  @apply text-[rgba(222,220,249,0.8)] text-sm md:text-base font-[500];
+}
+
+.input::-ms-input-placeholder {
+  /* Edge 12 -18 */
+  @apply text-[rgba(222,220,249,0.8)] text-base font-[500];
+}
+
+.btnSubmit {
+  @apply absolute;
+  @apply w-[140px] h-[42px];
+  @apply md:w-[146px] md:h-[48px];
+  @apply top-1 bottom-1 right-1;
+  @apply flex items-center justify-center;
+  @apply rounded-xl;
+  @apply text-sm;
+  @apply md:text-base text-black font-[500];
+
+  font-family: var(--font-matter);
+  background-image: linear-gradient(45deg, white, #d1d0ff);
+}
+
+.btnSubmit:hover {
+  @apply text-white;
+  background: linear-gradient(48.64deg, #5351de 10.15%, #bcbafd 104.79%);
+}
+
+.inputWrapper.hasError .input {
+  @apply !border-[#FF4672] !bg-[#1E1D2D];
+}
+
+.labelValidate {
+  @apply mt-2;
+  @apply text-[#FF4672] text-xs font-[400];
+}
+
+.labelReference {
+  @apply mt-4;
+  @apply text-white text-sm font-[400];
+}

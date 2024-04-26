@@ -1,0 +1,20 @@
+.companyLogoContainer {
+  @apply bg-black;
+  @apply overflow-auto;
+  @apply py-4;
+  /* temp code */
+  @apply min-h-[79px];
+}
+
+.companyLogoItemWrapper {
+  @apply ml-auto mr-auto;
+  @apply inline-flex items-center gap-10 justify-start;
+  @apply md:justify-between;
+  @apply min-w-full;
+  @apply md:flex;
+  @apply min-h-[28px] lg:min-h-[39.04px];
+}
+
+.companyLogoItem {
+  @apply relative shrink-0 md:shrink;
+}

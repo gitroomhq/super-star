@@ -1,15 +1,29 @@
-import HomeComponent from "@github20k/components/home/home.component";
-import { getGithubStars } from "@github20k/helpers/get.github.stars";
+import { clsx } from "clsx";
+import {
+  CompanyLogoContainer,
+  GitRoomCommunitySection,
+  GitRoomPlatformSection,
+  PeopleSaySection,
+  StayInformedSubscribeSection,
+  SubscribeSection,
+  StayFormSection,
+  GithubSection,
+  HomeHeader,
+} from "@/components/pages/home";
+import RootLayout from "@/components/layouts/RootLayout";
 
-export default function Home(props: { stargazers_count: number }) {
-  return <HomeComponent stargazers_count={props.stargazers_count} />;
-}
-
-export async function getStaticProps() {
-  return {
-    props: {
-      ...(await getGithubStars()),
-    }, // will be passed to the page component as props
-    revalidate: 3600
-  };
+export default function Home() {
+  return (
+    <RootLayout>
+      <HomeHeader />
+      <CompanyLogoContainer />
+      <StayFormSection />
+      <GithubSection />
+      <PeopleSaySection />
+      <SubscribeSection />
+      <GitRoomPlatformSection />
+      <GitRoomCommunitySection />
+      <StayInformedSubscribeSection />
+    </RootLayout>
+  );
 }
