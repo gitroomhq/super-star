@@ -1,0 +1,39 @@
+.cardWrapper {
+  @apply relative bg-black border-[1px] border-[rgba(205,204,255,0.15)] rounded;
+  @apply flex flex-col;
+  @apply w-full max-w-[335px];
+  @apply z-0;
+}
+
+.cardOne {
+  @apply h-[415px];
+}
+
+.cardTwo {
+  @apply h-[280px];
+}
+
+@media screen and (min-width: 960px) {
+  .cardWrapper {
+    @apply w-[635px] max-w-full;
+  }
+  .cardOne {
+    @apply h-[520px];
+  }
+  .cardTwo {
+    @apply h-[301px];
+  }
+}
+
+.cardTitle {
+  @apply font-matter text-white font-[500];
+  @apply text-[22px] leading-[26.4px];
+  @apply md:text-[32px] md:leading-[38.4px];
+  @apply z-0;
+}
+
+.cardDescription {
+  @apply mt-5 text-white font-matter font-[300] text-opacity-80;
+  @apply text-sm leading-[16.8px];
+  @apply: mt-6 md: text-base md: leading-[19.2px];
+}

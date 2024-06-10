@@ -1,0 +1,25 @@
+.wrapper {
+  @apply w-full flex flex-col;
+}
+
+.accordion {
+  @apply flex flex-col mb-8 last:mb-0 last:border-[0] pb-[22px];
+  @apply border-b-[1px] border-b-[rgba(255,255,255,0.15)];
+}
+
+.accordion .accordionHeader {
+  @apply flex items-center;
+  @apply cursor-pointer w-full;
+  @apply text-white font-[600] font-matter;
+  @apply text-[24px] leading-[28.8px];
+}
+
+.accordionContent {
+  @apply overflow-hidden transition-all duration-100 pt-[20px];
+}
+
+.accordionContentDiv {
+  @apply max-w-[700px];
+  @apply transition-all font-matter font-[400] text-[rgba(255,255,255,0.9)];
+  @apply text-base leading-[19.2px];
+}

@@ -1,13 +1,11 @@
 import React from "react";
 import clsx from "clsx";
 import Image from "next/image";
-import Lottie from "react-lottie-player";
 
 import { Button } from "@/components/core/Buttons";
-
+import LottieWrapper from "@/components/common/LottieWrapper";
 import LottieGrid from "@/lottie/Grid.json";
-
-import styles from "./styles.module.css";
+import LottieGridMobile from "@/lottie/Grid-mobile.json";
 
 const GitRoomPlatformSection = () => {
   return (
@@ -16,36 +14,29 @@ const GitRoomPlatformSection = () => {
         "z-0",
         "git-room-container",
         "flex flex-col",
-        "pt-[100px] md:pt-[200px]"
+        "pt-[120px] md:pt-[200px] !pl-[18px] !pr-[17px]",
+        "md:mt-10 overflow-hidden"
       )}
     >
       <div
         className={clsx(
-          "left-[50%] top-[116px] z-[1] translate-x-[-50%]",
-          "absolute md:w-[646px] md:h-[646px]"
+          "left-[50%] top-[50px] md:top-[100px] translate-x-[-50%]",
+          "absolute w-full h-[600px] md:h-[1000px] z-[1]"
         )}
         style={{
           background:
-            "radial-gradient(circle at 50%, rgba(69,23,255,0.35), transparent 85%)",
+            "radial-gradient(circle at 50%, rgba(69,23,255,0.35), transparent 70%)",
         }}
-        // radial-gradient(circle at 100%, #333, #333 50%, #eee 75%, #333 75%);
-      >
-        {/* <Image
-          src="/svgs/Circle1.svg"
-          layout="fill"
-          objectFit="contain"
-          alt="circle"
-        /> */}
-      </div>
+      />
 
-      <div className={clsx("absolute left-0 top-0 w-full z-0")}>
-        <Lottie
-          play
-          loop
-          animationData={LottieGrid}
-          style={{ width: "100%" }}
-        />
-      </div>
+      <LottieWrapper
+        animationData={LottieGridMobile}
+        className="absolute top-0 left-[50%] -translate-x-[50%] w-[100%] z-0 sm:hidden"
+      />
+      <LottieWrapper
+        animationData={LottieGrid}
+        className="hidden sm:block absolute top-0 left-[50%] -translate-x-[50%] sm:w-[calc(100%+40px)] md:w-[calc(100%+80px)] lg:w-[calc(100%+115px)] z-0"
+      />
 
       <div
         className={clsx(
@@ -92,7 +83,33 @@ const GitRoomPlatformSection = () => {
       >
         Get Started
       </Button>
-      <div className={clsx(styles.illustrationWrapper)}></div>
+      {/* <div className={clsx(styles.illustrationWrapper)}></div> */}
+
+      <div className="w-full flex overflow-hidden relative mt-10 md:mt-[90px]">
+        <div className="relative min-w-[482px] mx-5 md:mx-[65px] px-[6px] pt-[6px] md:px-4 md:pt-4 border-[1px] border-[#7B6FFF33] border-b-0 rounded-t-[16px] md:rounded-t-[40px] overflow-hidden">
+          <div
+            className={clsx(
+              "left-[50%] translate-x-[-50%] -translate-y-[calc(50%-50px)]",
+              "absolute w-[800px] h-[600px] md:w-[1200px] md:h-[1200px] scale-y-50 opacity-20"
+            )}
+            style={{
+              background:
+                "radial-gradient(circle at 50%, #FFF, transparent 60%)",
+            }}
+          />
+          <Image
+            src="/pngs/Illustration.png"
+            width={1118}
+            height={596}
+            alt="Illustration"
+            className="z-[2] relative opacity-100"
+          />
+        </div>
+
+        {/* Black Shadow */}
+        <div className="absolute bottom-0 left-0 w-full h-[57px] md:h-[218px] bg-illustration-mask-b z-[4]" />
+        <div className="h-full w-[57px] xs:hidden right-0 top-0 absolute bg-illustration-mask-r z-[4]" />
+      </div>
     </div>
   );
 };

@@ -1,0 +1,73 @@
+.landCard {
+  @apply flex flex-col mx-auto;
+  @apply w-[335px] rounded overflow-hidden;
+  @apply border-[1px] border-[rgba(185,200,255,0.2)];
+}
+
+.landCard .leftSection {
+  @apply w-full h-[205px];
+  @apply bg-center bg-no-repeat;
+  background-size: 100%;
+}
+
+.landCard .rightSection {
+  @apply w-full h-[240px];
+  @apply flex flex-col bg-black;
+  @apply p-[32px];
+  @apply lg:pt-[61px] lg:pr-[50px] lg:pb-[60px] lg:pl-[50px];
+}
+
+.searchContainer {
+  @apply flex flex-col items-start sm:flex-row sm:items-center;
+}
+
+.listContainer {
+  @apply mt-6 lg:mt-10 grid grid-cols-1 gap-[10px];
+}
+
+.card {
+  @apply mx-auto;
+}
+
+@media screen and (min-width: 380px) {
+  .searchContainer {
+    @apply w-[335px] max-w-[335px] mx-auto items-start;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .landCard {
+    @apply flex-row w-full max-w-[680px] mx-auto;
+  }
+  .searchContainer {
+    @apply w-[680px] max-w-[680px] mx-auto justify-around;
+  }
+
+  .landCard .leftSection,
+  .landCard .rightSection {
+    @apply min-w-[50%] h-[240px];
+    background-size: auto 100%;
+  }
+
+  .listContainer {
+    @apply grid-cols-2;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .listContainer {
+    @apply grid-cols-3;
+  }
+}
+
+@media screen and (min-width: 1320px) {
+  .landCard,
+  .searchContainer {
+    @apply w-full max-w-full;
+  }
+
+  .landCard .leftSection,
+  .landCard .rightSection {
+    @apply w-[50%] h-[397px];
+  }
+}

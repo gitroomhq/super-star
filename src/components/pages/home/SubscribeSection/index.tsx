@@ -1,22 +1,26 @@
-import { SubscribeForm } from "@/components/common";
-import { SubscribeSvg } from "@/components/svgs";
-import clsx from "clsx";
-import Image from "next/image";
 import React from "react";
+import clsx from "clsx";
+
+import SubscribeForm from "@/components/common/SubscribeForm";
+import IconContainer from "@/components/common/IconContainer";
 
 const SubscribeSection: React.FC = () => {
   return (
     <div
       className={clsx(
         "mt-[100px] md:mt-[200px] git-room-container",
-        "flex flex-col"
+        "flex flex-col items-center"
       )}
     >
-      <div
-        className={clsx("mx-auto w-[50px] h-[50px] md:w-[68px] md:h-[68px]")}
-      >
-        <SubscribeSvg />
-      </div>
+      <IconContainer
+        iconSrc="/svgs/Subscribe.svg"
+        className="w-[28px] h-[24px] md:w-[38px] md:h-[32px] mx-auto"
+        width={50}
+        height={50}
+        alt="subscribe"
+        hasGradient
+        gradientColor="#6F52E5"
+      />
       <div
         className={clsx(
           "text-white mx-auto mt-3 md:mt-6 w-full max-w-[335px] md:max-w-full",
@@ -26,9 +30,7 @@ const SubscribeSection: React.FC = () => {
       >
         Subscribe Now to Receive Weekly Tips
       </div>
-      <div className="mx-auto mt-10 md:mt-[60px]">
-        <SubscribeForm />
-      </div>
+      <SubscribeForm customClasses="mt-10 md:mt-[60px]" />
     </div>
   );
 };

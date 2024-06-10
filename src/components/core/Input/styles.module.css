@@ -1,0 +1,37 @@
+.searchInputWrapper {
+  @apply relative flex flex-col w-full;
+}
+
+.searchInputWrapper input {
+  @apply w-full h-[50px] lg:h-[56px] rounded-[16px];
+  @apply pt-1 pr-1 pb-1 pl-[52px];
+  @apply lg:pt-4 lg:pb-4 lg:pr-4 lg:pl-[52px] lg:rounded-2xl;
+  @apply bg-[#1E1D2D] border-[1px] border-[#2F2C55];
+  @apply text-white font-[400];
+  @apply text-sm md:text-base;
+
+  @apply !outline-none;
+}
+
+.searchInputWrapper input:focus {
+  @apply !bg-[#2B2944];
+  @apply !border-[#9791FF];
+}
+
+.searchInputWrapper input::placeholder {
+  @apply text-[rgba(222,220,249,0.8)] text-sm md:text-base font-[500];
+}
+
+.input::-ms-input-placeholder {
+  /* Edge 12 -18 */
+  @apply text-[rgba(222,220,249,0.8)] text-base font-[500];
+}
+
+.searchInputWrapper.hasError .input {
+  @apply !border-[#FF4672] !bg-[#1E1D2D];
+}
+
+.searchInputWrapper:hover input {
+  @apply border-[#6661B6];
+  @apply bg-[#1E1D2D];
+}

@@ -1,0 +1,45 @@
+.pricingCardItem {
+  @apply flex items-center last:mb-0 text-white font-matter;
+  @apply mb-3 text-[13px] leading-[15.6px];
+  @apply tablet:mb-4 tablet:text-base tablet:leading-[19.2px];
+}
+
+.popularBadge {
+  @apply relative p-[1px] overflow-hidden;
+  @apply flex items-center justify-center;
+  @apply text-[rgba(255,255,255,0.9)] font-matter font-[400];
+  @apply w-[75px] h-[30px] rounded-[20px] text-xs leading-[14.4px];
+  background-image: linear-gradient(
+    79.78deg,
+    rgba(255, 255, 255, 0.15) 11.01%,
+    rgba(255, 255, 255, 0.054) 91.33%
+  );
+}
+
+.popularBadge div {
+  @apply flex items-center justify-center;
+  @apply absolute w-[calc(100%-2px)] h-[calc(100%-2px)] left-[1px] top-[1px] bottom-[1px] right-[1px];
+  @apply z-[0];
+  @apply bg-[rgba(107,85,241,0.3)];
+}
+
+.btnSelect {
+  @apply mt-auto mx-auto w-[177px] h-[42px];
+}
+
+.trialText {
+  @apply text-center text-[rgba(255,255,255,0.8)] font-matter font-[400];
+  @apply mt-5 text-xs leading-[14.4px];
+}
+
+@media screen and (min-width: 1080px) {
+  .popularBadge {
+    @apply w-[82px] h-[33px] rounded-[20px] text-sm leading-[16.8px];
+  }
+  .btnSelect {
+    @apply w-[200px] h-[48px];
+  }
+  .trialText {
+    @apply text-sm leading-[16.8px];
+  }
+}

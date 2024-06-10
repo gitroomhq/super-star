@@ -18,7 +18,7 @@ const ChevLeftSvg: React.FC<Props> = ({
     >
       <path
         d="M6.5 11L1.5 6L6.5 1"
-        stroke="white"
+        stroke="currentColor"
         strokeOpacity="0.8"
         strokeWidth="2"
         strokeLinecap="round"

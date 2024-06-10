@@ -1,0 +1,21 @@
+.communityCard {
+  @apply flex flex-col cursor-pointer;
+  @apply relative;
+  @apply bg-no-repeat;
+  background-image: url("/pngs/CommunityCard-Normal.png");
+  background-size: 100% 100%;
+}
+
+.communityCard:hover {
+  background-image: url("/pngs/CommunityCard-Hover.png");
+}
+
+@media screen and (min-width: 1320px) {
+  .communityCard {
+    background-image: url("/pngs/CommunityCard-Normal-lg.png");
+  }
+
+  .communityCard:hover {
+    background-image: url("/pngs/CommunityCard-Hover-lg.png");
+  }
+}

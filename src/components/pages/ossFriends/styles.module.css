@@ -1,0 +1,14 @@
+.ossCard {
+  @apply flex flex-col p-[32px];
+  @apply relative bg-no-repeat;
+  @apply w-full h-[279px];
+  @apply sm:w-[calc(50%-4px)];
+  @apply md:w-[calc(33.33%-8px)] md:h-[279px];
+  @apply lg:w-[420px];
+  background-size: 100% 100%;
+  background-image: url("/pngs/CommunityCard-Normal.png");
+}
+
+.ossCard:hover {
+  background-image: url("/pngs/CommunityCard-Hover.png");
+}

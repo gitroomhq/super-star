@@ -1,0 +1,26 @@
+.wrapper {
+  @apply relative flex items-center transition-all;
+  @apply w-[36px] h-[20px] rounded-[60px];
+  @apply p-[2px];
+  background: linear-gradient(125.2deg, #9378ff 30.35%, #4b2cca 103.43%);
+}
+
+.anchor {
+  @apply relative flex items-center justify-center w-4 h-4 rounded-full transition-all;
+  @apply ml-0;
+  background: linear-gradient(
+    212.5deg,
+    #ffffff 7.65%,
+    rgba(255, 255, 255, 0) 60.77%
+  );
+}
+
+.anchor:after {
+  content: " ";
+  @apply absolute left-[1px] top-[1px] w-[14px] h-[14px] rounded-full;
+  background: linear-gradient(33.87deg, #ffffff 50.08%, #4a42fb 129.64%);
+}
+
+.anchorRight {
+  @apply ml-[16px];
+}

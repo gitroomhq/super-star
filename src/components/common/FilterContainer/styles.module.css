@@ -1,0 +1,26 @@
+.filterBtn {
+  @apply flex justify-center items-center text-white font-matter cursor-pointer;
+  @apply border-[1px] border-[rgba(186,185,255,0.2)] rounded;
+  @apply hover:border-[rgba(188,186,253,1)];
+  @apply text-sm leading-[16px] px-3 h-[32px];
+}
+
+.filterBtn:hover {
+  background: linear-gradient(
+    48.64deg,
+    rgba(83, 81, 222, 0.4) 10.15%,
+    rgba(188, 186, 253, 0.4) 104.79%
+  );
+  border-color: #5351de;
+}
+
+.filterBtn.selected {
+  background: linear-gradient(48.64deg, #5351de 10.15%, #bcbafd 104.79%);
+  border-color: #5351de;
+}
+
+@media screen and (min-width: 1320px) {
+  .filterBtn {
+    @apply text-base leading-[19.1px] h-[36px] px-4;
+  }
+}

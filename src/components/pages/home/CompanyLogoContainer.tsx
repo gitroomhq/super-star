@@ -31,8 +31,8 @@ const CompanyLogoContainer: React.FC = () => {
         >
           <Image
             src="/svgs/Flatfile.svg"
-            layout="fill"
-            objectFit="contain"
+            width={133}
+            height={32}
             alt="Flatfile"
           />
         </div>
@@ -40,56 +40,60 @@ const CompanyLogoContainer: React.FC = () => {
           className={clsx(
             styles.companyLogoItem,
             "w-[74px] h-[28px]",
-            "md:w-[101.47px] md:h-[26.16px]"
+            "md:w-[140px] md:h-[40px]"
           )}
         >
           <Image
             src="/svgs/Wing.svg"
-            layout="fill"
-            objectFit="contain"
+            width={74}
+            height={28}
             alt="Wing"
+            className="w-[74px] h-[28px] md:w-[140px] md:h-[40px]"
           />
         </div>
         <div
           className={clsx(
             styles.companyLogoItem,
             "w-[118px] h-[28px]",
-            "md:w-[164.96px] md:h-[33.1px]"
+            "md:w-[180px] md:h-[60px]"
           )}
         >
           <Image
             src="/svgs/CopilotKit.svg"
-            layout="fill"
-            objectFit="contain"
+            width={74}
+            height={28}
             alt="CopilotKit"
+            className="w-[118px] h-[28px] md:w-[180px] md:h-[60px]"
           />
         </div>
         <div
           className={clsx(
             styles.companyLogoItem,
             "w-[88px] h-[28px]",
-            "md:w-[123.04px] md:h-[29.36px]"
+            "md:w-[140.04px] md:h-[55px]"
           )}
         >
           <Image
             src="/svgs/Odigos.svg"
-            layout="fill"
-            objectFit="contain"
             alt="Odigos"
+            width={88}
+            height={28}
+            className="w-[88px] h-[28px] md:w-[140.04px] md:h-[55px]"
           />
         </div>
         <div
           className={clsx(
             styles.companyLogoItem,
             "w-[85px] h-[28px]",
-            "md:w-[118.49px] md:h-[31.1px]"
+            "md:w-[118.49px] md:h-[40.1px]"
           )}
         >
           <Image
             src="/svgs/Taipy.svg"
-            layout="fill"
-            objectFit="contain"
+            width={85}
+            height={28}
             alt="Taipy"
+            className="w-[85px] h-[28px] md:w-[118.49px] md:h-[40.1px]"
           />
         </div>
       </div>

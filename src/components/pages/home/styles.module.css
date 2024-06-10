@@ -1,9 +1,9 @@
 .companyLogoContainer {
-  @apply bg-black;
+  @apply bg-transparent;
   @apply overflow-auto;
   @apply py-4;
   /* temp code */
-  @apply min-h-[79px];
+  @apply min-h-[79px] z-[6];
 }
 
 .companyLogoItemWrapper {
@@ -17,4 +17,49 @@
 
 .companyLogoItem {
   @apply relative shrink-0 md:shrink;
+}
+
+.header {
+  @apply max-w-[340px] mx-auto;
+  @apply md:max-w-[615px] lg:mx-0;
+  @apply relative flex flex-col w-full pt-[284px] z-[6];
+}
+
+.headerTitle {
+  @apply font-chakra-petch text-white font-[600];
+  @apply text-[48px] leading-[48px] w-full max-w-[335px];
+}
+
+.headerSubTitle {
+  @apply mt-6 text-white text-[400];
+  @apply w-full max-w-[335px];
+  @apply text-sm leading-[16.8px];
+}
+
+@media screen and (min-width: 960px) {
+  .headerSubTitle {
+    @apply mt-[90px] text-base leading-[19.2px] max-w-[520px];
+  }
+}
+
+@media screen and (min-width: 1080px) {
+  .header {
+    @apply pt-[150px] max-w-full;
+  }
+
+  .headerTitle {
+    @apply text-[90px] leading-[90px] max-w-[615px];
+  }
+}
+
+@media screen and (min-width: 1370px) {
+  .header {
+    @apply pt-[160px];
+  }
+
+  .headerTitle {
+    @apply text-[90px] leading-[90px] max-w-[615px];
+  }
+
+  .headerSubTitle {}
 }

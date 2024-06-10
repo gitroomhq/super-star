@@ -1,0 +1,29 @@
+.accordion {
+}
+
+.accordion .accordion__button {
+  @apply text-white font-[600];
+  font-family: var(--font-matter);
+  @apply text-[24px] leading-[28.8px];
+}
+
+.btnProviderItem {
+  @apply relative flex items-center justify-center cursor-pointer p-2;
+  @apply rounded-full;
+}
+
+.accordionItem {
+  @apply mt-1 md:mt-3;
+}
+
+.btnAccordion {
+  @apply ml-auto overflow-hidden relative flex items-center justify-center;  
+  @apply border-[1px] border-[rgba(186,185,255,0.2)]; 
+  @apply w-[32px] h-[32px] rounded-[5.82px];
+  @apply cursor-pointer text-white;
+  @apply md:w-[44px] md:h-[44px] md:rounded-[8px];
+}
+
+.btnAccordion:hover {
+  background: linear-gradient(227.12deg, rgba(101,27,223,0.2) 23.2%, rgba(78,0,244,0.2) 115.38%);
+}

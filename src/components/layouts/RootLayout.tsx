@@ -1,9 +1,10 @@
 import React from "react";
-import localFont from "@next/font/local";
-import { Chakra_Petch } from "@next/font/google";
+import localFont from "next/font/local";
+import { Chakra_Petch, IBM_Plex_Sans } from "next/font/google";
 
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import { EnumNavMenus } from "@/types";
 
 const matters = localFont({
   src: [
@@ -30,16 +31,27 @@ const chakra_petch = Chakra_Petch({
   display: "swap",
 });
 
+const ibm_plex_sans = IBM_Plex_Sans({
+  weight: ["300", "400", "500", "600", "700"],
+  subsets: ["latin"],
+  variable: "--font-ibm-plex-sans",
+  display: "swap",
+});
+
 interface Props {
+  activeMenu?: EnumNavMenus;
   children?: React.ReactNode | React.ReactNode[];
 }
 
-const RootLayout: React.FC<Props> = ({ children = null }: Props) => {
+const RootLayout: React.FC<Props> = ({
+  activeMenu = EnumNavMenus.Home,
+  children = null,
+}: Props) => {
   return (
     <div
-      className={`${matters.variable} ${chakra_petch.variable} flex flex-col w-full h-screen`}
+      className={`${matters.variable} ${chakra_petch.variable} ${ibm_plex_sans.variable} min-w-full flex flex-col w-full overflow-x-hidden`}
     >
-      <Navbar />
+      <Navbar activeMenu={activeMenu} />
       {children}
       <Footer />
     </div>

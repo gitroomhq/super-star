@@ -12,7 +12,7 @@ const Footer: React.FC = () => {
           "git-room-container",
           "flex flex-col",
           "gap-[48px]",
-          "pt-[64px] pb-[32px]"
+          "pt-[64px] pb-[32px] mt-[100px]"
         )}
       >
         <div
@@ -26,24 +26,29 @@ const Footer: React.FC = () => {
               "gap-[16px] md:gap-[10px]"
             )}
           >
-            <div className={clsx("flex flex-row gap-[12px]")}>
+            <div className={clsx("flex flex-row gap-1")}>
               <Image
                 className={clsx("block md:hidden")}
                 src="/svgs/Logo.svg"
                 height={0}
                 width={0}
-                style={{ width: "30.55px", height: "31.38px" }}
+                style={{ width: "45px", height: "auto" }}
                 alt="logo"
               />
               <h4
                 className={clsx(
-                  "font-semibold text-[23.8px] md:text-[26.47px] font-chakra-petch"
+                  "font-semibold text-[23.8px] md:text-[26.47px] font-chakra-petch pt-[11px] md:pt-0"
                 )}
               >
                 GitRoom
               </h4>
             </div>
-            <p className={clsx("font-matter")}>
+            <p
+              className={clsx(
+                "font-matter font-[400] text-sm leading-[24px] text-[rgba(255,255,255,0.8)]",
+                "md:text-base leading-[24px]"
+              )}
+            >
               Grow your open-source community
             </p>
           </div>
@@ -60,13 +65,17 @@ const Footer: React.FC = () => {
                 "gap-[12px] md:gap-[20px]"
               )}
             >
-              <h4 className={clsx("text-[18px] md:text-[20px]")}>
+              <h4
+                className={clsx(
+                  "font-[500] text-[18px] md:text-[20px] leading-[21.6px]"
+                )}
+              >
                 Need consulting?
               </h4>
               <Link
                 href="#"
                 className={clsx(
-                  "text-[14px] md:text-[16px] text-[#B385FF] hover:text-[rgba(217,193,255,1)]",
+                  "font-[400] text-[14px] md:text-[16px] text-[#B385FF] hover:text-[rgba(217,193,255,1)]",
                   "underline transition-all"
                 )}
               >
@@ -79,7 +88,11 @@ const Footer: React.FC = () => {
                 "gap-[12px] md:gap-[20px]"
               )}
             >
-              <h4 className={clsx("text-[18px] md:text-[20px]")}>
+              <h4
+                className={clsx(
+                  "font-[500] text-[18px] md:text-[20px] leading-[21.6px]"
+                )}
+              >
                 Launching a product?
               </h4>
               <Link
@@ -98,7 +111,11 @@ const Footer: React.FC = () => {
                 "gap-[12px] md:gap-[20px]"
               )}
             >
-              <h4 className={clsx("text-[18px] md:text-[20px]")}>
+              <h4
+                className={clsx(
+                  "font-[500] text-[18px] md:text-[20px] leading-[21.6px]"
+                )}
+              >
                 GitHub Library
               </h4>
               <Link

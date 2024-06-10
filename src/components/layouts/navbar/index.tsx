@@ -7,8 +7,15 @@ import { Button, IconButton } from "../../core/Buttons";
 import { CloseSvg, HamburgerSvg } from "../../svgs";
 
 import styles from "./styles.module.css";
+import { EnumNavMenus } from "@/types";
+import { useRouter } from "next/router";
 
-const Navbar = () => {
+interface Props {
+  activeMenu: EnumNavMenus;
+}
+
+const Navbar: React.FC<Props> = ({ activeMenu = "" }) => {
+  const router = useRouter();
   const [isExpanded, setIsExpanded] = useState<boolean>(false);
   const [isScrollDowned, setIsScrollDowned] = useState<boolean>(false);
 
@@ -39,12 +46,13 @@ const Navbar = () => {
     <div
       className={clsx(
         "git-room-container",
-        "!fixed top-0 translate-x-[-50%] left-[50%]",
-        "z-[1]",
-        "pt-3 pb-4 transition-all",
+        "!fixed top-0 left-0 right-0",
+        "z-[15]",
+        "transition-all",
         "w-full",
         isExpanded && "h-screen",
-        isScrollDowned && "md:backdrop-blur-sm"
+        // isScrollDowned && "md:backdrop-blur-md",
+        "top-3"
       )}
     >
       <div
@@ -52,15 +60,15 @@ const Navbar = () => {
           "relative z-[1] ml-auto mr-auto transition-all",
           "overflow-hidden",
           "px-4",
-          "bg-[rgba(38,37,52,0.35)] border-[1px] border-[rgba(255,255,255,0.05)]",
-          "border-[1px] border-[rgba(255,255,255,0.35)] rounded-xl",
+          "bg-[rgba(38,37,52,0.35)] backdrop-blur-md",
+          "border-[1px] md:border-[rgba(255,255,255,0.05)] border-[rgba(255,255,255,0.35)] rounded-[20px]",
           "flex flex-col",
           "w-full",
           {
-            "h-[calc(100%-12px)]": isExpanded,
+            "h-[calc(100%-24px)]": isExpanded,
             "h-[60px]": !isExpanded,
           },
-          "md:!h-[90px]",
+          "md:!h-[80px]",
           "md:flex-row md:items-center"
         )}
       >
@@ -76,7 +84,7 @@ const Navbar = () => {
         <div
           className={clsx("relative flex items-center h-[58px] min-h-[58px]")}
         >
-          <div className={clsx("flex items-center")}>
+          <Link className={clsx("flex items-center")} href="/">
             <div
               className={clsx(
                 "relative",
@@ -100,9 +108,9 @@ const Navbar = () => {
             >
               Gitroom
             </div>
-          </div>
+          </Link>
           <IconButton
-            customClasses={clsx("w-6 h-6 ml-auto", "md:!hidden")}
+            customClasses={clsx("!w-6 !h-6 ml-auto", "md:!hidden")}
             onClick={() => {
               setIsExpanded(!isExpanded);
             }}
@@ -125,17 +133,37 @@ const Navbar = () => {
             className={clsx("flex flex-col gap-y-8", "md:flex-row md:gap-x-10")}
           >
             <li className="text-center">
-              <Link href="" className={styles.navbarItem}>
+              <Link
+                href="/community-deals"
+                className={clsx(
+                  styles.navbarItem,
+                  activeMenu === EnumNavMenus.CommuntyDeals &&
+                    styles.navbarItemActive
+                )}
+              >
                 Community Deals
               </Link>
             </li>
             <li className="text-center">
-              <Link href="" className={styles.navbarItem}>
+              <Link
+                href="/oss-friends"
+                className={clsx(
+                  styles.navbarItem,
+                  activeMenu === EnumNavMenus.OSSFriends &&
+                    styles.navbarItemActive
+                )}
+              >
                 OSS Friends
               </Link>
             </li>
             <li className="text-center">
-              <Link href="" className={styles.navbarItem}>
+              <Link
+                href="/blog"
+                className={clsx(
+                  styles.navbarItem,
+                  activeMenu === EnumNavMenus.Blog && styles.navbarItemActive
+                )}
+              >
                 Blog
               </Link>
             </li>
@@ -143,9 +171,9 @@ const Navbar = () => {
           <Button
             variant="secondary-white"
             customClasses={clsx(
-              "mt-[80px] w-full max-w-[243px] h-[42px]",
+              "mt-[80px] w-full max-w-[243px] min-h-[42px]",
               "md:ml-[70px] md:mt-0",
-              "md:min-w-[130px] md:w-[130px] md:!h-12",
+              "md:min-w-[130px] md:w-[130px] md:min-w-[130px] md:!h-12",
               "md:!text-base"
             )}
           >
@@ -154,10 +182,11 @@ const Navbar = () => {
           <Button
             variant="primary-white"
             customClasses={clsx(
-              "mt-2 w-full max-w-[243px] h-[42px]",
-              "md:mt-0 md:ml-2.5 md:w-[208px] md:!h-12",
+              "mt-2 w-full max-w-[243px] w-[243px] min-h-[42px]",
+              "md:mt-0 md:ml-2.5 md:w-[208px] md:min-w-[208px] md:!h-12",
               "md:!text-base"
             )}
+            onClick={() => router.push("/gitroom-platform")}
           >
             Discover the Platform
           </Button>

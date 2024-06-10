@@ -12,17 +12,17 @@ const GithubSection = () => {
       className={clsx(
         "mt-10 md:mt-[60.36px]",
         "git-room-container",
-        "flex flex-col"
+        "flex flex-col z-[11]"
       )}
     >
-      <div
-        className={clsx(
-          "flex justify-start items-center md:justify-between flex-col md:flex-row h-[391px] md:h-[460px] overflow-hidden"
-        )}
-      >
-        {GithubInfo.map((item: IGithubInfo, idx: number) => (
-          <GithubCard key={idx} githubInfo={item} />
-        ))}
+      <div className={"hidden md:flex flex-row gap-[10px] mb-[20px] w-full"}>
+        {GithubInfo.map((item: IGithubInfo, idx: number) => {
+          if (idx >= 3) return null;
+          return <GithubCard key={idx} githubInfo={item} />;
+        })}
+      </div>
+      <div className="md:hidden mb-[20px] w-full flex justify-center">
+        {<GithubCard githubInfo={GithubInfo[0]} />}
       </div>
       <Button
         customClasses={clsx(

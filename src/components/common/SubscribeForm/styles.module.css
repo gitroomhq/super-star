@@ -3,49 +3,70 @@
   @apply relative;
   @apply flex flex-col;
 }
-
 .inputWrapper {
   @apply relative h-[50px];
   @apply md:h-[56px];
   @apply rounded-2xl;
   @apply overflow-hidden;
+  @apply py-[1px];
+  /* background-image: linear-gradient(0deg, #2f2c55, #2f2c55);
+  @apply bg-gradient-radial from-[#CCCBFF] to-[#2f2c55]; */
+  /* @apply bg-gradient-to-r from-[#CCCBFF70] via-[#2F2C55] to-[#2F2C55]; */
+  /* @apply bg-gradient-radial from-[#cccbffcc] to-[#ffffff00]; */
+  @apply bg-[#2F2C55] border border-[#2F2C55];
+}
+
+.inputWrapper:hover {
+  background-image: linear-gradient(0deg, #6661b6, #6661b6),
+    radial-gradient(
+      30.12% 89.56% at 20.84% 0%,
+      rgba(204, 203, 255, 0.6) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+}
+
+.inputWrapper.focused {
+  background-image: linear-gradient(0deg, #9791ff, #9791ff),
+    radial-gradient(
+      30.12% 89.56% at 20.84% 0%,
+      rgba(204, 203, 255, 0.6) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
 }
 
 .inputWrapper:hover .input {
-  @apply border-[#6661B6];
   @apply bg-[#1E1D2D];
 }
 
 .input {
   @apply w-full;
-  @apply h-[50px];
-  @apply rounded-2xl md:h-[56px];
+  @apply h-[48px];
+  @apply rounded-2xl md:h-[54px];
   @apply py-[17px] pl-5 pr-[160px];
   @apply md:py-5 md:pl-6 md:pr-[166px];
   /* @apply bg-[rgba(222, 220, 249, 0.8)]; */
   @apply bg-[#1E1D2D];
   @apply text-white text-sm md:text-base font-[400];
-  @apply border-[1px] border-[#2F2C55];
+  @apply border-none;
   @apply !outline-none;
 }
 
 .input:focus {
   @apply !bg-[#2B2944];
-  @apply !border-[#9791FF];
 }
 
 .input::placeholder {
-  @apply text-[rgba(222,220,249,0.8)] text-sm md:text-base font-[500];
+  @apply text-[rgba(222,220,249,0.8)] text-sm md:text-base font-[400];
 }
 
 .input::-ms-input-placeholder {
   /* Edge 12 -18 */
-  @apply text-[rgba(222,220,249,0.8)] text-base font-[500];
+  @apply text-[rgba(222,220,249,0.8)] text-base font-[400];
 }
 
 .btnSubmit {
   @apply absolute;
-  @apply w-[140px] h-[42px];
+  @apply w-[120px] h-[42px];
   @apply md:w-[146px] md:h-[48px];
   @apply top-1 bottom-1 right-1;
   @apply flex items-center justify-center;
@@ -62,8 +83,34 @@
   background: linear-gradient(48.64deg, #5351de 10.15%, #bcbafd 104.79%);
 }
 
+.inputWrapper.hasError {
+  background-image: linear-gradient(
+      0deg,
+      rgba(255, 70, 114, 0.3),
+      rgba(255, 70, 114, 0.3)
+    ),
+    radial-gradient(
+      30.12% 89.56% at 20.84% 0%,
+      rgba(255, 185, 215, 0.6) 0%,
+      rgba(255, 255, 255, 0) 100%
+    ) !important;
+}
+
 .inputWrapper.hasError .input {
-  @apply !border-[#FF4672] !bg-[#1E1D2D];
+  @apply !bg-[#1E1D2D];
+}
+
+.inputWrapper.filled {
+  background-image: linear-gradient(0deg, #2f2c55, #2f2c55),
+    radial-gradient(
+      30.12% 89.56% at 20.84% 0%,
+      rgba(204, 203, 255, 0.6) 0%,
+      rgba(255, 255, 255, 0) 100%
+    ) !important;
+}
+
+.inputWrapper.filled .input {
+  background: rgba(30, 29, 45, 1) !important;
 }
 
 .labelValidate {
@@ -73,5 +120,5 @@
 
 .labelReference {
   @apply mt-4;
-  @apply text-white text-sm font-[400];
+  @apply font-matter text-white text-sm font-[400] text-left;
 }
