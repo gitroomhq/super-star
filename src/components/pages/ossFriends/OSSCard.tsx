@@ -57,7 +57,8 @@ const OSSCard: React.FC<Props> = ({ customClasses = "", cardInfo }) => {
           "text-sm leading-[16.8px]",
           "lg:text-base lg:leading-[19.2px]"
         )}
-        href={cardInfo.link}
+        href={`https://${cardInfo.link}`}
+        target="_blank"
       >
         <div className={clsx("w-5 h-5 mr-2")}>
           <GoIntoSvg />

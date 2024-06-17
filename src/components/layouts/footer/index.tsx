@@ -1,10 +1,13 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import clsx from "clsx";
 import { IconButton } from "../../core/Buttons";
 
 const Footer: React.FC = () => {
+  const router = useRouter();
+
   return (
     <div className={clsx("bg-black", "text-white")}>
       <div
@@ -73,7 +76,7 @@ const Footer: React.FC = () => {
                 Need consulting?
               </h4>
               <Link
-                href="#"
+                href="https://cal.com/gitroom/30min?utm_source=website"
                 className={clsx(
                   "font-[400] text-[14px] md:text-[16px] text-[#B385FF] hover:text-[rgba(217,193,255,1)]",
                   "underline transition-all"
@@ -96,7 +99,7 @@ const Footer: React.FC = () => {
                 Launching a product?
               </h4>
               <Link
-                href="#"
+                href="https://growchief.com/"
                 className={clsx(
                   "text-[14px] md:text-[16px] text-[#B385FF] hover:text-[rgba(217,193,255,1)]",
                   "underline transition-all"
@@ -119,7 +122,7 @@ const Footer: React.FC = () => {
                 GitHub Library
               </h4>
               <Link
-                href="#"
+                href="https://gitlibrary.club/"
                 className={clsx(
                   "text-[14px] md:text-[16px] text-[#B385FF] hover:text-[rgba(217,193,255,1)]",
                   "underline transition-all"
@@ -146,13 +149,14 @@ const Footer: React.FC = () => {
             )}
           >
             <div className={clsx("text-[13px] md:text-[15px]")}>
-              <p>© Gitroom , 2024. All rights reserved.</p>
+              <p>© GitRoom , 2024. All rights reserved.</p>
             </div>
             <div
               className={clsx(
                 "flex flex-row justify-between gap-[10px]",
-                "text-[14px] md:text-[15px]"
+                "text-[14px] md:text-[15px] hover:text-[#AA80EE] transition-all cursor-pointer"
               )}
+              onClick={() => router.push("https://peppermint.id")}
             >
               <p>Designed by </p>
               <Image
@@ -165,7 +169,11 @@ const Footer: React.FC = () => {
             </div>
           </div>
           <div className={clsx("flex flex-row justify-center gap-[10px]")}>
-            <IconButton onClick={() => {}}>
+            <IconButton
+              onClick={() => {
+                router.push("https://discord.gitroom.com/");
+              }}
+            >
               <Image
                 src="/svgs/Discord.svg"
                 height={0}
@@ -174,7 +182,11 @@ const Footer: React.FC = () => {
                 alt="discord"
               />
             </IconButton>
-            <IconButton onClick={() => {}}>
+            <IconButton
+              onClick={() => {
+                router.push("https://youtube.com/@nevodavid");
+              }}
+            >
               <Image
                 src="/svgs/Youtube.svg"
                 height={0}
@@ -183,7 +195,11 @@ const Footer: React.FC = () => {
                 alt="youtube"
               />
             </IconButton>
-            <IconButton onClick={() => {}}>
+            <IconButton
+              onClick={() => {
+                router.push("https://linkedin.com/in/nevo-david");
+              }}
+            >
               <Image
                 src="/svgs/Linkedin.svg"
                 height={0}
@@ -192,7 +208,11 @@ const Footer: React.FC = () => {
                 alt="linkedin"
               />
             </IconButton>
-            <IconButton onClick={() => {}}>
+            <IconButton
+              onClick={() => {
+                router.push("https://twitter.com/nevodavid");
+              }}
+            >
               <Image
                 src="/svgs/Twitter.svg"
                 height={0}
@@ -209,7 +229,7 @@ const Footer: React.FC = () => {
             )}
           >
             <Link
-              href=""
+              href="https://gitroom.com/terms-of-service"
               className={clsx(
                 "pl-0 md:pl-[41px] text-[rgba(255,255,255,0.6)] hover:text-[rgba(255,255,255,1)] transition-all"
               )}
@@ -217,7 +237,7 @@ const Footer: React.FC = () => {
               Terms of service
             </Link>
             <Link
-              href=""
+              href="https://gitroom.com/privacy-policy"
               className={clsx(
                 "text-[rgba(255,255,255,0.6)] hover:text-[rgba(255,255,255,1)] transition-all"
               )}

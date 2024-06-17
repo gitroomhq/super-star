@@ -1,5 +1,6 @@
 import clsx from "clsx";
 import Image from "next/image";
+import { useRouter } from "next/router";
 import { Button } from "@/components/core/Buttons";
 import SectionTitle from "@/components/core/SectionTitle";
 import SectionSubTitle from "@/components/core/SectionSubTitle";
@@ -62,6 +63,8 @@ const Shadow = () => (
 );
 
 const FullyOpenSourceSection = () => {
+  const router = useRouter();
+
   return (
     <div
       className={clsx(
@@ -93,12 +96,14 @@ const FullyOpenSourceSection = () => {
         <Button
           variant="secondary-white"
           customClasses={clsx("w-[170px] h-[48px]")}
+          onClick={() => router.push("https://docs.gitroom.com/use/analytics")}
         >
           Read the docs
         </Button>
         <Button
           variant="primary-white"
           customClasses={clsx("w-[170px] h-[48px]")}
+          onClick={() => router.push("https://github.com/gitroomhq/gitroom")}
         >
           <div className={clsx("relative w-5 h-5 mr-2")}>
             <Image

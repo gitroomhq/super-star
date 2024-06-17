@@ -5,6 +5,7 @@
   @apply sm:w-[calc(50%-4px)];
   @apply md:w-[calc(33.33%-8px)] md:h-[279px];
   @apply lg:w-[420px];
+  @apply transition-all cursor-pointer;
   background-size: 100% 100%;
   background-image: url("/pngs/CommunityCard-Normal.png");
 }

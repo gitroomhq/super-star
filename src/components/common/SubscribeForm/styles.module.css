@@ -120,5 +120,5 @@
 
 .labelReference {
   @apply mt-4;
-  @apply font-matter text-white text-sm font-[400] text-left;
+  @apply font-matter text-white text-sm font-[400] text-center;
 }

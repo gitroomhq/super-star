@@ -42,6 +42,7 @@ const PeopleSaySection: React.FC = () => {
         name: "Guillermo Rauch",
         role: "COO",
         company: "Medusa",
+        link: "https://github.com/medusajs/medusa",
       },
     },
     {
@@ -53,6 +54,7 @@ const PeopleSaySection: React.FC = () => {
         name: "Tomer Barnea",
         role: "CEO",
         company: "Novu",
+        link: "https://github.com/novuhq/novu",
       },
     },
     {
@@ -64,6 +66,7 @@ const PeopleSaySection: React.FC = () => {
         name: "Zevi Reinitz",
         role: "Head of Product Marketing",
         company: "Livecycle",
+        link: "https://github.com/livecycle/preevy",
       },
     },
     {
@@ -75,6 +78,7 @@ const PeopleSaySection: React.FC = () => {
         name: "Michael Solati",
         role: "DevRel",
         company: "Amplication",
+        link: "https://github.com/amplication/amplication",
       },
     },
     {
@@ -86,6 +90,7 @@ const PeopleSaySection: React.FC = () => {
         name: "Teja Kummarikuntla",
         role: "Developer Advocate",
         company: "ToolJet",
+        link: "https://github.com/ToolJet/ToolJet",
       },
     },
     {
@@ -97,6 +102,7 @@ const PeopleSaySection: React.FC = () => {
         name: "Guillermo Rauch",
         role: "COO",
         company: "Medusa",
+        link: "https://github.com/medusajs/medusa",
       },
     },
     {
@@ -108,6 +114,7 @@ const PeopleSaySection: React.FC = () => {
         name: "Tomer Barnea",
         role: "CEO",
         company: "Novu",
+        link: "https://github.com/novuhq/novu",
       },
     },
     {
@@ -119,6 +126,7 @@ const PeopleSaySection: React.FC = () => {
         name: "Zevi Reinitz",
         role: "Head of Product Marketing",
         company: "Livecycle",
+        link: "https://github.com/livecycle/preevy",
       },
     },
     {
@@ -130,6 +138,7 @@ const PeopleSaySection: React.FC = () => {
         name: "Michael Solati",
         role: "DevRel",
         company: "Amplication",
+        link: "https://github.com/amplication/amplication",
       },
     },
     {
@@ -141,6 +150,7 @@ const PeopleSaySection: React.FC = () => {
         name: "Teja Kummarikuntla",
         role: "Developer Advocate",
         company: "ToolJet",
+        link: "https://github.com/ToolJet/ToolJet",
       },
     },
   ];
@@ -180,15 +190,15 @@ const PeopleSaySection: React.FC = () => {
       </div>
 
       <div className="w-full max-w-[1442px] relative mt-[66px] md:mt-20 h-[380px] mx-auto">
-        <div className="hidden md:block absolute h-[300px] w-[50px] laptop:w-[110px] lg:w-[120px] top-0 left-0 bg-card-mask z-[1]" />
-        <div className="hidden md:block absolute h-[300px] w-[50px] laptop:w-[110px] lg:w-[120px] top-0 right-0 bg-card-mask-reverse z-[1]" />
+        <div className="hidden xs:block absolute h-[300px] w-[50px] laptop:w-[110px] lg:w-[120px] top-0 left-0 bg-card-mask z-[1]" />
+        <div className="hidden xs:block absolute h-[300px] w-[50px] laptop:w-[110px] lg:w-[120px] top-0 right-0 bg-card-mask-reverse z-[1]" />
         <div className="max-w-[1440px] relative mx-auto h-[380px] overflow-hidden">
-          <div className="absolute top-0 left-[50%] -translate-x-[50%] max-w-[426px] w-full md:max-w-max md:w-[calc((100%-80px)/3*5)] laptop:w-[1930px] mx-auto">
+          <div className="absolute top-0 left-[50%] -translate-x-[50%] w-[calc((100%-30px)*3)] xs:w-[1000px] md:max-w-max md:w-[calc((100%-80px)/3*5)] laptop:w-[1930px] mx-auto">
             <Swiper
               loop={true}
               breakpoints={{
                 320: {
-                  slidesPerView: 1,
+                  slidesPerView: 3,
                 },
                 960: {
                   slidesPerView: 5,
@@ -196,6 +206,7 @@ const PeopleSaySection: React.FC = () => {
               }}
               slidesPerView={7}
               centeredSlides
+              cssMode={true}
             >
               <NavigationButton />
               {peopleCardsInfo.map((item, idx: number) => (

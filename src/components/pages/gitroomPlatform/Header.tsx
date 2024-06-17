@@ -5,6 +5,8 @@ import Image from "next/image";
 import { Button } from "@/components/core/Buttons";
 import LottieWrapper from "@/components/common/LottieWrapper";
 import LottieHero from "@/lottie/GitPlatformHero.json";
+import Link from "next/link";
+import { useRouter } from "next/router";
 
 const PurpleShadow = () => (
   <>
@@ -41,12 +43,14 @@ const PurpleShadow = () => (
 );
 
 const Header = () => {
+  const router = useRouter();
+
   return (
     <div className={clsx("relative", "pb-[102px] md:pb-[263px]")}>
       <LottieWrapper
         animationData={LottieHero}
         className={clsx(
-          "absolute translate-x-[-50%] top-0 md:-top-[0px] lg:-top-[0px]",
+          "absolute translate-x-[-50%] -top-[48px] md:-top-[70px] lg:-top-[50px]",
           "w-[1024px] h-[500px] md:w-[1700px] md:h-[810px] lg:w-[1920px] lg:h-[860px]",
           "left-[calc(50%-135px)] md:left-[50%]"
         )}
@@ -131,20 +135,23 @@ const Header = () => {
             "lg:mt-6 lg:gap-[10px]"
           )}
         >
-          <Button
-            customClasses={clsx(
-              "w-[143px] h-[42px]",
-              "lg:w-[134px] lg:h-[48px] lg:text-base"
-            )}
-          >
-            Go to Platform
-          </Button>
+          <Link href="https://staging.gitroom.com/auth">
+            <Button
+              customClasses={clsx(
+                "w-[143px] h-[42px]",
+                "lg:w-[134px] lg:h-[48px] lg:text-base"
+              )}
+            >
+              Go to Platform
+            </Button>
+          </Link>
           <Button
             variant="secondary-white"
             customClasses={clsx(
               "w-[93px] h-[42px]",
               "lg:w-[100px] lg:!h-[48px] lg:!text-base"
             )}
+            onClick={() => router.push("#pricing")}
           >
             Pricing
           </Button>

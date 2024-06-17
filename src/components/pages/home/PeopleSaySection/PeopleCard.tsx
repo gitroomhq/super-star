@@ -1,11 +1,18 @@
 import React from "react";
 import { clsx } from "clsx";
 import Image from "next/image";
+import Link from "next/link";
 
 interface Props {
   logo: { src: string; width?: number; height?: number };
   description: string;
-  person: { imgSrc: string; name: string; role: string; company: string };
+  person: {
+    imgSrc: string;
+    name: string;
+    role: string;
+    company: string;
+    link: string;
+  };
 }
 
 const PeopleCard: React.FC<Props> = ({
@@ -27,7 +34,7 @@ const PeopleCard: React.FC<Props> = ({
           <Image src={logo} width={width} height={height} alt="" />
         </div>
         <div className="flex-1">
-          <p className="text-white text-sm leading-[16.8px] font-matter line-clamp-3">
+          <p className="text-white text-sm leading-[16.8px] font-matter line-clamp-4 sm:line-clamp-3">
             {description}
           </p>
         </div>
@@ -61,8 +68,14 @@ const PeopleCard: React.FC<Props> = ({
               )}
             >
               <span>{person.role}</span>
-              <span>&nbsp;&&nbsp;</span>
-              <span className="underline">{person.company}</span>
+              <span>&nbsp;@&nbsp;</span>
+              <Link
+                href={person.link}
+                target="_blank"
+                className="underline hover:text-[#B385FF] transition-all"
+              >
+                {person.company}
+              </Link>
             </div>
           </div>
         </div>

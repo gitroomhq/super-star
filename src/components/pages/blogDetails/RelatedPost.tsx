@@ -49,13 +49,15 @@ const RelatedPost = () => {
           }}
           centeredSlides
         >
-          <NavigationButton />
-          <div className={clsx("flex justify-center items-stretch")}>
-            {GithubInfo.map((item: IGithubInfo, idx: number) => (
-              <SwiperSlide key={idx}>
-                <GithubCard key={idx} githubInfo={item} />
-              </SwiperSlide>
-            ))}
+          {/* <NavigationButton /> */}
+          <div
+            className={clsx(
+              "px-5 flex flex-col md:flex-row items-center gap-2.5"
+            )}
+          >
+            <GithubCard githubInfo={GithubInfo[0]} />
+            <GithubCard githubInfo={GithubInfo[1]} />
+            <GithubCard githubInfo={GithubInfo[2]} />
           </div>
         </Swiper>
       </div>

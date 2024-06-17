@@ -1,12 +1,15 @@
 import React from "react";
+import { useRouter } from "next/router";
 import clsx from "clsx";
-import GithubCard from "./GithubCard";
 
+import GithubCard from "./GithubCard";
 import { GithubInfo } from "@/mockData/github";
 import { IGithubInfo } from "@/types";
 import { Button } from "@/components/core/Buttons";
 
 const GithubSection = () => {
+  const router = useRouter();
+
   return (
     <div
       className={clsx(
@@ -28,6 +31,7 @@ const GithubSection = () => {
         customClasses={clsx(
           "mx-auto mt-10 md:mt-[61.08px] w-[152px] h-[42px] md:[164px] md:h-[48px]"
         )}
+        onClick={() => router.push("/blog")}
       >
         Explore Blog
       </Button>

@@ -1,26 +1,23 @@
 import React, { useState } from "react";
 import clsx from "clsx";
 import ReactPaginate from "react-paginate";
+import Image from "next/image";
+
 import CommunityDealsCard from "./CommunityDealsCard";
 import FilterContainer from "@/components/common/FilterContainer";
 import { ICommunityCard } from "@/types";
 
-import { CommunityCardMockData } from "@/mockData/communityCard";
-import { ChevLeftSvg, ChevRightSvg } from "@/components/svgs";
-import Image from "next/image";
-
 interface Props {
   onSelectCommunity: Function;
+  communityCards: ICommunityCard[];
 }
 
 const CommunityDealsCardContainer: React.FC<Props> = ({
   onSelectCommunity,
+  communityCards,
 }) => {
   const [curPage, setCurPage] = useState<number>(0);
   const [pageCount, setPageCount] = useState<number>(100);
-  const [communityCards, setCommunityCards] = useState<ICommunityCard[]>(
-    CommunityCardMockData
-  );
 
   const handlePageClick = (selectedItem: { selected: number }) => {
     setCurPage(selectedItem.selected);
@@ -45,7 +42,7 @@ const CommunityDealsCardContainer: React.FC<Props> = ({
               "sm:w-[calc(50%-5px)] lg:w-[635px] lg:h-[350px]"
             )}
             onApply={() => {
-              onSelectCommunity(item);
+              onSelectCommunity(item.id);
             }}
           />
         ))}

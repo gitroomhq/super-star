@@ -29,6 +29,8 @@ export interface ICommunityCard {
   contentTitle: string;
   contentSubTitle: string;
   cardType: EnumCommunityCardType;
+
+  applied?: boolean;
 }
 
 export enum EnumCommunityCardType {

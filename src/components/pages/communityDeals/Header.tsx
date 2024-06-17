@@ -1,6 +1,7 @@
 import clsx from "clsx";
 import { Button } from "@/components/core/Buttons";
 import IconContainer from "@/components/common/IconContainer";
+import Link from "next/link";
 
 const BlackShadow = () => (
   <>
@@ -176,14 +177,16 @@ const CommunityDealsHeader = () => {
         >
           Want to add your software deal?
         </div>
-        <Button
-          customClasses={clsx(
-            "mt-[35px] w-[217px] h-[42px] text-sm leading-[16px]",
-            "md:text-base md:leading-[19.1px] md:mt-5 md:w-[242px] md:h-12"
-          )}
-        >
-          Join the Gitroom platform
-        </Button>
+        <Link href="https://staging.gitroom.com/auth">
+          <Button
+            customClasses={clsx(
+              "mt-[35px] w-[217px] h-[42px] text-sm leading-[16px]",
+              "md:text-base md:leading-[19.1px] md:mt-5 md:w-[242px] md:h-12"
+            )}
+          >
+            Join the Gitroom platform
+          </Button>
+        </Link>
       </div>
 
       <BlackShadow />

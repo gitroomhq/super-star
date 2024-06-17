@@ -1,9 +1,11 @@
-import { ChevLeftSvg } from "@/components/svgs";
+import Image from "next/image";
+import dynamic from "next/dynamic";
 import clsx from "clsx";
+
+import { ChevLeftSvg } from "@/components/svgs";
 import RelatedPost from "./RelatedPost";
 import { StayInformedSubscribeSection } from "../home";
 import { BlogDetail } from "@/mockData/blog-detail";
-import Image from "next/image";
 
 const PurpleShadow = () => (
   <div className="hidden md:block">
@@ -151,6 +153,10 @@ const PurpleShadow = () => (
   </div>
 );
 
+const Newsletter = dynamic(() => import("./Newsletter"), {
+  ssr: false,
+});
+
 interface Props {
   blogId: string;
 }
@@ -253,8 +259,9 @@ const BlogDetailsPageContent: React.FC<Props> = ({ blogId }) => {
           <div
             dangerouslySetInnerHTML={{ __html: data.content }}
             className="text-white mt-10 font-matter"
-          ></div>
+          />
         </div>
+        <Newsletter />
       </div>
       <RelatedPost />
       <StayInformedSubscribeSection />

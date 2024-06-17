@@ -1,6 +1,7 @@
 import React from "react";
 import clsx from "clsx";
 import Image from "next/image";
+import { useRouter } from "next/router";
 
 import { Button } from "@/components/core/Buttons";
 import LottieWrapper from "@/components/common/LottieWrapper";
@@ -8,6 +9,8 @@ import LottieGrid from "@/lottie/Grid.json";
 import LottieGridMobile from "@/lottie/Grid-mobile.json";
 
 const GitRoomPlatformSection = () => {
+  const router = useRouter();
+
   return (
     <div
       className={clsx(
@@ -80,6 +83,7 @@ const GitRoomPlatformSection = () => {
           "md:w-[164px] md:h-[48px]",
           "z-[1]"
         )}
+        onClick={() => router.push("https://platform.gitroom.com/")}
       >
         Get Started
       </Button>

@@ -1,26 +1,22 @@
 .filterBtn {
-  @apply flex justify-center items-center text-white font-matter cursor-pointer;
+  @apply flex justify-center items-center h-[32px] px-3 cursor-pointer;
   @apply border-[1px] border-[rgba(186,185,255,0.2)] rounded;
-  @apply hover:border-[rgba(188,186,253,1)];
-  @apply text-sm leading-[16px] px-3 h-[32px];
+  @apply text-sm leading-[16px] text-white font-matter;
+  @apply transition-all;
 }
 
 .filterBtn:hover {
-  background: linear-gradient(
-    48.64deg,
-    rgba(83, 81, 222, 0.4) 10.15%,
-    rgba(188, 186, 253, 0.4) 104.79%
-  );
-  border-color: #5351de;
+  @apply hover:border-[rgba(186,185,255,0.6)];
 }
 
 .filterBtn.selected {
-  background: linear-gradient(48.64deg, #5351de 10.15%, #bcbafd 104.79%);
-  border-color: #5351de;
+  @apply bg-gradient-to-tr from-[#5350DD] to-[#B3B1FA];
+  @apply border-none;
 }
 
 @media screen and (min-width: 1320px) {
   .filterBtn {
-    @apply text-base leading-[19.1px] h-[36px] px-4;
+    @apply h-[36px] px-4;
+    @apply text-base leading-[19.1px];
   }
 }

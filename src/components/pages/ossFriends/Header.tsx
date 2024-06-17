@@ -2,6 +2,7 @@ import clsx from "clsx";
 import Image from "next/image";
 import { Button } from "@/components/core/Buttons";
 import IconContainer from "@/components/common/IconContainer";
+import Link from "next/link";
 
 const BlackShadow = () => (
   <>
@@ -115,14 +116,16 @@ const OSSFriendsHeader = () => {
           partners to promote open-source software and the values of
           transparency, collaboration, and community that it represents.{" "}
         </div>
-        <Button
-          customClasses={clsx(
-            "mt-[35px] w-[217px] h-[42px] text-sm leading-[16px]",
-            "md:text-base md:leading-[19.1px] md:mt-5 md:w-[242px] md:h-12"
-          )}
-        >
-          Join the Gitroom platform
-        </Button>
+        <Link href="https://staging.gitroom.com/auth">
+          <Button
+            customClasses={clsx(
+              "mt-[35px] w-[217px] h-[42px] text-sm leading-[16px]",
+              "md:text-base md:leading-[19.1px] md:mt-5 md:w-[242px] md:h-12"
+            )}
+          >
+            Join the Gitroom platform
+          </Button>
+        </Link>
       </div>
 
       <div className="absolute left-[50%] top-[0px] md:-top-[12px] -translate-x-[50%] w-[690px] h-[690px] md:w-[1164px] md:h-[1164px] z-[1]">

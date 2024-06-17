@@ -1,7 +1,7 @@
 .communityCard {
   @apply flex flex-col cursor-pointer;
-  @apply relative;
-  @apply bg-no-repeat;
+  @apply relative bg-no-repeat;
+  @apply transition-all;
   background-image: url("/pngs/CommunityCard-Normal.png");
   background-size: 100% 100%;
 }

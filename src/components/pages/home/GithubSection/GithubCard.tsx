@@ -65,8 +65,9 @@ const GithubCard: React.FC<Props> = ({ githubInfo }) => {
           src={githubInfo.imageUrl ?? `/svgs/GithubCard${style}.svg`}
           width={420}
           height={267}
-          alt="oss header"
-          className="w-full z-[0] group-hover:scale-110 transition-all duration-500"
+          alt=""
+          style={{ objectFit: "cover" }}
+          className="w-full h-[210px] md:h-[260px] z-[0] group-hover:scale-110 transition-all duration-500"
         />
         {!githubInfo.imageUrl && (
           <div className="top-0 left-0 absolute w-full h-full flex flex-col gap-[3px] items-center justify-center z-[2]">

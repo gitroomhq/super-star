@@ -10,6 +10,7 @@ import LottieYoutube from "@/lottie/Youtube.json";
 
 import styles from "./styles.module.css";
 import IconContainer from "../IconContainer";
+import Link from "next/link";
 
 const Shadow = () => (
   <>
@@ -105,7 +106,7 @@ const GitRoomCommunitySection: React.FC<Props> = ({ customClasses = "" }) => {
           <LottieWrapper
             animationData={LottieOSS}
             play={isMobile || playOSS}
-            className="absolute left-0 top-0 w-full z-0"
+            className="absolute left-0 top-0 w-full z-0 h-full rounded"
           />
           <div
             className={clsx(
@@ -121,9 +122,11 @@ const GitRoomCommunitySection: React.FC<Props> = ({ customClasses = "" }) => {
               relationships with like-minded developers passionate about
               advancing initiatives.
             </div>
-            <TextButton customClasses={clsx("mt-4 font-[300]")}>
-              Join Community {`>`}
-            </TextButton>
+            <Link href="/oss-friends">
+              <TextButton customClasses={clsx("mt-4 font-[300]")}>
+                Join Community {`>`}
+              </TextButton>
+            </Link>
           </div>
         </div>
         <div
@@ -134,7 +137,7 @@ const GitRoomCommunitySection: React.FC<Props> = ({ customClasses = "" }) => {
           <LottieWrapper
             animationData={LottieCommunityDeal}
             play={isMobile || playCommunity}
-            className="absolute left-0 top-0 w-full z-0"
+            className="absolute left-0 top-0 w-full z-0 h-full rounded"
           />
           <div
             className={clsx(
@@ -150,9 +153,11 @@ const GitRoomCommunitySection: React.FC<Props> = ({ customClasses = "" }) => {
               discover opportunities to connect, learn, and grow with fellow
               developers.
             </div>
-            <TextButton customClasses={clsx("mt-4 font-[300]")}>
-              Explorer Deals {`>`}
-            </TextButton>
+            <Link href="/community-deals">
+              <TextButton customClasses={clsx("mt-4 font-[300]")}>
+                Explorer Deals {`>`}
+              </TextButton>
+            </Link>
           </div>
         </div>
         <div
@@ -175,14 +180,16 @@ const GitRoomCommunitySection: React.FC<Props> = ({ customClasses = "" }) => {
               insights, ask questions, and collaborate in real-time within our
               community.
             </div>
-            <TextButton customClasses={clsx("mt-4 font-[300]")}>
-              Join the Discord {`>`}
-            </TextButton>
+            <Link href="https://discord.gitroom.com/">
+              <TextButton customClasses={clsx("mt-4 font-[300]")}>
+                Join the Discord {`>`}
+              </TextButton>
+            </Link>
           </div>
           <LottieWrapper
             animationData={LottieDiscord}
             play={isMobile || playDiscord}
-            className="absolute left-0 bottom-0 w-full z-0"
+            className="absolute left-0 bottom-0 w-full z-0 h-full rounded"
           />
         </div>
         <div
@@ -202,14 +209,16 @@ const GitRoomCommunitySection: React.FC<Props> = ({ customClasses = "" }) => {
               Subscribe to our YouTube channel today for exclusive content,
               early access to videos and to join a community of enthusiasts.
             </div>
-            <TextButton customClasses={clsx("mt-4 font-[300]")}>
-              YouTube Channel {`>`}
-            </TextButton>
+            <Link href="https://youtube.com/@nevodavid">
+              <TextButton customClasses={clsx("mt-4 font-[300]")}>
+                YouTube Channel {`>`}
+              </TextButton>
+            </Link>
           </div>
           <LottieWrapper
             animationData={LottieYoutube}
             play={isMobile || playYoutube}
-            className="absolute left-0 bottom-0 w-full z-0"
+            className="absolute left-0 bottom-0 w-full z-0 h-full rounded"
           />
         </div>
       </div>

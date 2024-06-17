@@ -60,8 +60,8 @@ const Navbar: React.FC<Props> = ({ activeMenu = "" }) => {
           "relative z-[1] ml-auto mr-auto transition-all",
           "overflow-hidden",
           "px-4",
-          "bg-[rgba(38,37,52,0.35)] backdrop-blur-md",
-          "border-[1px] md:border-[rgba(255,255,255,0.05)] border-[rgba(255,255,255,0.35)] rounded-[20px]",
+          "bg-[rgba(38,37,52,0.35)] backdrop-blur-lg",
+          "border-[1px] md:border-[rgba(255,255,255,0.05)] border-[rgba(255,255,255,0.35)] rounded-[12px]",
           "flex flex-col",
           "w-full",
           {
@@ -110,7 +110,7 @@ const Navbar: React.FC<Props> = ({ activeMenu = "" }) => {
             </div>
           </Link>
           <IconButton
-            customClasses={clsx("!w-6 !h-6 ml-auto", "md:!hidden")}
+            customClasses={clsx("!w-6 !h-6 ml-auto !bg-none", "md:!hidden")}
             onClick={() => {
               setIsExpanded(!isExpanded);
             }}
@@ -168,17 +168,22 @@ const Navbar: React.FC<Props> = ({ activeMenu = "" }) => {
               </Link>
             </li>
           </ul>
-          <Button
-            variant="secondary-white"
-            customClasses={clsx(
-              "mt-[80px] w-full max-w-[243px] min-h-[42px]",
-              "md:ml-[70px] md:mt-0",
-              "md:min-w-[130px] md:w-[130px] md:min-w-[130px] md:!h-12",
-              "md:!text-base"
-            )}
-          >
-            Book a Call
-          </Button>
+          <Link href="https://cal.com/gitroom/30min?utm_source=website">
+            <Button
+              variant="secondary-white"
+              customClasses={clsx(
+                "mt-[80px] w-full max-w-[243px] min-h-[42px]",
+                "md:ml-[70px] md:mt-0",
+                "md:min-w-[130px] md:w-[130px] md:min-w-[130px] md:!h-12",
+                "md:!text-base"
+              )}
+              onClick={() =>
+                router.push("https://cal.com/gitroom/30min?utm_source=website")
+              }
+            >
+              Book a Call
+            </Button>
+          </Link>
           <Button
             variant="primary-white"
             customClasses={clsx(

@@ -143,8 +143,7 @@ export const OSSCardData: IOSSCard[] = [
     title: "Webstudio",
     logoSrc: "/svgs/webstudio.svg",
     rating: "12.2k",
-    description:
-      "Webstudio is an open source alternative to Webflow.",
+    description: "Webstudio is an open source alternative to Webflow.",
     link: "webstudio.is",
   },
   {

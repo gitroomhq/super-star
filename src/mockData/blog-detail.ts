@@ -286,6 +286,7 @@ export const BlogDetail = {
       src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/4fef61fc-2301-4c96-80d4-c7d24fdb6810/CleanShot_2024-04-05_at_22.05.40.png?t=1712329559"
     />
   </div>
+  <div id="register-newsletter"></div>
   <div style="">
     <p style="text-align: left">
       And nasty comments, but that’s Reddit. You should be expecting that:

@@ -13,7 +13,10 @@ const FlexiblePricingSection = () => {
   const [dayMode, setDayMode] = useState<"Monthly" | "Yearly">("Monthly");
   const [selectedPrice, setSelectedPrice] = useState<number>(1);
   return (
-    <div className={clsx("git-room-container", "flex flex-col")}>
+    <section
+      id="pricing"
+      className={clsx("git-room-container", "flex flex-col")}
+    >
       <div
         className={clsx(
           "relative mx-auto",
@@ -60,7 +63,7 @@ const FlexiblePricingSection = () => {
           />
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 
