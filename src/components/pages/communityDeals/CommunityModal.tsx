@@ -158,11 +158,11 @@ const CommunityModal: React.FC<Props> = ({
               <div
                 className={clsx(
                   "relative",
-                  "mx-auto w-[30.88px] h-[30.88px] md:w-[42px] md:h-[42px]"
+                  "mx-auto w-[50px] h-[50px] md:w-[68px] md:h-[68px]"
                 )}
               >
                 <Image
-                  src="/svgs/CommunityDealsPageHeader.svg"
+                  src="/svgs/CommunityModalApplied.svg"
                   layout="fill"
                   objectFit="contain"
                   alt="community deals header"
