@@ -75,7 +75,7 @@ const CommunityDealsCard: React.FC<Props> = ({
         </div>
 
         <div className={clsx("flex flex-col flex-grow")}>
-          <div
+          <h4
             className={clsx(
               "font-chakra-petch font-[600] text-[rgba(189,166,255,1)]",
               "mt-5 text-[24px] leading-[28.8px]",
@@ -83,7 +83,7 @@ const CommunityDealsCard: React.FC<Props> = ({
             )}
           >
             {cardInfo.contentTitle}
-          </div>
+          </h4>
           <div
             className={clsx(
               "font-matter text-[rgba(255,255,255,0.6)] font-[400]",

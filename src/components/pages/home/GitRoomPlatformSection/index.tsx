@@ -55,7 +55,7 @@ const GitRoomPlatformSection = () => {
           alt="Logo"
         />
       </div>
-      <div
+      <h3
         className={clsx(
           "z-[1]",
           "mx-auto font-chakra-petch font-[600] text-white text-[28px] leading-[30.8px]",
@@ -63,7 +63,7 @@ const GitRoomPlatformSection = () => {
         )}
       >
         Gitroom Platform
-      </div>
+      </h3>
       <div
         className={clsx(
           "z-[1] text-center",

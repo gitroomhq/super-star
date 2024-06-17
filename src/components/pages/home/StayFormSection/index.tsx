@@ -59,7 +59,7 @@ const StayFormSection: React.FC = () => {
         transparent={35}
         opacity={40}
       />
-      <div
+      <h3
         className={clsx(
           "text-center font-chakra-petch text-white font-[600]",
           "mt-5 text-[28px] leading-[30.8px] mx-5",
@@ -68,7 +68,7 @@ const StayFormSection: React.FC = () => {
         )}
       >
         Stay Informed: Access Free Learning Resources and Articles
-      </div>
+      </h3>
       <div
         className={clsx(
           "font-matter text-center text-[rgba(255,255,255,0.9)] font-[400]",

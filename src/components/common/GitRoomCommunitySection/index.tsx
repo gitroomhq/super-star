@@ -80,7 +80,7 @@ const GitRoomCommunitySection: React.FC<Props> = ({ customClasses = "" }) => {
         hasGradient
         gradientColor="#6F52E5"
       />
-      <div
+      <h3
         className={clsx(
           "mx-auto text-center",
           "mt-[31.08px] text-white font-[600] font-chakra-petch text-[28px] leading-[30.8px]",
@@ -89,7 +89,7 @@ const GitRoomCommunitySection: React.FC<Props> = ({ customClasses = "" }) => {
         )}
       >
         Join the Gitroom Community
-      </div>
+      </h3>
       <div
         className={clsx(
           "mt-10 md:mt-20",
@@ -115,7 +115,7 @@ const GitRoomCommunitySection: React.FC<Props> = ({ customClasses = "" }) => {
               "md:pb-10 md:pl-[39.5px] md:max-w-[539px]"
             )}
           >
-            <div className={clsx(styles.cardTitle)}>OSS Friends</div>
+            <h4 className={clsx(styles.cardTitle)}>OSS Friends</h4>
             <div className={clsx(styles.cardDescription)}>
               Connect with community of open-source enthusiasts and
               collaborators. Share knowledge, seek advice, and foster meaningful
@@ -146,7 +146,7 @@ const GitRoomCommunitySection: React.FC<Props> = ({ customClasses = "" }) => {
               "md:pb-10 md:pl-[39.5px] md:max-w-[539px]"
             )}
           >
-            <div className={clsx(styles.cardTitle)}>Community Deals</div>
+            <h4 className={clsx(styles.cardTitle)}>Community Deals</h4>
             <div className={clsx(styles.cardDescription)}>
               Explore our community features designed to enhance collaboration
               and engagement. From discussion forums to collaborative projects,
@@ -172,9 +172,7 @@ const GitRoomCommunitySection: React.FC<Props> = ({ customClasses = "" }) => {
               "md:mt-[99px] md:max-w-[420px] md:pb-10 md:pl-[39.5px] md:pt-0"
             )}
           >
-            <div className={clsx(styles.cardTitle)}>
-              Join our Discord Server
-            </div>
+            <h4 className={clsx(styles.cardTitle)}>Join our Discord Server</h4>
             <div className={clsx(styles.cardDescription, "max-w-[333px]")}>
               Connect with like-minded developers on our Discord server. Share
               insights, ask questions, and collaborate in real-time within our
@@ -204,7 +202,7 @@ const GitRoomCommunitySection: React.FC<Props> = ({ customClasses = "" }) => {
               "md:pt-0 md:pl-[39.5px] md:pb-10 md:w-[365px] md:mt-[99px]"
             )}
           >
-            <div className={clsx(styles.cardTitle)}>YouTube channel</div>
+            <h4 className={clsx(styles.cardTitle)}>YouTube channel</h4>
             <div className={clsx(styles.cardDescription, "max-w-[296px]")}>
               Subscribe to our YouTube channel today for exclusive content,
               early access to videos and to join a community of enthusiasts.

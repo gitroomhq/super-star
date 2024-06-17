@@ -23,9 +23,9 @@ const HomeHeader = () => {
           }}
         />
         <div className={clsx(styles.header)}>
-          <div className={clsx(styles.headerTitle)}>
+          <h1 className={clsx(styles.headerTitle)}>
             Grow Your Open-Source Community
-          </div>
+          </h1>
           <div className={clsx(styles.headerSubTitle)}>
             Tools to help your grow your open-source repository. Gain more
             visibility, stars, contributions and customers. Get free weekly

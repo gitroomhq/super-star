@@ -103,7 +103,7 @@ const GithubCard: React.FC<Props> = ({ githubInfo }) => {
           "lg:py-[30px] lg:h-[197px] z-[2]"
         )}
       >
-        <div
+        <h4
           className={clsx(
             "font-ibm-plex-sans w-full overflow-hidden text-ellipsis whitespace-nowrap",
             "text-white font-[500]",
@@ -112,7 +112,7 @@ const GithubCard: React.FC<Props> = ({ githubInfo }) => {
           )}
         >
           {githubInfo.title}
-        </div>
+        </h4>
         <div className={clsx("flex items-center")}>
           <div
             className={clsx(

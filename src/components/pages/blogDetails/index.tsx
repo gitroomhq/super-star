@@ -207,7 +207,7 @@ const BlogDetailsPageContent: React.FC<Props> = ({ blogId }) => {
           >
             LATEST POST
           </div>
-          <div
+          <h1
             className={clsx(
               "font-[500] text-white font-ibm-plex-sans",
               "mt-5 text-[28px] leading-[30.8px]",
@@ -215,7 +215,7 @@ const BlogDetailsPageContent: React.FC<Props> = ({ blogId }) => {
             )}
           >
             {data.title}
-          </div>
+          </h1>
           <div className={clsx("flex items-center mt-5 md:mt-6")}>
             <div
               className={clsx(

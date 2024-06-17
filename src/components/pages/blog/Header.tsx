@@ -146,7 +146,7 @@ const BlogHeader = () => {
           gradientColor="#6F52E5"
           transparent={25}
         />
-        <div
+        <h2
           className={clsx(
             "mt-[28px]",
             "w-full max-w-[480px] md:max-w-[860px]",
@@ -157,7 +157,7 @@ const BlogHeader = () => {
         >
           Unraveling the latest trends and tips in tech, development, and
           collaboration
-        </div>
+        </h2>
         <div
           className={clsx(
             "mt-6",

@@ -32,7 +32,7 @@ const OSSCard: React.FC<Props> = ({ customClasses = "", cardInfo }) => {
           {cardInfo.rating}
         </div>
       </div>
-      <div
+      <h4
         className={clsx(
           "text-white font-chakra-petch font-[500]",
           "mt-5 text-[28px] leading-[30.8px]",
@@ -40,7 +40,7 @@ const OSSCard: React.FC<Props> = ({ customClasses = "", cardInfo }) => {
         )}
       >
         {cardInfo.title}
-      </div>
+      </h4>
       <div
         className={clsx(
           "font-matter font-[400] text-white",

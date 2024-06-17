@@ -7,7 +7,7 @@ interface Props {
 
 const SectionTitle: React.FC<Props> = ({ customClasses = "", children }) => {
   return (
-    <div
+    <h3
       className={clsx(
         "font-chakra-petch font-semibold text-white text-center",
         "text-[28px] leading-[30.8px] md:text-[44px] md:leading-[48.4px]",
@@ -15,7 +15,7 @@ const SectionTitle: React.FC<Props> = ({ customClasses = "", children }) => {
       )}
     >
       {children}
-    </div>
+    </h3>
   );
 };
 

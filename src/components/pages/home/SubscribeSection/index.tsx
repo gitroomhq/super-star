@@ -21,7 +21,7 @@ const SubscribeSection: React.FC = () => {
         hasGradient
         gradientColor="#6F52E5"
       />
-      <div
+      <h3
         className={clsx(
           "text-white mx-auto mt-3 md:mt-6 w-full max-w-[335px] md:max-w-full",
           "font-chakra-petch font-[600] text-[28px] leading-[30.8px] text-center",
@@ -29,7 +29,7 @@ const SubscribeSection: React.FC = () => {
         )}
       >
         Subscribe Now to Receive Weekly Tips
-      </div>
+      </h3>
       <SubscribeForm customClasses="mt-10 md:mt-[60px]" />
     </div>
   );

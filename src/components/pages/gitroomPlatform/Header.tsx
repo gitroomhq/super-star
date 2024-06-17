@@ -108,7 +108,7 @@ const Header = () => {
         >
           We are open-source, star our repository.
         </div>
-        <div
+        <h2
           className={clsx(
             "text-white font-chakra-petch font-[600]",
             "text-[50px] leading-[50px] max-w-[200px]",
@@ -118,7 +118,7 @@ const Header = () => {
           )}
         >
           Gitroom Platform
-        </div>
+        </h2>
         <div
           className={clsx(
             "text-white font-matter font-[400] text-center",

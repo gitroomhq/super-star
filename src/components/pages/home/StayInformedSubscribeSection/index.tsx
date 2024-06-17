@@ -34,7 +34,7 @@ const StayInformedSubscribeSection = () => {
           )}
         />
       </div>
-      <div
+      <h3
         className={clsx(
           "z-[1]",
           "text-white text-center text-[28px] md:text-[44px]",
@@ -46,7 +46,7 @@ const StayInformedSubscribeSection = () => {
         )}
       >
         Stay informed, subscribe for the newsletter now!
-      </div>
+      </h3>
       <SubscribeForm />
     </div>
   );

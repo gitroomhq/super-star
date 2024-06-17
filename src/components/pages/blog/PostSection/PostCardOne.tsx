@@ -111,7 +111,7 @@ const PostCardOne: React.FC<Props> = ({ githubInfo }) => {
             Latest Post
           </div>
           <div className="flex flex-col gap-5">
-            <div
+            <h4
               className={clsx(
                 "font-ibm-plex-sans w-full overflow-hidden text-ellipsis whitespace-nowrap",
                 "text-white font-[500]",
@@ -121,7 +121,7 @@ const PostCardOne: React.FC<Props> = ({ githubInfo }) => {
               )}
             >
               {githubInfo.title}
-            </div>
+            </h4>
             <div
               className={clsx(
                 "text-white text-[400] line-clamp-2 md:line-clamp-3",

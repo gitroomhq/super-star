@@ -95,7 +95,7 @@ const OSSFriendsHeader = () => {
           gradientColor="#6F52E5"
           transparent={25}
         />
-        <div
+        <h2
           className={clsx(
             "text-center text-white font-chakra-petch font-[600] max-w-[335px]",
             "mt-[27.08px] text-[28px] leading-[30.8px]",
@@ -103,7 +103,7 @@ const OSSFriendsHeader = () => {
           )}
         >
           Do you want to be an open-source friend?
-        </div>
+        </h2>
         <div
           className={clsx(
             "text-[rgba(255,255,255,0.9)] font-matter text-center max-w-[335px]",

@@ -148,7 +148,7 @@ const CommunityDealsHeader = () => {
           gradientColor="#6F52E5"
           transparent={25}
         />
-        <div
+        <h2
           className={clsx(
             "text-center text-white font-chakra-petch font-[600]",
             "mt-4 text-[28px] leading-[30.8px]",
@@ -156,7 +156,7 @@ const CommunityDealsHeader = () => {
           )}
         >
           Community Deals
-        </div>
+        </h2>
         <div
           className={clsx(
             "text-[rgba(255,255,255,0.9)] font-matter text-center",

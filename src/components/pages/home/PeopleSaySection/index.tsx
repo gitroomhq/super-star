@@ -176,7 +176,7 @@ const PeopleSaySection: React.FC = () => {
               hasGradient
               gradientColor="#6F52E5"
             />
-            <div
+            <h3
               className={clsx(
                 "mt-5",
                 "text-center font-[600] text-white font-chakra-petch text-[28px] ",
@@ -184,7 +184,7 @@ const PeopleSaySection: React.FC = () => {
               )}
             >
               What People Say
-            </div>
+            </h3>
           </div>
         </div>
       </div>
