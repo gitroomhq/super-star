@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import clsx from "clsx";
-import { IconButton } from "@/components/core/Buttons";
+import IconButton from "@/components/core/Buttons/IconButton";
 
 const Footer: React.FC = () => {
   const router = useRouter();

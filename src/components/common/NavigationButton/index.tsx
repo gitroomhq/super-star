@@ -1,7 +1,7 @@
 import { useSwiper } from "swiper/react";
 
 // @ts-ignore
-import { IconButton } from "@/components/core/Buttons";
+import IconButton from "@/components/core/Buttons/IconButton";
 import { ChevLeftSvg, ChevRightSvg } from "@/components/svgs";
 
 const NavigationButton = () => {
