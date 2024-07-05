@@ -5,6 +5,7 @@ import { Chakra_Petch, IBM_Plex_Sans } from "next/font/google";
 // @ts-ignore
 import Navbar from "./Navbar";
 
+
 // @ts-ignore
 import Footer from "./Footer";
 import { EnumNavMenus } from "@/types";
