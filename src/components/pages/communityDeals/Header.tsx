@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import { Button } from "@/components/core/Buttons";
+import { Button } from "@/components/core/buttons";
 import IconContainer from "@/components/common/IconContainer";
 import Link from "next/link";
 

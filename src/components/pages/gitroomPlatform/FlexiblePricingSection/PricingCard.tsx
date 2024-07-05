@@ -1,6 +1,6 @@
 import clsx from "clsx";
 
-import { Button } from "@/components/core/Buttons";
+import { Button } from "@/components/core/buttons";
 import { CircleCheckFilledSvg } from "@/components/svgs";
 
 import { IPricingCard } from "@/types";

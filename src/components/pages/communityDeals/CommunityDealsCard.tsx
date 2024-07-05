@@ -1,6 +1,6 @@
 import clsx from "clsx";
 import Image from "next/image";
-import { Button } from "@/components/core/Buttons";
+import { Button } from "@/components/core/buttons";
 import { CircleCheckFilledSvg } from "@/components/svgs";
 import { EnumCommunityCardType, ICommunityCard } from "@/types";
 

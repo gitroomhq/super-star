@@ -5,7 +5,7 @@ import clsx from "clsx";
 import GithubCard from "./GithubCard";
 import { GithubInfo } from "@/mockData/github";
 import { IGithubInfo } from "@/types";
-import { Button } from "@/components/core/Buttons";
+import { Button } from "@/components/core/buttons";
 
 const GithubSection = () => {
   const router = useRouter();

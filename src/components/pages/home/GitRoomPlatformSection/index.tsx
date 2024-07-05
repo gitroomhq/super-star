@@ -3,7 +3,7 @@ import clsx from "clsx";
 import Image from "next/image";
 import { useRouter } from "next/router";
 
-import { Button } from "@/components/core/Buttons";
+import { Button } from "@/components/core/buttons";
 import LottieWrapper from "@/components/common/LottieWrapper";
 import LottieGrid from "@/lottie/Grid.json";
 import LottieGridMobile from "@/lottie/Grid-mobile.json";

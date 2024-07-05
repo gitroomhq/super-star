@@ -4,7 +4,7 @@ import Image from "next/image";
 import { ChangeEvent, MouseEvent, useState } from "react";
 import clsx from "clsx";
 
-import { Button } from "@/components/core/Buttons";
+import { Button } from "@/components/core/buttons";
 import { CloseSvg } from "@/components/svgs";
 import { ICommunityCard } from "@/types";
 

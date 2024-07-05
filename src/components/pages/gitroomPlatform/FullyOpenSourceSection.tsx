@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import Image from "next/image";
 import { useRouter } from "next/router";
-import { Button } from "@/components/core/Buttons";
+import { Button } from "@/components/core/buttons";
 import SectionTitle from "@/components/core/SectionTitle";
 import SectionSubTitle from "@/components/core/SectionSubTitle";
 

@@ -2,7 +2,7 @@ import React from "react";
 import clsx from "clsx";
 import Image from "next/image";
 
-import { Button } from "@/components/core/Buttons";
+import { Button } from "@/components/core/buttons";
 import LottieWrapper from "@/components/common/LottieWrapper";
 import LottieHero from "@/lottie/GitPlatformHero.json";
 import Link from "next/link";
