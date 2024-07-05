@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@dotlottie/react-player": "^1.6.19",
     "@react-hook/window-size": "^3.1.1",
     "@szhsin/react-accordion": "^1.2.4",
     "clsx": "^2.1.0",

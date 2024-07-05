@@ -35,7 +35,7 @@ const HomeHeader = () => {
         </div>
       </div>
       <LottieWrapper
-        animationData={LottieHomeHeader}
+        path="https://lottie.host/220d7e86-1580-4b0e-9b53-3690abf9fcfc/P1IOZrfxEY.json"
         className="absolute top-0 left-[50%] -translate-x-[63%] md:-translate-x-[50%] w-[1450px] md:w-[2400px]"
       />
     </div>
