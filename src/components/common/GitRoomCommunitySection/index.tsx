@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import clsx from "clsx";
 
+// @ts-ignore
 import TextButton from "@/components/core/Buttons/TextButton";
 import LottieWrapper from "@/components/common/LottieWrapper";
 import LottieOSS from "@/lottie/Oss.json";
