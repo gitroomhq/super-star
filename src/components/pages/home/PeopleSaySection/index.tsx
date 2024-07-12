@@ -39,7 +39,7 @@ const PeopleSaySection: React.FC = () => {
         "Nevo is an outstanding Growth Engineer. He really understands how to create traction around a developer products and his results speak for themselves!",
       person: {
         imgSrc: "/pngs/people1.png",
-        name: "Guillermo Rauch",
+        name: "Nicklas Gellner",
         role: "COO",
         company: "Medusa",
         link: "https://github.com/medusajs/medusa",
@@ -91,54 +91,6 @@ const PeopleSaySection: React.FC = () => {
         role: "Developer Advocate",
         company: "ToolJet",
         link: "https://github.com/ToolJet/ToolJet",
-      },
-    },
-    {
-      logo: { src: "/svgs/PeopleSayLogo1.svg", width: 60, height: 60 },
-      description:
-        "Nevo is an outstanding Growth Engineer. He really understands how to create traction around a developer products and his results speak for themselves!",
-      person: {
-        imgSrc: "/pngs/people1.png",
-        name: "Nicklas Gellner",
-        role: "COO",
-        company: "Medusa",
-        link: "https://github.com/medusajs/medusa",
-      },
-    },
-    {
-      logo: { src: "/svgs/PeopleSayLogo2.svg", width: 60, height: 60 },
-      description:
-        "Nevo has achieved great growth for Novu in a remarkably short time. His creative, and practical strategies have resulted in immediate and tangible results.",
-      person: {
-        imgSrc: "/pngs/people2.png",
-        name: "Tomer Barnea",
-        role: "CEO",
-        company: "Novu",
-        link: "https://github.com/novuhq/novu",
-      },
-    },
-    {
-      logo: { src: "/svgs/PeopleSayLogo3.svg", width: 80, height: 60 },
-      description:
-        "The content is clear, creative and practical, and can have an immediate impact, highly recommend to anyone looking to grow their Github library.",
-      person: {
-        imgSrc: "/pngs/people3.png",
-        name: "Zevi Reinitz",
-        role: "Head of Product Marketing",
-        company: "Livecycle",
-        link: "https://github.com/livecycle/preevy",
-      },
-    },
-    {
-      logo: { src: "/svgs/PeopleSayLogo4.svg", width: 60, height: 60 },
-      description:
-        "Nevo's knowledge and expertise in building communities, engaging with developers, and reaching out to them wherever they are, is invaluable.",
-      person: {
-        imgSrc: "/pngs/people4.png",
-        name: "Michael Solati",
-        role: "DevRel",
-        company: "Amplication",
-        link: "https://github.com/amplication/amplication",
       },
     },
   ];
