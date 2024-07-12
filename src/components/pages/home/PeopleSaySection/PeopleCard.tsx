@@ -34,7 +34,7 @@ const PeopleCard: React.FC<Props> = ({
           <Image src={logo} width={width} height={height} alt="" />
         </div>
         <div className="flex-1">
-          <p className="text-white text-sm leading-[16.8px] font-matter line-clamp-4 sm:line-clamp-3">
+          <p className="text-white text-sm leading-[16.8px] font-matter">
             {description}
           </p>
         </div>

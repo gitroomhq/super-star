@@ -99,7 +99,7 @@ const PeopleSaySection: React.FC = () => {
         "Nevo is an outstanding Growth Engineer. He really understands how to create traction around a developer products and his results speak for themselves!",
       person: {
         imgSrc: "/pngs/people1.png",
-        name: "Guillermo Rauch",
+        name: "Nicklas Gellner",
         role: "COO",
         company: "Medusa",
         link: "https://github.com/medusajs/medusa",
@@ -139,18 +139,6 @@ const PeopleSaySection: React.FC = () => {
         role: "DevRel",
         company: "Amplication",
         link: "https://github.com/amplication/amplication",
-      },
-    },
-    {
-      logo: { src: "/svgs/PeopleSayLogo5.svg", width: 60, height: 60 },
-      description:
-        "Nevo's thoughts were insightful, his ideas and strategies are experimented with regular improvements towards the growth of GitHub stargazers and contributors.",
-      person: {
-        imgSrc: "/pngs/people5.png",
-        name: "Teja Kummarikuntla",
-        role: "Developer Advocate",
-        company: "ToolJet",
-        link: "https://github.com/ToolJet/ToolJet",
       },
     },
   ];
