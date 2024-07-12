@@ -35,7 +35,7 @@ export async function getStaticProps(props: { params: { id: string } }) {
     props: {
       blog: await blogService.getPost(props.params.id),
       relatedPosts: shuffle(await blogService.getPostList()).slice(0, 3),
-    }, // will be passed to the page component as props
+    }, // will be passed to the page component as props!
     revalidate: 3600
   };
 }
