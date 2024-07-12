@@ -156,7 +156,7 @@ const GitRoomCommunitySection: React.FC<Props> = ({ customClasses = "" }) => {
             </div>
             <div>
               <TextButton customClasses={clsx("mt-4 font-[300]")}>
-                Explorer Deals (SOON) {`>`}
+                Explore Deals (SOON)
               </TextButton>
             </div>
           </div>
