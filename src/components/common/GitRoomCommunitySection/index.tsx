@@ -123,11 +123,11 @@ const GitRoomCommunitySection: React.FC<Props> = ({ customClasses = "" }) => {
               relationships with like-minded developers passionate about
               advancing initiatives.
             </div>
-            <Link href="/oss-friends">
+            <div>
               <TextButton customClasses={clsx("mt-4 font-[300]")}>
-                Join Community {`>`}
+                Join Community (SOON)
               </TextButton>
-            </Link>
+            </div>
           </div>
         </div>
         <div
@@ -154,11 +154,11 @@ const GitRoomCommunitySection: React.FC<Props> = ({ customClasses = "" }) => {
               discover opportunities to connect, learn, and grow with fellow
               developers.
             </div>
-            <Link href="/community-deals">
+            <div>
               <TextButton customClasses={clsx("mt-4 font-[300]")}>
-                Explorer Deals {`>`}
+                Explorer Deals (SOON) {`>`}
               </TextButton>
-            </Link>
+            </div>
           </div>
         </div>
         <div
