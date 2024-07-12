@@ -102,7 +102,7 @@ const GitRoomPlatformSection = () => {
             }}
           />
           <Image
-            src="/pngs/Illustration.png"
+            src="/pngs/Illustrtion.svg"
             width={1118}
             height={596}
             alt="Illustration"
