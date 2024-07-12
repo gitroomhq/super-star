@@ -4,7 +4,7 @@ export interface Details {
     description: string;
     subtitle?: string;
     slug: string;
-    created: number;
+    created?: number;
     seo?: string;
     picture: string;
     author: { name: string; picture: string };
