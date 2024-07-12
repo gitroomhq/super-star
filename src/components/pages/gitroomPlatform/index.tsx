@@ -1,4 +1,4 @@
-import React from "react";
+import React, { FC } from "react";
 import clsx from "clsx";
 import Header from "./Header";
 import FrequentlyAskSection from "./FrequentlyAskSection";
@@ -12,7 +12,7 @@ import LaunchesSection from "./LaunchesSection";
 import GitRoomCommunitySection from "@/components/common/GitRoomCommunitySection";
 import { CompanyLogoContainer, StayInformedSubscribeSection } from "../home";
 
-const GitRoomPlatformPageContent = () => {
+const GitRoomPlatformPageContent: FC<{stars: number}> = (props) => {
   return (
     <div className="relative">
       <div className="bg-star-background w-full h-full max-w-[1440px] absolute z-[0] top-0 left-[50%] -translate-x-[50%]" />
@@ -24,7 +24,7 @@ const GitRoomPlatformPageContent = () => {
       <MarketPlaceSection />
       <ProvidersSection />
       <FlexiblePricingSection />
-      <FullyOpenSourceSection />
+      <FullyOpenSourceSection stars={props.stars} />
       <FrequentlyAskSection />
       <GitRoomCommunitySection
         customClasses={clsx("mt-[100px] md:mt-[200px]")}

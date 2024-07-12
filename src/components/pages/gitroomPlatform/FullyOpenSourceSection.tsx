@@ -4,6 +4,7 @@ import { useRouter } from "next/router";
 import { Button } from "@/components/core/buttons";
 import SectionTitle from "@/components/core/SectionTitle";
 import SectionSubTitle from "@/components/core/SectionSubTitle";
+import { FC, useMemo } from "react";
 
 const BlackShadow = () => (
   <>
@@ -62,8 +63,12 @@ const Shadow = () => (
   </>
 );
 
-const FullyOpenSourceSection = () => {
+const FullyOpenSourceSection: FC<{stars: number}> = (props) => {
   const router = useRouter();
+
+  const calculateStars = useMemo(() => {
+    return (props.stars / 1000).toFixed(1) + "k";
+  }, [props.stars]);
 
   return (
     <div
@@ -103,7 +108,7 @@ const FullyOpenSourceSection = () => {
         <Button
           variant="primary-white"
           customClasses={clsx("w-[170px] h-[48px]")}
-          onClick={() => router.push("https://github.com/gitroomhq/gitroom")}
+          onClick={() => window.open("https://github.com/gitroomhq/gitroom")}
         >
           <div className={clsx("relative w-5 h-5 mr-2")}>
             <Image
@@ -117,7 +122,7 @@ const FullyOpenSourceSection = () => {
           <div
             className={clsx("mx-2 w-[1px] h-[18px] bg-[rgba(0,0,0,0.25)]")}
           ></div>
-          3.2k
+          {calculateStars}
         </Button>
       </div>
 

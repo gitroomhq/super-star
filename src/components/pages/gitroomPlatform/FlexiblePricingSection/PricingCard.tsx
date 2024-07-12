@@ -130,10 +130,6 @@ const PricingCard: React.FC<Props> = ({
           Get Started for Free
         </Button>
       </div>
-
-      <div className={clsx(styles.trialText, "z-[2]")}>
-        14 days trial. No credit card required.
-      </div>
     </div>
   );
 };
