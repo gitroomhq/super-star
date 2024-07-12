@@ -8,6 +8,7 @@ import StayInformedSubscribeSection from "./StayInformedSubscribeSection";
 import StayFormSection from "./StayFormSection";
 import GithubSection from "./GithubSection";
 import GitRoomCommunitySection from "@/components/common/GitRoomCommunitySection";
+import { FC } from "react";
 
 export {
   HomeHeader,
@@ -20,7 +21,7 @@ export {
   GithubSection,
 };
 
-const HomePageContent = () => {
+const HomePageContent: FC<{blog: any[]}> = (props) => {
   return (
     <>
       <HomeHeader />
@@ -28,7 +29,7 @@ const HomePageContent = () => {
         <div className="bg-star-background w-full h-full max-w-[1440px] absolute z-[0] top-0 left-[50%] -translate-x-[50%]" />
         <CompanyLogoContainer />
         <StayFormSection />
-        <GithubSection />
+        <GithubSection blog={props.blog} />
         <PeopleSaySection />
         <SubscribeSection />
         <GitRoomPlatformSection />

@@ -1,13 +1,10 @@
 import { clsx } from "clsx";
-import Image from "next/image";
 import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
-import NavigationButton from "@/components/common/NavigationButton";
 import GithubCard from "../home/GithubSection/GithubCard";
-import { GithubInfo } from "@/mockData/github";
-import { IGithubInfo } from "@/types";
 import IconContainer from "@/components/common/IconContainer";
+import { FC } from "react";
 
-const RelatedPost = () => {
+const RelatedPost: FC<{relatedPosts: any[]}> = (props) => {
   return (
     <>
       <div className="git-room-container mt-[100px] md:flex">
@@ -55,9 +52,9 @@ const RelatedPost = () => {
               "px-5 flex flex-col md:flex-row items-center gap-2.5"
             )}
           >
-            <GithubCard githubInfo={GithubInfo[0]} />
-            <GithubCard githubInfo={GithubInfo[1]} />
-            <GithubCard githubInfo={GithubInfo[2]} />
+            <GithubCard githubInfo={props.relatedPosts[0]} num={1} />
+            <GithubCard githubInfo={props.relatedPosts[1]} num={2} />
+            <GithubCard githubInfo={props.relatedPosts[2]} num={3} />
           </div>
         </Swiper>
       </div>

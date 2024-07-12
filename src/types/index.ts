@@ -1,16 +1,11 @@
 export interface IGithubInfo {
-  id: number;
-  imageUrl?: string;
-  headerTitle: string;
-  hasTitleGradient?: boolean;
-  headerSubTitle: string;
-  hasSubTitleGradient?: boolean;
-  title: string;
-  author: string;
-  date: string;
-  avatarUrl: string;
-  description: string;
-  style?: number;
+  id: string;
+  title: string,
+  created: number,
+  description: string,
+  slug: string,
+  picture: string,
+  author: any
 }
 
 export enum EnumNavMenus {

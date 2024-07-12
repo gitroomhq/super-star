@@ -5,6 +5,8 @@ import clsx from "clsx";
 import { IGithubInfo } from "@/types";
 
 import Image from "next/image";
+import dayjs from "dayjs";
+import Link from "next/link";
 
 const Title = ({
   title,
@@ -27,7 +29,7 @@ const Title = ({
   ) : (
     <p
       className={clsx(
-        "bg-gradient-to-r uppercase font-[700] text-[41.68px] leading-[37.32px] md:text-[45px] lg:text-[52.33px] lg:leading-[46.77px] font-matter text-center bg-clip-text text-transparent group-hover:scale-110 transition-all duration-500",
+        "bg-gradient-to-r uppercase font-[700] text-[41.68px] leading-[37.32px] md:text-[45px] lg:text-[52.33px] lg:leading-[46.77px] font-matter text-center text-transparent group-hover:scale-110 transition-all duration-500",
         styles[style]
       )}
     >
@@ -38,18 +40,19 @@ const Title = ({
 
 interface Props {
   githubInfo: IGithubInfo;
+  num: number;
 }
 
-const GithubCard: React.FC<Props> = ({ githubInfo }) => {
+const GithubCard: React.FC<Props> = ({ githubInfo, num }) => {
   const router = useRouter();
 
-  const style = (githubInfo.style || 0) % 3;
+  const style = (num || 0) % 3;
 
   return (
     <div
       className="w-full h-full flex flex-col flex-1 rounded-[4px] overflow-hidden border-[#B9C8FF33] border-[1px] max-w-[420px] relative group cursor-pointer bg-black"
       onClick={() => {
-        router.push(`/blog/${2}`);
+        router.push(`/blog/${githubInfo.slug}`);
       }}
     >
       <div
@@ -62,14 +65,14 @@ const GithubCard: React.FC<Props> = ({ githubInfo }) => {
 
       <div className="w-full relative overflow-hidden">
         <Image
-          src={githubInfo.imageUrl ?? `/svgs/GithubCard${style}.svg`}
+          src={githubInfo.picture ?? `/svgs/GithubCard${style}.svg`}
           width={420}
           height={267}
           alt=""
           style={{ objectFit: "cover" }}
           className="w-full h-[210px] md:h-[260px] z-[0] group-hover:scale-110 transition-all duration-500"
         />
-        {!githubInfo.imageUrl && (
+        {!githubInfo.picture && (
           <div className="top-0 left-0 absolute w-full h-full flex flex-col gap-[3px] items-center justify-center z-[2]">
             <div className="flex gap-[3px] items-center justify-center mb-[26px] group-hover:scale-110 transition-all duration-500">
               <Image
@@ -83,13 +86,13 @@ const GithubCard: React.FC<Props> = ({ githubInfo }) => {
               </div>
             </div>
             <Title
-              title={githubInfo.headerTitle}
-              hasGradient={githubInfo.hasTitleGradient}
+              title={githubInfo.title}
+              hasGradient={true}
               style={style}
             />
             <Title
-              title={githubInfo.headerSubTitle}
-              hasGradient={githubInfo.hasSubTitleGradient}
+              title={githubInfo.title}
+              hasGradient={true}
               style={style}
             />
           </div>
@@ -100,19 +103,19 @@ const GithubCard: React.FC<Props> = ({ githubInfo }) => {
           "flex flex-col gap-4",
           "w-full",
           "py-[24.91px] px-4",
-          "lg:py-[30px] lg:h-[197px] z-[2]"
+          "lg:py-[30px] lg:min-h-[197px] z-[2]"
         )}
       >
-        <h4
+        <Link href={`/blog/${githubInfo.slug}`}
           className={clsx(
-            "font-ibm-plex-sans w-full overflow-hidden text-ellipsis whitespace-nowrap",
+            "font-ibm-plex-sans w-full overflow-hidden text-ellipsis",
             "text-white font-[500]",
             "text-lg leading-[19.8px]",
             "lg:text-[22px] lg:leading-[24px]"
           )}
         >
           {githubInfo.title}
-        </h4>
+        </Link>
         <div className={clsx("flex items-center")}>
           <div
             className={clsx(
@@ -129,7 +132,7 @@ const GithubCard: React.FC<Props> = ({ githubInfo }) => {
               "lg:text-base lg:leading-[20.8px]"
             )}
           >
-            {githubInfo.author}
+            {githubInfo.author.name}
           </div>
           <div
             className={clsx(
@@ -143,12 +146,12 @@ const GithubCard: React.FC<Props> = ({ githubInfo }) => {
               "lg:text-base lg:leading-[20.8px]"
             )}
           >
-            {githubInfo.date}
+            {dayjs.unix(githubInfo.created).format('MMM DD, YYYY')}
           </div>
         </div>
         <div
           className={clsx(
-            "text-white text-[400] line-clamp-2",
+            "text-white text-[400]",
             "text-[15px] leading-[22.5px]"
           )}
         >

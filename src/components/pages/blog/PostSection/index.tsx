@@ -1,16 +1,14 @@
 import React from "react";
-import clsx from "clsx";
 import PostCardOne from "./PostCardOne";
 import GithubContainer from "./GithubContainer";
-import { GithubInfo } from "@/mockData/github";
 
-const PostSection: React.FC = () => {
-  const data = GithubInfo[GithubInfo.length - 1];
+const PostSection: React.FC<{blog: any[]}> = (props) => {
+  const [firstPost, ...restPosts] = props.blog;
 
   return (
     <>
-      <PostCardOne githubInfo={data} />
-      <GithubContainer />
+      <PostCardOne blog={firstPost} />
+      <GithubContainer blog={restPosts} />
     </>
   );
 };

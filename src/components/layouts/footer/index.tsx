@@ -43,7 +43,7 @@ const Footer: React.FC = () => {
                   "font-semibold text-[23.8px] md:text-[26.47px] font-chakra-petch pt-[11px] md:pt-0"
                 )}
               >
-                GitRoom
+                Gitroom
               </h4>
             </div>
             <p
@@ -170,10 +170,7 @@ const Footer: React.FC = () => {
           </div>
           <div className={clsx("flex flex-row justify-center gap-[10px]")}>
             <IconButton
-              onClick={() => {
-                router.push("https://discord.gitroom.com/");
-              }}
-            >
+              asLink="https://discord.gitroom.com">
               <Image
                 src="/svgs/Discord.svg"
                 height={0}
@@ -183,9 +180,7 @@ const Footer: React.FC = () => {
               />
             </IconButton>
             <IconButton
-              onClick={() => {
-                router.push("https://youtube.com/@nevodavid");
-              }}
+              asLink="https://youtube.com/@nevodavid"
             >
               <Image
                 src="/svgs/Youtube.svg"
@@ -196,9 +191,7 @@ const Footer: React.FC = () => {
               />
             </IconButton>
             <IconButton
-              onClick={() => {
-                router.push("https://linkedin.com/in/nevo-david");
-              }}
+              asLink="https://linkedin.com/in/nevo-david"
             >
               <Image
                 src="/svgs/Linkedin.svg"
@@ -209,9 +202,7 @@ const Footer: React.FC = () => {
               />
             </IconButton>
             <IconButton
-              onClick={() => {
-                router.push("https://twitter.com/nevodavid");
-              }}
+              asLink="https://twitter.com/nevodavid"
             >
               <Image
                 src="/svgs/Twitter.svg"
@@ -229,7 +220,7 @@ const Footer: React.FC = () => {
             )}
           >
             <Link
-              href="https://gitroom.com/terms-of-service"
+              href="/terms"
               className={clsx(
                 "pl-0 md:pl-[41px] text-[rgba(255,255,255,0.6)] hover:text-[rgba(255,255,255,1)] transition-all"
               )}
@@ -237,7 +228,7 @@ const Footer: React.FC = () => {
               Terms of service
             </Link>
             <Link
-              href="https://gitroom.com/privacy-policy"
+              href="/privacy"
               className={clsx(
                 "text-[rgba(255,255,255,0.6)] hover:text-[rgba(255,255,255,1)] transition-all"
               )}

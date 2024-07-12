@@ -1,13 +1,11 @@
-import React from "react";
+import React, { FC } from "react";
 import { useRouter } from "next/router";
 import clsx from "clsx";
 
 import GithubCard from "./GithubCard";
-import { GithubInfo } from "@/mockData/github";
-import { IGithubInfo } from "@/types";
 import { Button } from "@/components/core/buttons";
 
-const GithubSection = () => {
+const GithubSection: FC<{blog: any[]}> = (props) => {
   const router = useRouter();
 
   return (
@@ -19,13 +17,13 @@ const GithubSection = () => {
       )}
     >
       <div className={"hidden md:flex flex-row gap-[10px] mb-[20px] w-full"}>
-        {GithubInfo.map((item: IGithubInfo, idx: number) => {
+        {props.blog.map((item, idx: number) => {
           if (idx >= 3) return null;
-          return <GithubCard key={idx} githubInfo={item} />;
+          return <GithubCard num={idx} key={idx} githubInfo={item} />;
         })}
       </div>
       <div className="md:hidden mb-[20px] w-full flex justify-center">
-        {<GithubCard githubInfo={GithubInfo[0]} />}
+        {<GithubCard num={1} githubInfo={props.blog[0]} />}
       </div>
       <Button
         customClasses={clsx(

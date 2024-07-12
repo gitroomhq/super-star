@@ -1,0 +1,1 @@
+export const basic = 'Basic ' + Buffer.from(process.env.BASIC_TOKEN!).toString("base64");

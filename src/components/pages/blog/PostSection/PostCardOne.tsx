@@ -5,6 +5,8 @@ import clsx from "clsx";
 import { IGithubInfo } from "@/types";
 
 import Image from "next/image";
+import Link from "next/link";
+import dayjs from "dayjs";
 
 const Title = ({
   title,
@@ -37,60 +39,36 @@ const Title = ({
 };
 
 interface Props {
-  githubInfo: IGithubInfo;
+  blog: any;
 }
 
-const PostCardOne: React.FC<Props> = ({ githubInfo }) => {
+const PostCardOne: React.FC<Props> = ({ blog }) => {
   const router = useRouter();
 
-  const style = (githubInfo.style || 0) % 3;
+  const style = 1 % 3;
 
   return (
     <div className="flex justify-center git-room-container">
       <div
         className="w-full max-w-[420px] md:max-w-full flex flex-col md:flex-row rounded-[4px] overflow-hidden border-[#B9C8FF33] border-[1px] relative group cursor-pointer bg-black"
         onClick={() => {
-          router.push(`/blog/${2}`);
+          router.push(`/blog/${blog.slug}`);
         }}
       >
         <div
-          className="absolute left-[70px] -bottom-[37px] translate-y-[50%] -translate-x-[50%] w-[1000px] h-[1000px] opacity-0 z-[1] group-hover:opacity-50 transition-all"
-          style={{
-            background:
-              "radial-gradient(circle at 50%, #11279E, transparent 60%)",
-          }}
+          className="absolute left-[70px] -bottom-[37px] translate-y-[50%] -translate-x-[50%] w-[1000px] h-[1000px] opacity-0 z-[1]"
         />
 
         <div className="w-full md:w-[50%] relative h-full">
-          <Image
-            src={`/svgs/GithubCard${style}.svg`}
-            width={420}
-            height={267}
-            alt="oss header"
-            className="w-full h-full object-cover z-[0]"
-          />
-          <div className="top-0 left-0 absolute w-full h-full flex flex-col gap-[3px] items-center justify-center z-[2]">
-            <div className="flex gap-[3px] items-center justify-center mb-[26px] group-hover:scale-110 transition-all">
+          <div className="top-0 left-0 absolute w-full h-full flex flex-col items-center justify-center z-[2]">
+            <div className="flex items-center justify-center transition-all">
               <Image
-                src={`/svgs/Logo${style}.svg`}
-                width={25}
-                height={27}
+                src={blog.picture}
+                fill={true}
                 alt="logo"
+                className="w-full object-cover"
               />
-              <div className="font-chakra-petch text-white font-bold text-[14px] leading-[18.22px] mt-2">
-                Gitroom
-              </div>
-            </div>
-            <Title
-              title={githubInfo.headerTitle}
-              hasGradient={githubInfo.hasTitleGradient}
-              style={style}
-            />
-            <Title
-              title={githubInfo.headerSubTitle}
-              hasGradient={githubInfo.hasSubTitleGradient}
-              style={style}
-            />
+          </div>
           </div>
         </div>
         <div
@@ -111,7 +89,7 @@ const PostCardOne: React.FC<Props> = ({ githubInfo }) => {
             Latest Post
           </div>
           <div className="flex flex-col gap-5">
-            <h4
+            <Link href={`/blog/${blog.slug}`}
               className={clsx(
                 "font-ibm-plex-sans w-full overflow-hidden text-ellipsis whitespace-nowrap",
                 "text-white font-[500]",
@@ -120,8 +98,8 @@ const PostCardOne: React.FC<Props> = ({ githubInfo }) => {
                 "lg:text-[30px] lg:leading-[35.2px]"
               )}
             >
-              {githubInfo.title}
-            </h4>
+              {blog.title}
+            </Link>
             <div
               className={clsx(
                 "text-white text-[400] line-clamp-2 md:line-clamp-3",
@@ -129,7 +107,7 @@ const PostCardOne: React.FC<Props> = ({ githubInfo }) => {
                 "md:text-[20px] md:leading-[30px]"
               )}
             >
-              {githubInfo.description}
+              {blog.description}
             </div>
           </div>
           <div className={clsx("flex items-center")}>
@@ -148,7 +126,7 @@ const PostCardOne: React.FC<Props> = ({ githubInfo }) => {
                 "lg:text-base lg:leading-[20.8px]"
               )}
             >
-              {githubInfo.author}
+              {blog.author.name}
             </div>
             <div
               className={clsx(
@@ -162,7 +140,7 @@ const PostCardOne: React.FC<Props> = ({ githubInfo }) => {
                 "lg:text-base lg:leading-[20.8px]"
               )}
             >
-              {githubInfo.date}
+              {dayjs.unix(blog.created).format("MMM DD, YYYY")}
             </div>
           </div>
         </div>

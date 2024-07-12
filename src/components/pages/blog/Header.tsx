@@ -1,5 +1,6 @@
 import IconContainer from "@/components/common/IconContainer";
 import clsx from "clsx";
+import { FC } from "react";
 
 const BlackShadow = () => (
   <>
@@ -126,7 +127,7 @@ const PurpleShadow = () => (
   </>
 );
 
-const BlogHeader = () => {
+const BlogHeader: FC = (props) => {
   return (
     <div className="relative flex min-h-[502px] md:min-h-[680px] max-w-[1440px] mx-auto">
       <div

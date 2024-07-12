@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useCallback, useState } from "react";
 import { useRouter } from "next/router";
 
 import clsx from "clsx";
@@ -6,40 +6,53 @@ import clsx from "clsx";
 import { validateEmail } from "@/utlis/validate";
 
 import styles from "./styles.module.css";
+import { useNewsletterRegister } from "@/utlis/use.newsletter.register";
+import { useForm } from "react-hook-form";
 
 interface Props {
   customClasses?: string;
 }
 
 const SubscribeForm: React.FC<Props> = ({ customClasses }) => {
+  const newsletter = useNewsletterRegister();
   const [value, setValue] = useState<string>("");
-  const [submitted, setSubmitted] = useState<boolean>(false);
-  const [successed, setSuccessed] = useState<boolean>(false);
   const [focused, setFocused] = useState<boolean>(false);
 
   const router = useRouter();
 
-  const handleSubmit = () => {
-    if (successed) {
-      router.push("/blog");
-    } else {
-      setSubmitted(true);
-      if (validateEmail(value).validate) {
-        setSuccessed(true);
-      }
-    }
-  };
+  const form = useForm({
+    values: {
+      email: "",
+    },
+  });
+
+  const { onBlur, ...theRest } = form.register("email", {
+    required: true,
+    pattern: /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/,
+  });
+
+  const newOnBlur = useCallback(
+    (e: any) => {
+      setFocused(false);
+      return onBlur(e);
+    },
+    [onBlur]
+  );
+
+  const handleSubmit = useCallback((values: { email: string }) => {
+    newsletter(values.email);
+  }, []);
 
   return (
     <div
       className={clsx(
         styles.componentContainer,
         customClasses,
-        submitted && validateEmail(value).validate && styles.hasError,
+        form.formState.isSubmitted && styles.hasError,
         focused && styles.focused
       )}
     >
-      {successed ? (
+      {form.formState.isSubmitted ? (
         <div className={clsx("flex h-[50px] md:h-[56px]")}>
           <div
             className={clsx(
@@ -48,65 +61,55 @@ const SubscribeForm: React.FC<Props> = ({ customClasses }) => {
               "text-sm leading-[16.8px] max-w-[200px] md:text-[20px] md:leading-[22px] md:max-w-[323px]"
             )}
           >
-            Thank you! The newsletter will be in your mailbox very soon.
+            Thank you! You have successfully subscribed to our newsletter.
           </div>
-          <button
-            className={clsx(styles.btnSubmit, "ml-auto")}
-            onClick={handleSubmit}
-          >
-            Explore Blog
-          </button>
         </div>
       ) : (
-        <div
-          className={clsx(
-            styles.inputWrapper,
-            submitted && !validateEmail(value).validate && styles.hasError,
-            validateEmail(value).validate && styles.filled,
-            "realtive"
-          )}
-        >
+        <form onSubmit={form.handleSubmit(handleSubmit)}>
           <div
-            style={{
-              background: "radial-gradient(#cccbff, #ffffff00 50%) no-repeat",
-              width: "300px",
-              height: "50px",
-              top: "-40%",
-              left: "-10%",
-              position: "absolute",
-              opacity: "0.65",
-            }}
-            className="block hover:hidden"
-          />
-          <div className="absolute w-[calc(100%-2px)] h-[calc(100%-2px)] left-[50%] -translate-x-[50%]">
-            <input
-              className={clsx(styles.input, "!h-full !w-full")}
-              placeholder="Enter your e-mail"
-              value={value}
-              onChange={(event) => {
-                setValue(event.target.value);
+            className={clsx(
+              styles.inputWrapper,
+              form.formState.isSubmitted && styles.hasError,
+              validateEmail(value).validate && styles.filled,
+              "relative"
+            )}
+          >
+            <div
+              style={{
+                background: "radial-gradient(#cccbff, #ffffff00 50%) no-repeat",
+                width: "300px",
+                height: "50px",
+                top: "-40%",
+                left: "-10%",
+                position: "absolute",
+                opacity: "0.65",
               }}
-              onFocus={() => {
-                setFocused(true);
-              }}
-              onBlur={() => {
-                setFocused(false);
-              }}
+              className="block hover:hidden"
             />
+            <div className="absolute w-[calc(100%-2px)] h-[calc(100%-2px)] left-[50%] -translate-x-[50%]">
+              <input
+                type="text"
+                className={clsx(styles.input, "!h-full !w-full")}
+                placeholder="Enter your e-mail"
+                onFocus={() => setFocused(true)}
+                onBlur={newOnBlur}
+                {...theRest}
+              />
+            </div>
+            <button className={clsx(styles.btnSubmit, "-translate-y-[1px]")} type="submit">
+              Subscribe
+            </button>
           </div>
-          <button className={clsx(styles.btnSubmit, "-translate-y-[1px]")} onClick={handleSubmit}>
-            Subscribe
-          </button>
-        </div>
+        </form>
       )}
-      {submitted && !validateEmail(value).validate && (
+      {form?.formState?.errors?.email && (
         <div className={clsx(styles.labelValidate)}>
-          {validateEmail(value).validateStr}
+          {form.formState.errors.email.message}
         </div>
       )}
 
       <div className={clsx(styles.labelReference)}>
-        * Add your email, a video of getting the first 1,000 stars will be sent
+        * Add your email, a video of getting the first 1,000 stars will be sent
         to your email
       </div>
     </div>

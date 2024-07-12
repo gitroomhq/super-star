@@ -603,3 +603,21 @@ code .react-syntax-highlighter-line-number {
 .blog-post .captioned-image-container + h2 {
   margin-top: 0;
 }
+.content [style="border-top: 3px solid #080ea6; width: 50%;"] {
+    width: 100% !important;
+    margin: 40px 0;
+    border-color: #6273B2 !important;
+}
+
+.content ol li, .content ul li {
+  margin: 20px 0 !important;
+}
+
+.content > div {
+  margin: 20px 0;
+}
+.content pre {
+  padding: 20px;
+  margin-top: 20px;
+  font-size: 12px;
+}

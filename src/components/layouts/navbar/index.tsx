@@ -133,37 +133,42 @@ const Navbar: React.FC<Props> = ({ activeMenu = "" }) => {
           <ul
             className={clsx("flex flex-col gap-y-8", "md:flex-row md:gap-x-10")}
           >
+            {/*<li className="text-center">*/}
+            {/*  <Link*/}
+            {/*    href="/community-deals"*/}
+            {/*    className={clsx(*/}
+            {/*      styles.navbarItem,*/}
+            {/*      activeMenu === EnumNavMenus.CommuntyDeals &&*/}
+            {/*        styles.navbarItemActive*/}
+            {/*    )}*/}
+            {/*  >*/}
+            {/*    Community Deals*/}
+            {/*  </Link>*/}
+            {/*</li>*/}
+            {/*<li className="text-center">*/}
+            {/*  <Link*/}
+            {/*    href="/oss-friends"*/}
+            {/*    className={clsx(*/}
+            {/*      styles.navbarItem,*/}
+            {/*      activeMenu === EnumNavMenus.OSSFriends &&*/}
+            {/*        styles.navbarItemActive*/}
+            {/*    )}*/}
+            {/*  >*/}
+            {/*    OSS Friends*/}
+            {/*  </Link>*/}
+            {/*</li>*/}
             <li className="text-center">
               <Link
-                href="/community-deals"
-                className={clsx(
-                  styles.navbarItem,
-                  activeMenu === EnumNavMenus.CommuntyDeals &&
-                    styles.navbarItemActive
-                )}
+                href="https://gitlibrary.club"
+                className={clsx(styles.navbarItem)}
               >
-                Community Deals
-              </Link>
-            </li>
-            <li className="text-center">
-              <Link
-                href="/oss-friends"
-                className={clsx(
-                  styles.navbarItem,
-                  activeMenu === EnumNavMenus.OSSFriends &&
-                    styles.navbarItemActive
-                )}
-              >
-                OSS Friends
+                Add your repository
               </Link>
             </li>
             <li className="text-center">
               <Link
                 href="/blog"
-                className={clsx(
-                  styles.navbarItem,
-                  activeMenu === EnumNavMenus.Blog && styles.navbarItemActive
-                )}
+                className={clsx(styles.navbarItem, activeMenu === EnumNavMenus.Blog && styles.navbarItemActive)}
               >
                 Blog
               </Link>
@@ -172,10 +177,7 @@ const Navbar: React.FC<Props> = ({ activeMenu = "" }) => {
           <Link href="https://cal.com/gitroom/30min?utm_source=website">
             <Button
               variant="secondary-white"
-              customClasses={clsx(
-                "mt-[80px] w-full max-w-[243px] min-h-[42px]",
-                "md:ml-[70px] md:mt-0",
-                "md:min-w-[130px] md:w-[130px] md:min-w-[130px] md:!h-12",
+              customClasses={clsx("mt-[80px] w-full max-w-[243px] min-h-[42px]", "md:ml-[70px] md:mt-0", "md:min-w-[130px] md:w-[130px] md:min-w-[130px] md:!h-12",
                 "md:!text-base"
               )}
               onClick={() =>

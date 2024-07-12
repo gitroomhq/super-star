@@ -1,17 +1,9 @@
-import React, { useState } from "react";
+import React, { FC, useState } from "react";
 import clsx from "clsx";
-import Image from "next/image";
-import ReactPaginate from "react-paginate";
-
 import GithubCard from "../../home/GithubSection/GithubCard";
-import { SearchInput } from "@/components/core/Input";
-
-import { GithubInfo } from "@/mockData/github";
-import { IGithubInfo } from "@/types";
-
 import styles from "../styles.module.css";
 
-const GithubContainer = () => {
+const GithubContainer: FC<{blog: any[]}> = (props) => {
   const [curPage, setCurPage] = useState<number>(0);
   const [pageCount, setPageCount] = useState<number>(100);
 
@@ -41,58 +33,58 @@ const GithubContainer = () => {
         >
           All posts
         </div>
-        <div className={clsx("w-full sm:w-[320px]")}>
-          <SearchInput />
-        </div>
+        {/*<div className={clsx("w-full sm:w-[320px]")}>*/}
+        {/*  <SearchInput />*/}
+        {/*</div>*/}
       </div>
       <div className={"flex justify-center"}>
         <div className={clsx(styles.listContainer)}>
-          {GithubInfo.map((item: IGithubInfo, idx: number) => (
-            <GithubCard key={idx} githubInfo={item} />
+          {props.blog.map((item, idx: number) => (
+            <GithubCard key={idx} githubInfo={item} num={idx} />
           ))}
         </div>
       </div>
-      <div
-        className={clsx(
-          "mt-10",
-          "w-full flex justify-center git-room-paginiate-wrapper"
-        )}
-      >
-        <ReactPaginate
-          onPageChange={handlePageClick}
-          pageRangeDisplayed={1}
-          marginPagesDisplayed={1}
-          pageCount={pageCount}
-          renderOnZeroPageCount={null}
-          breakLabel="..."
-          nextLabel={
-            <div className="flex items-center">
-              Next
-              <div className="relative w-[16px] h-[16px] ml-1">
-                <Image
-                  src="/svgs/ChevRight-Small.svg"
-                  layout="fill"
-                  objectFit="contain"
-                  alt="pagniation right"
-                />
-              </div>
-            </div>
-          }
-          previousLabel={
-            <div className="flex items-center">
-              <div className="relative w-[16px] h-[16px] mr-1">
-                <Image
-                  src="/svgs/ChevLeft-Small.svg"
-                  layout="fill"
-                  objectFit="contain"
-                  alt="pagniation left"
-                />
-              </div>
-              Back
-            </div>
-          }
-        />
-      </div>
+      {/*<div*/}
+      {/*  className={clsx(*/}
+      {/*    "mt-10",*/}
+      {/*    "w-full flex justify-center git-room-paginiate-wrapper"*/}
+      {/*  )}*/}
+      {/*>*/}
+      {/*  <ReactPaginate*/}
+      {/*    onPageChange={handlePageClick}*/}
+      {/*    pageRangeDisplayed={1}*/}
+      {/*    marginPagesDisplayed={1}*/}
+      {/*    pageCount={pageCount}*/}
+      {/*    renderOnZeroPageCount={null}*/}
+      {/*    breakLabel="..."*/}
+      {/*    nextLabel={*/}
+      {/*      <div className="flex items-center">*/}
+      {/*        Next*/}
+      {/*        <div className="relative w-[16px] h-[16px] ml-1">*/}
+      {/*          <Image*/}
+      {/*            src="/svgs/ChevRight-Small.svg"*/}
+      {/*            layout="fill"*/}
+      {/*            objectFit="contain"*/}
+      {/*            alt="pagniation right"*/}
+      {/*          />*/}
+      {/*        </div>*/}
+      {/*      </div>*/}
+      {/*    }*/}
+      {/*    previousLabel={*/}
+      {/*      <div className="flex items-center">*/}
+      {/*        <div className="relative w-[16px] h-[16px] mr-1">*/}
+      {/*          <Image*/}
+      {/*            src="/svgs/ChevLeft-Small.svg"*/}
+      {/*            layout="fill"*/}
+      {/*            objectFit="contain"*/}
+      {/*            alt="pagniation left"*/}
+      {/*          />*/}
+      {/*        </div>*/}
+      {/*        Back*/}
+      {/*      </div>*/}
+      {/*    }*/}
+      {/*  />*/}
+      {/*</div>*/}
     </div>
   );
 };

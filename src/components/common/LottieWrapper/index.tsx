@@ -8,10 +8,12 @@ type LottieWrapperProps = {
   play?: boolean;
   className?: string;
   path?: string;
+  pic?: string;
 };
 
 const LottieWrapper: React.FC<LottieWrapperProps> = ({
   animationData,
+  pic = "",
   path = "",
   play = true,
   className = "",
@@ -19,12 +21,16 @@ const LottieWrapper: React.FC<LottieWrapperProps> = ({
   if (path) {
     return (
       <div className={className}>
-        <DotLottiePlayer
-          src={path}
-          loop={true}
-          autoplay={true}
-          style={{ width: "100%", height: "100%" }}
-        />
+        <div className="w-full h-full relative">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src={pic} alt="hero" className="absolute top-0 left-0 z-[1] w-full" />
+          <DotLottiePlayer
+            src={path}
+            loop={true}
+            autoplay={true}
+            style={{ width: "100%", height: "100%", position: 'relative', zIndex: 2 }}
+          />
+        </div>
       </div>
     )
   }
