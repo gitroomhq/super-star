@@ -2,7 +2,7 @@ export interface Details {
     id?: string;
     title: string;
     description: string;
-    subtitle: string;
+    subtitle?: string;
     slug: string;
     created: number;
     seo?: string;

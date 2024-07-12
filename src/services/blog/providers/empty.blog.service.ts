@@ -19,6 +19,7 @@ export class EmptyBlogService
       slug: "empty",
       seo: "empty",
       picture: "empty",
+      created: 0,
       author: {
         name: "empty",
         picture: "empty",
