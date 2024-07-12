@@ -7,6 +7,7 @@ import RelatedPost from "./RelatedPost";
 import { StayInformedSubscribeSection } from "../home";
 import dayjs from "dayjs";
 import { NextSeo } from "next-seo";
+import Link from "next/link";
 
 const PurpleShadow = () => (
   <div className="hidden md:block">
@@ -199,7 +200,7 @@ const BlogDetailsPageContent: React.FC<Props> = ({ blog, relatedPosts }) => {
         >
           <PurpleShadow />
 
-          <div
+          <Link href="/blog"
             className={clsx(
               "hidden",
               "absolute left-[20px] top-0 z-[1]",
@@ -208,15 +209,12 @@ const BlogDetailsPageContent: React.FC<Props> = ({ blog, relatedPosts }) => {
               "text-[18px] leading-[21.6px]",
               "hover:text-[rgb(179,133,255)]"
             )}
-            onClick={() => {
-              history.back();
-            }}
           >
             <div className={clsx("w-4 h-4 mr-1")}>
               <ChevLeftSvg />
             </div>
             Back
-          </div>
+          </Link>
 
           <div
             className={clsx("flex flex-col z-[1] max-w-[800px] mx-auto bg-black")}
