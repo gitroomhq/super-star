@@ -10,7 +10,7 @@ import { NextSeo } from "next-seo";
 
 const PurpleShadow = () => (
   <div className="hidden md:block">
-    {/* First One */}
+    {/* First One1 */}
     <div
       className={clsx(
         "absolute left-[100%] top-[0%]",
