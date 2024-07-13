@@ -174,7 +174,7 @@ const Navbar: React.FC<Props> = ({ activeMenu = "" }) => {
               </Link>
             </li>
           </ul>
-          <Link href="https://cal.com/gitroom/30min?utm_source=website">
+          <Link href="https://cal.com/gitroom/30min?utm_source=website" className="w-full flex flex-col items-center">
             <Button
               variant="secondary-white"
               customClasses={clsx("mt-[80px] w-full max-w-[243px] min-h-[42px]", "md:ml-[70px] md:mt-0", "md:min-w-[130px] md:w-[130px] md:min-w-[130px] md:!h-12",
