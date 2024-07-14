@@ -176,7 +176,7 @@ const BlogDetailsPageContent: React.FC<Props> = ({ blog, relatedPosts }) => {
             title: process.env.COURSE_NAME,
             description: blog.subtitle || 'Learn the best tips and trick to grow your GitHub library',
             images: [{
-              url: blog.page,
+              url: blog.picture,
               alt: process.env.COURSE_NAME,
               type: "image/png",
             }],
