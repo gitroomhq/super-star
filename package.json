@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "postbuild": "next-sitemap",
     "start": "next start",
     "lint": "next lint"
   },
@@ -24,6 +25,7 @@
     "next": "14.2.1",
     "next-plausible": "^3.12.0",
     "next-seo": "^6.5.0",
+    "next-sitemap": "^4.2.3",
     "react": "^18",
     "react-bootstrap-accordion": "^1.0.0",
     "react-dom": "^18",

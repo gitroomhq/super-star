@@ -171,22 +171,21 @@ const BlogDetailsPageContent: React.FC<Props> = ({ blog, relatedPosts }) => {
           title={process.env.COURSE_NAME! + ' Blog - ' + blog.title}
           description={`Blog - ${blog.title}`}
           canonical={process.env.COURSE_URL + '/blog/' + blog.slug}
-          additionalLinkTags={[{
-              rel: 'alternate',
-              type: 'application/rss+xml',
-              href: 'https://gitroom.com/feed.xml',
-          }]}
           openGraph={{
             url: process.env.COURSE_URL,
             title: process.env.COURSE_NAME,
             description: blog.subtitle || 'Learn the best tips and trick to grow your GitHub library',
             images: [{
-              url: process.env.COURSE_URL + "/github-blog.png", width: 1200, height: 630, alt: process.env.COURSE_NAME, type: "image/png",
+              url: blog.page,
+              alt: process.env.COURSE_NAME,
+              type: "image/png",
             }],
             siteName: process.env.COURSE_NAME,
           }}
           twitter={{
-            handle: "@nevodavid", site: "@nevodavid", cardType: "summary_large_image",
+            handle: "@nevodavid",
+            site: "@nevodavid",
+            cardType: "summary_large_image",
           }}
       />
       <div className="relative">
