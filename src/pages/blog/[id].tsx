@@ -26,7 +26,7 @@ export async function getStaticPaths() {
   const load = await blogService.getPostList();
   return {
     paths: load.map((p: Details) => ({ params: { id: p.slug } })),
-    fallback: false,
+    fallback: true,
   };
 }
 
