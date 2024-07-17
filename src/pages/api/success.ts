@@ -4,5 +4,5 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  res.status(200).send("Success");
+  res.status(200).json({success: "success"});
 }
