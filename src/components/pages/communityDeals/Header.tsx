@@ -177,7 +177,7 @@ const CommunityDealsHeader = () => {
         >
           Want to add your software deal?
         </div>
-        <Link href="https://staging.gitroom.com/auth">
+        <Link href="https://gitroom.com/auth">
           <Button
             customClasses={clsx(
               "mt-[35px] w-[217px] h-[42px] text-sm leading-[16px]",

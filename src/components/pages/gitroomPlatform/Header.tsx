@@ -135,7 +135,7 @@ const Header = () => {
             "lg:mt-6 lg:gap-[10px]"
           )}
         >
-          <Link href="https://staging.gitroom.com/auth">
+          <Link href="https://gitroom.com/auth">
             <Button
               customClasses={clsx(
                 "w-[143px] h-[42px]",

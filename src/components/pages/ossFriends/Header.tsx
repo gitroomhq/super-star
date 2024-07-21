@@ -116,7 +116,7 @@ const OSSFriendsHeader = () => {
           partners to promote open-source software and the values of
           transparency, collaboration, and community that it represents.{" "}
         </div>
-        <Link href="https://staging.gitroom.com/auth">
+        <Link href="https://gitroom.com/auth">
           <Button
             customClasses={clsx(
               "mt-[35px] w-[217px] h-[42px] text-sm leading-[16px]",
