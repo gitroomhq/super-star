@@ -7,7 +7,7 @@ export const PricingMockData: { [key: string]: IPricingCard[] } = {
       title: "Free",
       subTitle: "Perfect for testing",
       price: 0,
-      options: ["2 channels", "30 posts per month"],
+      options: ["1 channels", "30 posts per month"],
       duration: "Monthly",
     },
     {
