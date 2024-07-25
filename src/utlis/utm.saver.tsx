@@ -35,8 +35,8 @@ const UtmSaver: FC = () => {
 export const useUtmSaver = () => {
     return useCallback(() => {
         return {
-            utm: localStorage.getItem('utm'),
-            utmMedium: localStorage.getItem('utm_medium'),
+            utm: localStorage.getItem('utm') || localStorage.getItem('referrer'),
+            utmMedium: localStorage.getItem('utm_medium') || localStorage.getItem('landingUrl'),
             utmCampaign: localStorage.getItem('utm_campaign'),
             landingUrl: localStorage.getItem('landingUrl'),
             referrer: localStorage.getItem('referrer'),
