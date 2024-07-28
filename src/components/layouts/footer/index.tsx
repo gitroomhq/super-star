@@ -119,7 +119,7 @@ const Footer: React.FC = () => {
                   "font-[500] text-[18px] md:text-[20px] leading-[21.6px]"
                 )}
               >
-                GitHub Library
+                Resources
               </h4>
               <Link
                 href="https://gitlibrary.club/"
@@ -128,7 +128,16 @@ const Footer: React.FC = () => {
                   "underline transition-all"
                 )}
               >
-                Visit Website
+                GitHub Library
+              </Link>
+              <Link
+                href="https://postiz.com"
+                className={clsx(
+                  "text-[14px] md:text-[16px] text-[#B385FF] hover:text-[rgba(217,193,255,1)]",
+                  "underline transition-all"
+                )}
+              >
+                Postiz
               </Link>
             </div>
           </div>
