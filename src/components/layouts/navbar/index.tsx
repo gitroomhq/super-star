@@ -189,7 +189,7 @@ const Navbar: React.FC<Props> = ({ activeMenu = "" }) => {
             asLink={"https://cal.com/gitroom/30min?utm_source=website"}
             variant="primary-white"
             customClasses={clsx(
-              "mt-2 w-full max-w-[243px] w-[243px] min-h-[42px]",
+              "animate-bounce mt-2 w-full max-w-[243px] w-[243px] min-h-[42px]",
               "md:mt-0 md:ml-2.5 md:w-[208px] md:min-w-[208px] md:!h-12",
               "md:!text-base"
             )}
