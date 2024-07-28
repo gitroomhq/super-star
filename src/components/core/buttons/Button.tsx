@@ -2,6 +2,7 @@ import React from "react";
 import clsx from "clsx";
 
 import styles from "./styles.module.css";
+import Link from "next/link";
 
 interface Props
   extends Omit<
@@ -10,6 +11,7 @@ interface Props
   > {
   variant?: "primary-white" | "secondary-white";
   customClasses?: string | object;
+  asLink?: string;
   href?: string;
   children: React.ReactNode;
   disabled?: boolean;
@@ -20,6 +22,7 @@ const Button: React.FC<Props> = ({
   customClasses = "",
   children,
   disabled = false,
+  asLink,
   ...props
 }: Props) => {
   let variantClass = styles.btnPrimaryWhite;
@@ -39,8 +42,21 @@ const Button: React.FC<Props> = ({
         )}
         {...props}
       >
-        <div className={styles.content}>{children}</div>
+        {asLink ? <Link href={asLink} className={styles.content}>{children}</Link> : <div className={styles.content}>{children}</div>}
       </div>
+    );
+  }
+
+  if (asLink) {
+    return (
+      <Link href={asLink} className={clsx(
+            styles.btn,
+            "font-matter",
+            variantClass,
+            customClasses
+          )}>
+          {children}
+      </Link>
     );
   }
 

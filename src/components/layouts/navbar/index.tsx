@@ -174,29 +174,27 @@ const Navbar: React.FC<Props> = ({ activeMenu = "" }) => {
               </Link>
             </li>
           </ul>
-          <Link href="https://cal.com/gitroom/30min?utm_source=website" className="w-full flex flex-col items-center">
+          <div className="w-full flex flex-col items-center">
             <Button
+              asLink={"/gitroom-platform"}
               variant="secondary-white"
-              customClasses={clsx("mt-[80px] w-full max-w-[243px] min-h-[42px]", "md:ml-[70px] md:mt-0", "md:min-w-[130px] md:w-[130px] md:min-w-[130px] md:!h-12",
+              customClasses={clsx("mt-[80px] w-full max-w-[243px] min-h-[42px]", "md:ml-[70px] md:mt-0", "md:min-w-[130px] md:w-[200px] md:min-w-[130px] md:!h-12",
                 "md:!text-base"
               )}
-              onClick={() =>
-                router.push("https://cal.com/gitroom/30min?utm_source=website")
-              }
             >
-              Book a Call
+              Discover the Platform
             </Button>
-          </Link>
+          </div>
           <Button
+            asLink={"https://cal.com/gitroom/30min?utm_source=website"}
             variant="primary-white"
             customClasses={clsx(
               "mt-2 w-full max-w-[243px] w-[243px] min-h-[42px]",
               "md:mt-0 md:ml-2.5 md:w-[208px] md:min-w-[208px] md:!h-12",
               "md:!text-base"
             )}
-            onClick={() => router.push("/gitroom-platform")}
           >
-            Discover the Platform
+            Free Consultation
           </Button>
         </div>
       </div>
