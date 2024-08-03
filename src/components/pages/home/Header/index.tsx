@@ -22,7 +22,7 @@ const HomeHeader = () => {
             Grow Your Open-Source Community
           </h1>
           <div className={clsx(styles.headerSubTitle)}>
-            Tools to help your grow your open-source repository. Gain more
+            Tools to help you grow your open-source repository. Gain more
             visibility, stars, contributions and customers. Get free weekly
             value by registering to the newsletter.
           </div>
